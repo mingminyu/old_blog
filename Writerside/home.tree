@@ -4,7 +4,11 @@
 
 <instance-profile id="home"
                  name="home"
-                 start-page="contents.md">
-
-    <toc-element topic="contents.md"/>
+                 start-page="Python.md">
+    <toc-element topic="Python.md"/>
+    <toc-element topic="Go.md"/>
+    <toc-element topic="Java.md"/>
+    <toc-element topic="Rust.md"/>
+    <toc-element topic="Scala.md">
+    </toc-element>
 </instance-profile>
