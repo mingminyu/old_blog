@@ -1,0 +1,13 @@
+<buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <variables>
+        <algolia-id>VS53XCMK8S</algolia-id>
+        <algolia-index>my blog</algolia-index>
+        <web-root>https://mingminyu.github.io</web-root>
+
+    </variables>
+    <build-profile instance="instance_id"/>
+    <footer>
+        <copyright>Company 2000-2023</copyright>
+    </footer>
+</buildprofiles>

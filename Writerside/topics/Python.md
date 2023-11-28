@@ -1,9 +1,18 @@
 # Python
 
-<!--Writerside adds this topic when you create a new documentation project.
-You can use it as a sandbox to play with Writerside features, and remove it from the TOC when you don't need it anymore.-->
+> [Python Tutorial](%tutorial-python%)
+
 
 ## Basic Python
 
-Python String
+1. [Python String](%tutorial-python%)
+2. Python Function
+3. Python Class
+
+## Python Web
+
+1. NiceGUI
+2. Django
+3. Flask
+4. Streamlit
 
