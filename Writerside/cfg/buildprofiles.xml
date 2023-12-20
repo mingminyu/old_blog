@@ -8,6 +8,6 @@
     </variables>
     <build-profile instance="instance_id"/>
     <footer>
-        <copyright>Company 2000-2023</copyright>
+        <copyright>2023.11.28</copyright>
     </footer>
 </buildprofiles>

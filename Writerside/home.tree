@@ -3,8 +3,9 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="home"
-                 name="home"
-                 start-page="Python.md">
+                 name="郁明敏的博客小站"
+                 start-page="index.md">
+    <toc-element topic="index.md"/>
     <toc-element topic="Python.md"/>
     <toc-element topic="Go.md"/>
     <toc-element topic="Java.md"/>

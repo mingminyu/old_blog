@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE vars SYSTEM "https://resources.jetbrains.com/writerside/1.0/vars.dtd">
 <vars>
-    <var name="product" value="Writerside"/>
-    <var name="homepage" value="https://mingminyu.github.io" type="string"/>
-    <var name="tutorial-python" value="https://mingminyu.github.io/tutorial_python" type="string"/>
+    <var name="mysite" value="https://mingminyu.github.io"/>
+    <var name="tutorial-python" value="https://mingminyu.github.io/tutorial_python"/>
 </vars>
