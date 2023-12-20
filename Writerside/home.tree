@@ -4,8 +4,8 @@
 
 <instance-profile id="home"
                  name="郁明敏的博客小站"
-                 start-page="index.md">
-    <toc-element topic="index.md"/>
+                 start-page="home.md">
+    <toc-element topic="home.md"/>
     <toc-element topic="Python.md">
         <toc-element topic="pycharm.md"/>
         <toc-element topic="python-base.md">
