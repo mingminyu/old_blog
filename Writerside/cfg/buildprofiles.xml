@@ -3,6 +3,8 @@
     <variables>
         <algolia-id>VS53XCMK8S</algolia-id>
         <algolia-index>my blog</algolia-index>
+        <header-logo>site_logo.svg</header-logo>
+        <custom-favicons>site_logo.svg</custom-favicons>
         <web-root>https://mingminyu.github.io</web-root>
 
     </variables>
