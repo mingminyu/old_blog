@@ -28,9 +28,9 @@
     </toc-element>
     <toc-element topic="tutorial-ai.md">
         <toc-element topic="LLM.md"/>
-        <toc-element topic="tutoral_ml.md"/>
-        <toc-element topic="tutorial_asr.md"/>
-        <toc-element topic="tutorial_tts.md">
+        <toc-element topic="ml.md"/>
+        <toc-element topic="asr.md"/>
+        <toc-element topic="tts.md">
             <toc-element topic="pytts-bert-vits2.md"/>
         </toc-element>
         <toc-element topic="label-studio.md">
