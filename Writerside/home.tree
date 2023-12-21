@@ -22,6 +22,7 @@
         </toc-element>
     </toc-element>
     <toc-element topic="Go.md"/>
+    <toc-element topic="kotlin.topic"/>
     <toc-element topic="Java.md"/>
     <toc-element topic="Rust.md"/>
     <toc-element topic="Scala.md">
