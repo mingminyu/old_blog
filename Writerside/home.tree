@@ -4,15 +4,16 @@
 
 <instance-profile id="home"
                  name="郁明敏的博客小站"
-                 start-page="home.md">
-    <toc-element topic="home.md"/>
-    <toc-element topic="Python.md">
+                 start-page="homepage.topic">
+    <toc-element topic="homepage.topic"/>
+    <toc-element topic="python.topic">
         <toc-element topic="pycharm.md">
         </toc-element>
-        <toc-element topic="python-base.md">
+        <toc-element topic="python-base.topic">
             <toc-element topic="python-string.md"/>
         </toc-element>
-        <toc-element topic="PythonWeb.md">
+        <toc-element topic="python-advance.topic"/>
+        <toc-element topic="pythonweb.topic">
             <toc-element topic="tutorial-django.md"/>
             <toc-element topic="tutorial-flask.md"/>
             <toc-element topic="tutorial-fastapi.md"/>
@@ -26,7 +27,7 @@
     <toc-element topic="Scala.md">
     </toc-element>
     <toc-element topic="tutorial-ai.md">
-        <toc-element topic="tutorial-llm.md"/>
+        <toc-element topic="LLM.md"/>
         <toc-element topic="tutoral_ml.md"/>
         <toc-element topic="tutorial_asr.md"/>
         <toc-element topic="tutorial_tts.md">
