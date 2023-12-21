@@ -6,7 +6,7 @@
         <header-logo>site_logo.svg</header-logo>
         <custom-favicons>site_logo.svg</custom-favicons>
         <web-root>https://mingminyu.github.io</web-root>
-
+        <product-web-url>https://mingminyu.github.io</product-web-url>
     </variables>
     <build-profile instance="instance_id"/>
     <footer>

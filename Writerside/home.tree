@@ -7,15 +7,17 @@
                  start-page="home.md">
     <toc-element topic="home.md"/>
     <toc-element topic="Python.md">
-        <toc-element topic="pycharm.md"/>
+        <toc-element topic="pycharm.md">
+        </toc-element>
         <toc-element topic="python-base.md">
             <toc-element topic="python-string.md"/>
         </toc-element>
-        <toc-element topic="python-tts.md">
-            <toc-element topic="pytts-bert-vits2.md"/>
-        </toc-element>
-        <toc-element topic="python-aitools.md">
-            <toc-element topic="label-studio.md"/>
+        <toc-element topic="PythonWeb.md">
+            <toc-element topic="tutorial-django.md"/>
+            <toc-element topic="tutorial-flask.md"/>
+            <toc-element topic="tutorial-fastapi.md"/>
+            <toc-element topic="tutorial-sanic.md"/>
+            <toc-element topic="tutorial-nicegui.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="Go.md"/>
@@ -23,4 +25,33 @@
     <toc-element topic="Rust.md"/>
     <toc-element topic="Scala.md">
     </toc-element>
+    <toc-element topic="tutorial-ai.md">
+        <toc-element topic="tutorial-llm.md"/>
+        <toc-element topic="tutoral_ml.md"/>
+        <toc-element topic="tutorial_asr.md"/>
+        <toc-element topic="tutorial_tts.md">
+            <toc-element topic="pytts-bert-vits2.md"/>
+        </toc-element>
+        <toc-element topic="label-studio.md"/>
+        <toc-element topic="tutorial-analysis.md"/>
+    </toc-element>
+    <toc-element topic="tutorial-visualization.md"/>
+    <toc-element topic="tutorial-automation.md"/>
+    <toc-element topic="databases.md">
+        <toc-element topic="tutorial-clickhouse.md"/>
+        <toc-element topic="tutorial-hive.md"/>
+        <toc-element topic="tutorial-impala.md"/>
+        <toc-element topic="tutorial-mysql.md"/>
+        <toc-element topic="tutorial-mongodb.md"/>
+        <toc-element topic="tutorial-milvus.md"/>
+        <toc-element topic="tutorial-redis.md"/>
+        <toc-element topic="tutorial-rabbitmq.md"/>
+        <toc-element topic="tutorial-rocketmq.md"/>
+        <toc-element topic="tutorial-sqlite.md"/>
+        <toc-element topic="tutorial-postgresql.md"/>
+    </toc-element>
+    <toc-element topic="tutorial-vcs.md">
+        <toc-element topic="tutorial-git.md"/>
+    </toc-element>
+    <toc-element topic="tutorial-crawler.md"/>
 </instance-profile>

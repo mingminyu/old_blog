@@ -356,7 +356,7 @@ pip install tensorrt
 ### 9.2 预训练模型加载时的问题
 
 在进行模型训练时，通常会出现 2 类常见问题：
-1. 加载预训练模型文件报错，提示 “读取 DUR_0.pth 时报错 error, **norm_1.gamma** is not in the checkpoint”，类似于 **norm_1.gamma** 这样的属性可能还有很多（具体如下）， 造成此类问题主要暂无**未找到解决办法**。
+- 加载预训练模型文件报错，提示 “读取 DUR_0.pth 时报错 error, **norm_1.gamma** is not in the checkpoint”，类似于 **norm_1.gamma** 这样的属性可能还有很多（具体如下）， 造成此类问题主要暂无**未找到解决办法**。
 
 ```Bash
 INFO:OUTPUT_MODEL:Loaded checkpoint './logs/./OUTPUT_MODEL/DUR_0.pth' (iteration 0)
@@ -388,7 +388,7 @@ error, flow.flows.6.enc.cond_layer.weight_v is not in the checkpoint
 error, emb_g.weight is not in the checkpoint
 ```
 
-2. 在上面报错的情况下也能预训练模型加载进来，但是大概率会出现责这个问题 “RuntimeError: min(): Expected reduction dim to be specified for input.numel() == 0. Specify the reduction dim with the 'dim' argument”，造成此问题的原因可能有 3 种情况：
+- 在上面报错的情况下也能预训练模型加载进来，但是大概率会出现责这个问题 “RuntimeError: min(): Expected reduction dim to be specified for input.numel() == 0. Specify the reduction dim with the 'dim' argument”，造成此问题的原因可能有 3 种情况：
     - VITS2 不同版本的差异性较大，下载的预训练模型与当前版本不匹配。
     - config.json 配置文件中 `train` 参数下 `fp16_run` 被设置成了 `true`，导致和预训练模型当时训练时不匹配。
     - 首次训练时没有出现这个错误，但是继续训练时也可能出现这个报错，此时删除模型存储的文件夹，再次重新从头训练就好。

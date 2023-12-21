@@ -1,5 +1,7 @@
 # Label Studio 教程
 
+<show-structure for="chapter,procedure" depth="2"/>
+
 ## 1. 安装
 
 Label Studio 安装非常简单，这里推荐使用 Python 创建一个新的虚拟环境来进行安装。
@@ -79,7 +81,7 @@ pip install label-studio -U label-studio-sdk
             "年龄": 20
       },
       "dialog": [
-            {"author": "Mia Wallace:", "text": "Dont you hate that?", "start": 0.0, "end": 2.0},
+            {"author": "Mia Wallace:", "text": "Don't you hate that?", "start": 0.0, "end": 2.0},
             {"author": "Vincent Vega:", "text": "Hate what?", "start": 2.0, "end": 3.0}
         ]
       }
