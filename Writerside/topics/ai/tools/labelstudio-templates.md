@@ -6,7 +6,7 @@
 
 在做 NLP 相关模型时，常常需要通过人工去听一些录音来发现一些业务 Insights，当然这个过程中也会需要记录一些相关信息，通过此模板可以极大地提高操作效率，具体包含以下功能:
 - **基本信息**: 表格形式展示用户的基本信息，更好地理解对话内容
-- **音频播放**: 在 Label Studio 上直接播放相关音频，并且可以自由选择播放片段。
+- **音频播放**: 在 Label Studio 上直接播放相关音频，并且可以自由选择播放片段
 - **内容展示**: 如果音频有 ASR 转写，则以对话形式展示内容
 - **实体标注**: 在某一句上标注实体信息，比如标注一段文字为用户诉求
 
@@ -107,6 +107,15 @@
 
 ![录音信息挖掘界面展示](labelstudio_data_mining_for_recording.png)
 
-### 1.4 跨域问题
+### 1.4 音频获取失败问题
 
-该模板涉及到获取远程音频文件，可能会出现跨域的问题，具体问题以及解决方案，请参考[常见问题](%mysite%/labelstudio-faq#1)
+该模板涉及到获取远程音频文件，可能会出现跨域的问题，具体问题以及解决方案，请参考[常见问题](%mysite%/labelstudio-faq)
+
+
+<seealso>
+    <category ref="ref_docs">
+        <a href="https://labelstud.io/tags/audio">LabelStudio Audio</a>
+        <a href="https://labelstud.io/tags/paragraphs">LabelStudio Paragraphs</a>
+        <a href="https://labelstud.io/tags/paragraphs#Example-1">LabelStudio Paragraphs示例</a>
+    </category>
+</seealso>

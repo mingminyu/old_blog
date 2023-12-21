@@ -1,5 +1,7 @@
 # 常见问题
 
+<show-structure for="chapter,procedure" depth="2"/>
+
 ## 1. 跨域问题
 
 Label Studio 不建议加载本地文件，通常情况下我们是通过给本地文件开启一个 HTTP 服务，然后在模板里面配置变量的值为具体 url。
