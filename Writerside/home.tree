@@ -10,6 +10,7 @@
         <toc-element topic="pycharm.md">
         </toc-element>
         <toc-element topic="python-base.topic">
+            <toc-element topic="python-pkg-managment.md"/>
             <toc-element topic="python-string.md"/>
         </toc-element>
         <toc-element topic="python-advance.topic"/>
@@ -21,17 +22,17 @@
             <toc-element topic="tutorial-nicegui.md"/>
         </toc-element>
     </toc-element>
-    <toc-element topic="Go.md"/>
+    <toc-element topic="go.topic"/>
     <toc-element topic="kotlin.topic"/>
-    <toc-element topic="Java.md"/>
-    <toc-element topic="Rust.md"/>
-    <toc-element topic="Scala.md">
+    <toc-element topic="java.topic"/>
+    <toc-element topic="rust.topic"/>
+    <toc-element topic="scala.topic">
     </toc-element>
-    <toc-element topic="tutorial-ai.md">
-        <toc-element topic="LLM.md"/>
-        <toc-element topic="ml.md"/>
-        <toc-element topic="asr.md"/>
-        <toc-element topic="tts.md">
+    <toc-element topic="ai.topic">
+        <toc-element topic="llm.topic"/>
+        <toc-element topic="ml.topic"/>
+        <toc-element topic="asr.topic"/>
+        <toc-element topic="tts.topic">
             <toc-element topic="pytts-bert-vits2.md"/>
         </toc-element>
         <toc-element topic="label-studio.md">
@@ -41,8 +42,8 @@
         <toc-element topic="tutorial-analysis.md"/>
     </toc-element>
     <toc-element topic="tutorial-visualization.md"/>
-    <toc-element topic="tutorial-automation.md"/>
-    <toc-element topic="databases.md">
+    <toc-element topic="automation.topic"/>
+    <toc-element topic="databases.topic">
         <toc-element topic="tutorial-clickhouse.md"/>
         <toc-element topic="tutorial-hive.md"/>
         <toc-element topic="tutorial-impala.md"/>
@@ -55,8 +56,8 @@
         <toc-element topic="tutorial-sqlite.md"/>
         <toc-element topic="tutorial-postgresql.md"/>
     </toc-element>
-    <toc-element topic="tutorial-vcs.md">
-        <toc-element topic="tutorial-git.md"/>
+    <toc-element topic="vcs.topic">
+        <toc-element topic="git.topic"/>
     </toc-element>
-    <toc-element topic="tutorial-crawler.md"/>
+    <toc-element topic="crawler.topic"/>
 </instance-profile>

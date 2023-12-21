@@ -6,30 +6,6 @@
         <accepts>page.html</accepts>
     </rule>
     -->
-    <rule id="36fa6b34">
-        <description>Created after removal of "Starter" from 郁明敏的博客小站</description>
-        <accepts>Starter.html</accepts>
-    </rule>
-    <rule id="63906aae">
-        <description>Created after removal of "How to" from 郁明敏的博客小站</description>
-        <accepts>How-to.html</accepts>
-    </rule>
-    <rule id="2f0ead6a">
-        <description>Created after removal of "Overview" from 郁明敏的博客小站</description>
-        <accepts>Overview.html</accepts>
-    </rule>
-    <rule id="58606061">
-        <description>Created after removal of "Tutorial" from 郁明敏的博客小站</description>
-        <accepts>Tutorial.html</accepts>
-    </rule>
-    <rule id="177bf1d9">
-        <description>Created after removal of "Section Starting Page" from 郁明敏的博客小站</description>
-        <accepts>Section-Starting-Page.html</accepts>
-    </rule>
-    <rule id="6a348279">
-        <description>Created after removal of "Starter" from 郁明敏的博客小站</description>
-        <accepts>Starter.html</accepts>
-    </rule>
     <rule id="232fd639">
         <description>Created after removal of "首页" from 郁明敏的博客小站</description>
         <accepts>home.html</accepts>

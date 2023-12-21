@@ -38,7 +38,7 @@ app.add_middleware(
 
 @app.get("/recordings/{wav_path}")
 async def get_wav_file(wav_path: str):
-    # 这里 audio_path 是需要为绝对路径
+    # 这里 audio_path 须为绝对路径
     audio_path = f"/Users/yumingmin/llm_labelstudio/data/recordings/{wav_path}"
     return FileResponse(file_path, media_type="audio/wav")
 

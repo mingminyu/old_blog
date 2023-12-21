@@ -1,3 +1,0 @@
-# Scala
-
-Start typing here...
