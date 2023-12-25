@@ -62,10 +62,53 @@ timeout = 6000
 trusted-host = pypi.doubanio.com
 ```
 
-
 ## 2. CONDA
+
+CONDA 是一款嵌入在 Miniconda 和 Anaconda 中非常优秀的 Python 包管理器，它可以帮我们解决一些比较难装的库，比如 basemap、ffmpeg 等，甚至也可以在 Python 虚拟环境中安装与系统环境隔离的 GCC 等工具。
+
+当然，CONDA 的安装镜像源也是在美国，所以我们可以在 .condarc 文件中添加如下内容，来将安装镜像源更改为国内镜像源（国内用的最多的就是清华的 CONDA 镜像源）。
+
+```Bash
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+```
+
+对于 Windows 用户而言，默认是找不到 CONDA 的配置文件的(由于系统的限制，我们也不能直接创建以 . 开头的文件)，我们可以通过如下命令直接和配置清华镜像源，执行完我们就可以在用户根目录下找到 .condarc 文件了:
+
+```Bash
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+```
+
 
 ## 3. Poetry
 
 ## 4. PDM
+
+## 5. PIPX
+
+## 6. VIRTUALENV
+
+## 7.VENV
+
+## 8. PIPENV
+
+
+## 9. PYENV
+
+
+
 
