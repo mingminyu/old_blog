@@ -67,7 +67,7 @@ python server.py
 
 因为 Label Studio Web 服务自己本身就可以访问一下示例的静态文件，如果我们不希望另加接口的话，那么可以直接将自己的数据文件放在 Label Studio Web 服务的静态文件夹下。
 
-在下面路径下新建 recordings 文件夹，将所有音频放进去，那么我们就可以直接使用 `http://127.0.0.1:8000/static/recordings/test.wav` 来访问（使用 1.2.3.4 或者 localhost 都可以）。
+在 Label Studio 安装包路径下新建 core/recordings 文件夹，将所有音频放进去，那么我们就可以在模板中直接使用 `http://127.0.0.1:8000/static/recordings/test.wav` 来访问（使用 1.2.3.4 或者 localhost 都可以）。
 
 ```Text
 PYTHONENV/site-packages/label_studio/core/static_build

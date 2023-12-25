@@ -3,18 +3,18 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="home"
-                 name="郁明敏的博客小站"
+                 name="欢迎来到德莱联盟"
                  start-page="homepage.topic">
     <toc-element topic="homepage.topic"/>
     <toc-element topic="python.topic">
         <toc-element topic="pycharm.md">
         </toc-element>
         <toc-element topic="python-base.topic">
-            <toc-element topic="python-pkg-managment.md"/>
+            <toc-element topic="python-pkg-management.md"/>
             <toc-element topic="python-string.md"/>
         </toc-element>
         <toc-element topic="python-advance.topic"/>
-        <toc-element topic="pythonweb.topic">
+        <toc-element topic="python-web.topic">
             <toc-element topic="tutorial-django.md"/>
             <toc-element topic="tutorial-flask.md"/>
             <toc-element topic="tutorial-fastapi.md"/>
