@@ -29,7 +29,9 @@
     <toc-element topic="scala.topic">
     </toc-element>
     <toc-element topic="ai.topic">
-        <toc-element topic="llm.topic"/>
+        <toc-element topic="llm.topic">
+            <toc-element topic="llm-tools.md"/>
+        </toc-element>
         <toc-element topic="ml.topic"/>
         <toc-element topic="asr.topic"/>
         <toc-element topic="tts.topic">

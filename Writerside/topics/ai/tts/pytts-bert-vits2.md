@@ -163,9 +163,14 @@ wget -c https://huggingface.co/Erythrocyte/bert-vits2_base_model/resolve/main/G_
 {style="full" title="TODO"}
 : 后续需要找一下 BERT-VITS2 2.0 版本的预训练模型
 
-## 3. 训练前准备
+## 3. 配置文件参数说明
 
-### 3.1 初始化项目
+
+
+
+## 4. 训练前准备
+
+### 4.1 初始化项目
 
 执行以下脚本初始化整个项目文件夹结构。
 
@@ -179,7 +184,7 @@ python run_cmd.py --stage 1
 python run_cmd.py -s=1 --dpm -sid=nana -ws=large-v3
 ```
 
-### 3.2 分离双声道
+### 4.2 分离双声道
 
 如果你的音频文件是单声道的话，则可以跳过这一步，否则需要先将双声道分离出来。这里会将 audio/upload 所有音频进行声道分离，并保存分离声道后的音频至 audio/split 文件夹下。如果存在单声道音频的话，则不会进行分离，直接复制到 audio/split 文件夹下。
 
@@ -187,7 +192,7 @@ python run_cmd.py -s=1 --dpm -sid=nana -ws=large-v3
 python run_cmd.py -s=2
 ```
 
-### 3.3 音频降噪
+### 4.3 音频降噪
 
 如果音频文件中存在大量噪声片段，建议使用降噪功能先对音频进行降噪，降噪后的音频保存在 audio/denoise 文件夹下:
 
@@ -198,7 +203,7 @@ python run_cmd.py -s=3
 > 值得注意的是，用于训练的音频文件应该是无噪声的，但是经过降噪后可能会导致一些吞字的情况。如果存在这样音频片段，
 {style="warning"}
 
-### 3.4 音频切分
+### 4.4 音频切分
 
 原则上用于训练的音频质量应该是**单声道+采样率 44100+无噪声**，但是现实情况下很多音频中存在大量的静音片段，并且整个音频也会有存在不少噪声的情况。所以这一块我做了极大优化，采用 ModelScope 上 [speech_dfsmn_ans_psm_48k_causal](https://modelscope.cn/models/damo/speech_dfsmn_ans_psm_48k_causal/summary) 降噪算法以及 [speech_fsmn_vad_zh-cn-16k-common-pytorch](https://modelscope.cn/models/damo/speech_fsmn_vad_zh-cn-16k-common-pytorch/summary) 静音检测算法，
 
@@ -241,7 +246,7 @@ python run_cmd.py -s=4 -ws="large-v2"
 
 实际使用中发现，这里的 VAD 切分功能还不完善，容易导致后续音频不可用，导致后续训练有问题。目前是使用 Amadeus Pro 软件直接裁剪音频静音片段，**后续还是需要完善 VAD 相关功能**。
 
-## 4. 生成训练样本
+## 5. 生成训练样本
 
 这一步主要是将转写文件进行文本处理，然后生成训练和验证数据集（使用 `|` 作为间隔的 CSV 文件），数据保存在 data/cleaned 和 data/train 文件夹下。
 
@@ -250,7 +255,7 @@ python run_cmd.py -s=5
 ```
 
 
-## 5. 生成BERT文件
+## 6. 生成BERT文件
 
 这个步骤会在 data/segments 下给对应的 wav 生成对应的 bert.pt 文件。
 
@@ -259,10 +264,10 @@ python run_cmd.py -s=6
 ```
 
 
-## 6. 模型训练
+## 7. 模型训练
 
 
-### 6.1 训练模型
+### 7.1 训练模型
 
 通过如下命令进行 TTS 模型的训练，每 1000 步会在 models 文件夹中保存一版模型，默认保存 5 个模型版本。训练的日志信息 train.log 也在 models 文件夹下可查看，如果想要更改保存模型路径的话，在 config/config.yml 文件中进行更改。
 
@@ -273,11 +278,9 @@ python run_cmd.py -s=7
 训练过程中，会在 data/segments 文件下生成对应音频的 spec.pt 文件。此外，并不是训练的 epoch 越多，最终合成出来的效果就越好，反而是所训练的 epoch 过多，最终会导致模型合成出来的音频文件声音非常怪。 此外，原始项目中默认是保持最近 **5** 个版本的模型，在 bert-vits2-turbo 中 `train` 部分提供了 `keep_ckpts` 参数，来设置保持多少个版本的模型。
 
 
-### 6.2 训练日志异常排查
+### 7.2 训练日志异常排查
 
 对模型训练脚本做过多次改造，但发现执行 train_ms.py 这一步时，无论怎么改代码，日志在 **epoch=29** 总是打印出进度总是 **0%**，正常情况下不应该是这样（之前正常训练时并未出现过这样的情况）。 逐步排查发现，问题不是出在 train_ms.py 脚本上，而是可能出在训练样本生成和转换的 bert.pt 以及 spec.pt 文件上，可能对应到上面的 1-5 两步。
-
-这里使用 examples/nana_speech.wav 作为训练数据，整个训练过程每一步是正常的，但是加入我们自己的音频数据集后，就会出现异常。最终排查下来，我们自己音频数据时就会有这样的问题，造成这个问题的原因是音频切分阶段使用的 VAD+ASR 算法设计上，经过 VAD 检测后生成的音频文件送入 ASR，所生成的 wav 文件可能会对后续操作有影响。
 
 | 音频切分     | 生成ASR转写  | 简体中文Prompt | language | 是否训练异常 |
 |----------|----------|------------|----------|--------|
@@ -292,12 +295,19 @@ python run_cmd.py -s=7
 | large-v2 | medium   | 否          | CJE      | 正常     |
 | large-v2 | medium   | 否          | C        | 正常     |
 
+这里使用 examples/nana_speech.wav 作为训练数据，上面实验明显看出问题不是出在 Whisper 模型的选择上，整个训练过程每一步是正常的，但是加入我们自己的音频数据集后，就会出现异常。最终排查下来，我们自己音频数据时就会有这样的问题，造成这个问题的原因是**音频切分阶段使用的 VAD+ASR 算法设计上**，经过 VAD 检测后生成的音频文件送入 ASR，所生成的 wav 文件可能会对后续操作有影响。
 
-> **解决办法**: 最终我尝试在音频切分步骤中，根据 ASR 切分的 Segments 做了一下限制，**限制了切分的音频时长必须 >= 1.1s，转写的字符数必须 >= 5**，目前看下来良好。
+> **解决办法**: 最终我尝试在音频切分步骤中，根据 ASR 切分的 Segments 做了一下限制，目前看下来效果还不错。
+> * 切分的音频时长必须 >= 1s
+> * 如果转写的音频长度 < 5 是，则会和下一条 segment 做合并
+{style="note"}
+
+
+> 过程中还发现了一个问题，训练数据集中有一段 30s 的音频，有可能 Whisper 最终只切分出来 2 条音频(17s 和 13s)。但是我们如果不用降噪后的音频，直接使用切分声道后的音频的话，也许可以切多一点片段出来。**所以，降噪的步骤也可以放在音频切分之后。**
 {style="warning"}
 
 
-## 7. 合成语音
+## 8. 合成语音
 
 执行以下命令进行语音合成，合成的音频文件存放在 data/tts 文件夹下，如果已经存在同名文件，则默认会加上当前时间戳。
 
@@ -307,7 +317,7 @@ python run_cmd.py -s=8 --model_step=1000 -sid=nana -t="这是一段测试TTS的�
 
 > 这里如果想要合成的效果比较好，最好合成的文本内容与训练数据比较相关，并且训练数据中音频所说的内容也尽可能地包含垂直领域的信息。
 
-### 7.1 TTS 合成 Tips
+### 8.1 TTS 合成 Tips
 
 总结以下音频合成的小技巧:
 - 如果想要合成的效果比较好，那么合成的内容应该要和训练音频所说的内容比较相关
@@ -315,9 +325,9 @@ python run_cmd.py -s=8 --model_step=1000 -sid=nana -t="这是一段测试TTS的�
 - 有些 spk_id 说话过快，那么可以通过调节 `length_scale` 来调整合成音频的语速
 
 
-## 8. WEB服务
+## 9. WEB服务
 
-### 8.1 功能描述
+### 9.1 功能描述
 
 本项目基于 Streamlit 构建一个 Web 应用，底层调用 BERT-VITS2 模型在线合成语音，支持以下功能:
 - **在线音频合成**: 根据输入框中的文本，生成对应的音频，同时支持**多个角色音库**自由切换。
@@ -326,7 +336,7 @@ python run_cmd.py -s=8 --model_step=1000 -sid=nana -t="这是一段测试TTS的�
 - **一键降噪**: 支持训练预处理以及音频合成阶段降噪处理。
 - **语速调整**: 支持在合成时选择音频的语速。
 
-### 8.2 开启服务
+### 9.2 开启服务
 
 整个 web 服务是基于 Streamlit 搭建的，运行如下命令开启 Web 应用:
 
@@ -337,15 +347,15 @@ streamlit run vits2-web.py --port 8501
 服务开启后，本地浏览器访问 http://localhost:8501 。
 
 
-#### 8.3 界面预览
+#### 9.3 界面预览
 
 
 
-## 9. 常见问题
+## 10. 常见问题
 
 这里对使用 BERT-VITS2 使用过程中遇到的一些问题做一些记录，并附上一些解决方案，仅供参考。
 
-### 9.1 Could not find TensorRT
+### 10.1 Could not find TensorRT
 
 运行过程中，不停有警告信息 “TF-TRT Warning: Could not find TensorRT” ，这是因为没有安装 tensorrt 库导致的，执行以下代码进行安装：
 
@@ -353,7 +363,7 @@ streamlit run vits2-web.py --port 8501
 pip install tensorrt
 ```
 
-### 9.2 预训练模型加载时的问题
+### 10.2 预训练模型加载时的问题
 
 在进行模型训练时，通常会出现 2 类常见问题：
 - 加载预训练模型文件报错，提示 “读取 DUR_0.pth 时报错 error, **norm_1.gamma** is not in the checkpoint”，类似于 **norm_1.gamma** 这样的属性可能还有很多（具体如下）， 造成此类问题主要暂无**未找到解决办法**。
@@ -394,19 +404,19 @@ error, emb_g.weight is not in the checkpoint
     - 首次训练时没有出现这个错误，但是继续训练时也可能出现这个报错，此时删除模型存储的文件夹，再次重新从头训练就好。
 
 
-### 9.3 训练时显存溢出
+### 10.3 训练时显存溢出
 
 训练时如果报错显存溢出的话，那么可以通过调小 config.json 中 `train` 参数下 `batch_size` 来解决，默认情况下 `batch_size` 为 24，显存足够的情况也可以适当调大。
 
 
-### 9.4 训练后的模型合成音色奇怪
+### 10.4 训练后的模型合成音色奇怪
 
 如果合成后的音频音色奇怪，存在电音的并且吐字完全听不清的话，那么很有可能是设置 `epochs` 参数值过大，导致模型训练已经过拟合。
 
 解决办法是，修改 `epochs` 到一个比较合适的值，再重新进行训练。
 
 
-### 9.5 音频降噪步骤中提示 librosa 问题
+### 10.5 音频降噪步骤中提示 librosa 问题
 
 在使用 speech_dfsmn_ans_psm_48k_causal 对音频进行降噪时，提示 librosa 的错误，实际上是因为 librosa 版本的问题，解决方案如下(文件路径: modelscope/pipelines/audio/ans_dfsmn_pipeline.py):
 
@@ -415,7 +425,7 @@ data1 = librosa.resample(data1, orig_sr=fs, target_sr=self.SAMPLE_RATE)
 ```
 
 
-### 9.6 训练模型提示 librosa 问题
+### 10.6 训练模型提示 librosa 问题
 
 执行 `python train_ms.py -c config.json` 命令时，提示如下错误信息，其实是与上面一样的问题:
 
@@ -430,10 +440,6 @@ TypeError: mel() takes 0 positional arguments but 5 were given
 ```Python
 mel = librosa_mel_fn(sr=sampling_rate, n_fft=n_fft, n_mels=num_mels, fmin=fmin, fmax=fmax)
 ```
-
-
-
-
 
 
 <seealso>
