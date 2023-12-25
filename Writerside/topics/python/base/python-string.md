@@ -1,4 +1,4 @@
-# Python字符串
+# Python 字符串
 
 <show-structure for="chapter" depth="2"/>
 

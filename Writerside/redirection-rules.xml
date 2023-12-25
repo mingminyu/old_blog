@@ -14,4 +14,8 @@
         <description>Created after removal of "Python 基础" from 郁明敏的博客小站</description>
         <accepts>python-base.html</accepts>
     </rule>
+    <rule id="6393591f">
+        <description>Created after removal of "可视化" from 欢迎来到德莱联盟</description>
+        <accepts>tutorial-visualization.html</accepts>
+    </rule>
 </rules>

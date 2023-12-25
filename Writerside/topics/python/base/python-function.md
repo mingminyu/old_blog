@@ -1,0 +1,3 @@
+# Python 函数
+
+Start typing here...

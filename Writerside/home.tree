@@ -12,14 +12,66 @@
         <toc-element topic="python-base.topic">
             <toc-element topic="python-pkg-management.md"/>
             <toc-element topic="python-string.md"/>
+            <toc-element topic="python-control-flow.md"/>
+            <toc-element topic="python-regex.md"/>
+            <toc-element topic="python-function.md"/>
+            <toc-element topic="python-class.md"/>
+            <toc-element topic="python-exceptions.md"/>
         </toc-element>
-        <toc-element topic="python-advance.topic"/>
+        <toc-element topic="python-advance.topic">
+            <toc-element topic="python-logging.md"/>
+            <toc-element topic="python-decorator.md"/>
+            <toc-element topic="Python-mp.md"/>
+            <toc-element topic="python-packaging.md"/>
+            <toc-element topic="python-public-docs.md"/>
+        </toc-element>
+        <toc-element topic="python-pkgs.md">
+            <toc-element topic="scipy.md"/>
+            <toc-element topic="jupyter.md"/>
+            <toc-element topic="numpy.md"/>
+            <toc-element topic="rich.md"/>
+            <toc-element topic="python-sqlalchemy.md"/>
+            <toc-element topic="python-dask.md"/>
+            <toc-element topic="tqdm.md"/>
+            <toc-element topic="tenacity.md"/>
+            <toc-element topic="pyrind.md"/>
+            <toc-element topic="pandas.md"/>
+            <toc-element topic="pandassql.md"/>
+            <toc-element topic="pydantic.md"/>
+        </toc-element>
         <toc-element topic="python-web.topic">
+            <toc-element topic="uwsgi.md"/>
+            <toc-element topic="celery.md"/>
             <toc-element topic="tutorial-django.md"/>
             <toc-element topic="tutorial-flask.md"/>
             <toc-element topic="tutorial-fastapi.md"/>
+            <toc-element topic="jinja2.md"/>
             <toc-element topic="tutorial-sanic.md"/>
+            <toc-element topic="streamlit.md"/>
             <toc-element topic="tutorial-nicegui.md"/>
+        </toc-element>
+        <toc-element topic="python-connect-db.topic">
+            <toc-element topic="python-connect-impala.md"/>
+            <toc-element topic="python-connect-redis.md"/>
+        </toc-element>
+        <toc-element topic="python-crawler.topic">
+            <toc-element topic="python-beautifulsoup.md"/>
+            <toc-element topic="python-requests.md"/>
+            <toc-element topic="python-selenium.md"/>
+            <toc-element topic="scrapy.md"/>
+            <toc-element topic="pyspider.md"/>
+            <toc-element topic="pyppeteer.md"/>
+        </toc-element>
+        <toc-element topic="python-visualization.topic">
+            <toc-element topic="boken.md"/>
+            <toc-element topic="folium.md"/>
+            <toc-element topic="hvplot.md"/>
+            <toc-element topic="holoviews.md"/>
+            <toc-element topic="matplotlib.md"/>
+            <toc-element topic="superset.md"/>
+            <toc-element topic="seaborn.md"/>
+            <toc-element topic="plotly.md"/>
+            <toc-element topic="pyecharts.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="go.topic"/>
@@ -43,7 +95,6 @@
         </toc-element>
         <toc-element topic="tutorial-analysis.md"/>
     </toc-element>
-    <toc-element topic="tutorial-visualization.md"/>
     <toc-element topic="automation.topic"/>
     <toc-element topic="databases.topic">
         <toc-element topic="tutorial-clickhouse.md"/>
@@ -61,5 +112,4 @@
     <toc-element topic="vcs.topic">
         <toc-element topic="git.topic"/>
     </toc-element>
-    <toc-element topic="crawler.topic"/>
 </instance-profile>
