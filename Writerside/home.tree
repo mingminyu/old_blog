@@ -26,20 +26,22 @@
             <toc-element topic="python-public-docs.md"/>
         </toc-element>
         <toc-element topic="python-pkgs.md">
-            <toc-element topic="scipy.md"/>
+            <toc-element topic="python-dask.md"/>
             <toc-element topic="jupyter.md"/>
             <toc-element topic="numpy.md"/>
-            <toc-element topic="rich.md"/>
-            <toc-element topic="python-sqlalchemy.md"/>
-            <toc-element topic="python-dask.md"/>
-            <toc-element topic="tqdm.md"/>
-            <toc-element topic="tenacity.md"/>
-            <toc-element topic="pyrind.md"/>
             <toc-element topic="pandas.md"/>
             <toc-element topic="pandassql.md"/>
+            <toc-element topic="papermill.md"/>
             <toc-element topic="pydantic.md"/>
+            <toc-element topic="pyrind.md"/>
+            <toc-element topic="rich.md"/>
+            <toc-element topic="python-sqlalchemy.md"/>
+            <toc-element topic="scipy.md"/>
+            <toc-element topic="tqdm.md"/>
+            <toc-element topic="tenacity.md"/>
         </toc-element>
         <toc-element topic="python-web.topic">
+            <toc-element topic="uvicorn.md"/>
             <toc-element topic="flet.md"/>
             <toc-element topic="celery.md"/>
             <toc-element topic="tutorial-django.md"/>
@@ -95,6 +97,9 @@
     <toc-element topic="scala.topic">
     </toc-element>
     <toc-element topic="ai.topic">
+        <toc-element topic="chatbot.topic">
+            <toc-element topic="rasa.md"/>
+        </toc-element>
         <toc-element topic="asr.topic"/>
         <toc-element topic="dl.topic">
             <toc-element topic="keras.md"/>
