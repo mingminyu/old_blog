@@ -92,9 +92,20 @@
     </toc-element>
     <toc-element topic="go.topic"/>
     <toc-element topic="kotlin.topic"/>
-    <toc-element topic="java.topic"/>
+    <toc-element topic="java.topic">
+        <toc-element topic="java-base.topic"/>
+        <toc-element topic="java-advance.topic"/>
+        <toc-element topic="javaweb.topic">
+            <toc-element topic="springcloud.md"/>
+            <toc-element topic="springboot.topic"/>
+            <toc-element topic="spring.topic"/>
+        </toc-element>
+    </toc-element>
     <toc-element topic="rust.topic"/>
     <toc-element topic="scala.topic">
+        <toc-element topic="scala-base.topic"/>
+        <toc-element topic="scala-advance.topic"/>
+        <toc-element topic="scala-web.topic"/>
     </toc-element>
     <toc-element topic="ai.topic">
         <toc-element topic="chatbot.topic">
@@ -144,5 +155,13 @@
     </toc-element>
     <toc-element topic="vcs.topic">
         <toc-element topic="git.topic"/>
+        <toc-element topic="gitlab.topic"/>
+        <toc-element topic="github.topic"/>
+    </toc-element>
+    <toc-element topic="virtural-container.topic">
+        <toc-element topic="docker.topic"/>
+    </toc-element>
+    <toc-element topic="bigdata.topic">
+        <toc-element topic="spark.topic"/>
     </toc-element>
 </instance-profile>
