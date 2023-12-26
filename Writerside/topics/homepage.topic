@@ -13,7 +13,7 @@
 
         <!-- 最多选择两个 -->
         <spotlight>
-            <a href="%mysite%/python" type="start" summary="In this tutorial, You can learn basic and advanced python usages, different kinds frameworks of web development(like FastAPI, Django, Flask, Sanic, NiceGUI), and how to visualize data and automate your work, and so on.">Python 教程</a>
+            <a href="python.topic" type="start" summary="In this tutorial, You can learn basic and advanced python usages, different kinds frameworks of web development(like FastAPI, Django, Flask, Sanic, NiceGUI), and how to visualize data and automate your work, and so on.">Python 教程</a>
             <a href="%mysite%/llm" type="idea" summary="In this tutorial, If you are interested in LLM(Large Language Model), you can learn different usages of LLMs(like LLaMa, QWen, ChatGLM), including fine-tuning skills, prompt engineering and chatbot tools.">LLM 教程</a>
         </spotlight>
 

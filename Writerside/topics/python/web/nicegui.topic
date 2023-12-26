@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="NiceGUI 教程" id="nicegui" help-id="nicegui">
+
+    <section-starting-page>
+        <title>NiceGUI</title>
+        <description>
+            Add an introductory paragraph: explain what this section is about in 2-3 short sentences.
+        </description>
+
+        <!-- 最多选择两个 -->
+        <spotlight>
+            <a href="%mysite%/python" type="start" summary="In this tutorial, You can learn basic and advanced python usages, different kinds frameworks of web development(like FastAPI, Django, Flask, Sanic, NiceGUI), and how to visualize data and automate your work, and so on.">Python 教程</a>
+            <a href="%mysite%/llm" type="idea" summary="In this tutorial, If you are interested in LLM(Large Language Model), you can learn different usages of LLMs(like LLaMa, QWen, ChatGLM), including fine-tuning skills, prompt engineering and chatbot tools.">LLM 教程</a>
+        </spotlight>
+
+        <primary>
+            <title>Python 教程</title>
+            <a href="%mysite%/python-base" summary="basic data types, conditional control flow, programming styling, regex, package management">Python 基础</a>
+            <a href="%mysite%/python-advance" summary="usages of function, class, decorator, multi-process, logging, and so on">Python 进阶</a>
+            <a href="%mysite%/pycharm" summary="usages of pycharm">PyCharm 使用教程</a>
+        </primary>
+
+        <secondary>
+            <title>Explore advanced features</title>
+            <a href=""/>
+            <a href="" summary="With a custom card summary"/>
+            <a href="">Custom card title</a>
+            <a href="" summary="With a custom card summary">Custom card title</a>
+        </secondary>
+    </section-starting-page>
+</topic>

@@ -49,7 +49,9 @@
             <toc-element topic="flet.md"/>
             <toc-element topic="jinja2.md"/>
             <toc-element topic="locust.md"/>
-            <toc-element topic="nicegui.md"/>
+            <toc-element topic="nicegui.topic">
+                <toc-element topic="ng-examples.md"/>
+            </toc-element>
             <toc-element topic="reactpy.topic"/>
             <toc-element topic="sanic.md"/>
             <toc-element topic="streamlit.md"/>

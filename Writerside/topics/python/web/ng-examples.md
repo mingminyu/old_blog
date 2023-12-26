@@ -1,3 +1,3 @@
-# NiceGUI 教程
+# 应用示例
 
 Start typing here...
