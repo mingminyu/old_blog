@@ -25,6 +25,7 @@
             <toc-element topic="python-packaging.md"/>
             <toc-element topic="python-public-docs.md"/>
         </toc-element>
+        <toc-element topic="python-tips.md"/>
         <toc-element topic="python-pkgs.md">
             <toc-element topic="python-dask.md"/>
             <toc-element topic="jupyter.md"/>
@@ -41,18 +42,19 @@
             <toc-element topic="tenacity.md"/>
         </toc-element>
         <toc-element topic="python-web.topic">
-            <toc-element topic="uvicorn.md"/>
-            <toc-element topic="flet.md"/>
             <toc-element topic="celery.md"/>
-            <toc-element topic="tutorial-django.md"/>
-            <toc-element topic="tutorial-fastapi.md"/>
-            <toc-element topic="tutorial-flask.md"/>
+            <toc-element topic="django.md"/>
+            <toc-element topic="fastapi.md"/>
+            <toc-element topic="flask.md"/>
+            <toc-element topic="flet.md"/>
             <toc-element topic="jinja2.md"/>
             <toc-element topic="locust.md"/>
-            <toc-element topic="tutorial-nicegui.md"/>
-            <toc-element topic="tutorial-sanic.md"/>
+            <toc-element topic="nicegui.md"/>
+            <toc-element topic="reactpy.topic"/>
+            <toc-element topic="sanic.md"/>
             <toc-element topic="streamlit.md"/>
             <toc-element topic="uwsgi.md"/>
+            <toc-element topic="uvicorn.md"/>
         </toc-element>
         <toc-element topic="python-connect-db.topic">
             <toc-element topic="python-connect-impala.md"/>
@@ -90,8 +92,14 @@
             <toc-element topic="wxpython.md"/>
         </toc-element>
     </toc-element>
-    <toc-element topic="go.topic"/>
-    <toc-element topic="kotlin.topic"/>
+    <toc-element topic="go.topic">
+        <toc-element topic="go-advance.topic"/>
+        <toc-element topic="go-base.topic"/>
+    </toc-element>
+    <toc-element topic="kotlin.topic">
+        <toc-element topic="kotlin-base.topic"/>
+        <toc-element topic="kotlin-advance.topic"/>
+    </toc-element>
     <toc-element topic="java.topic">
         <toc-element topic="java-base.topic"/>
         <toc-element topic="java-advance.topic"/>
@@ -101,7 +109,10 @@
             <toc-element topic="spring.topic"/>
         </toc-element>
     </toc-element>
-    <toc-element topic="rust.topic"/>
+    <toc-element topic="rust.topic">
+        <toc-element topic="rust-base.topic"/>
+        <toc-element topic="rust-advance.topic"/>
+    </toc-element>
     <toc-element topic="scala.topic">
         <toc-element topic="scala-base.topic"/>
         <toc-element topic="scala-advance.topic"/>
@@ -140,6 +151,15 @@
         </toc-element>
         <toc-element topic="tutorial-analysis.md"/>
     </toc-element>
+    <toc-element topic="frontend.topic">
+        <toc-element topic="d3js.topic"/>
+        <toc-element topic="echartsjs.topic"/>
+        <toc-element topic="react.topic"/>
+        <toc-element topic="vue.topic"/>
+    </toc-element>
+    <toc-element topic="bigdata.topic">
+        <toc-element topic="spark.topic"/>
+    </toc-element>
     <toc-element topic="databases.topic">
         <toc-element topic="tutorial-clickhouse.md"/>
         <toc-element topic="tutorial-hive.md"/>
@@ -160,8 +180,5 @@
     </toc-element>
     <toc-element topic="virtural-container.topic">
         <toc-element topic="docker.topic"/>
-    </toc-element>
-    <toc-element topic="bigdata.topic">
-        <toc-element topic="spark.topic"/>
     </toc-element>
 </instance-profile>
