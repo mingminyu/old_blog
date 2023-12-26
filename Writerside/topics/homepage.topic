@@ -14,24 +14,24 @@
         <!-- 最多选择两个 -->
         <spotlight>
             <a href="python.topic" type="start" summary="In this tutorial, You can learn basic and advanced python usages, different kinds frameworks of web development(like FastAPI, Django, Flask, Sanic, NiceGUI), and how to visualize data and automate your work, and so on.">Python 教程</a>
-            <a href="%mysite%/llm" type="idea" summary="In this tutorial, If you are interested in LLM(Large Language Model), you can learn different usages of LLMs(like LLaMa, QWen, ChatGLM), including fine-tuning skills, prompt engineering and chatbot tools.">LLM 教程</a>
+            <a href="llm.topic" type="idea" summary="In this tutorial, If you are interested in LLM(Large Language Model), you can learn different usages of LLMs(like LLaMa, QWen, ChatGLM), including fine-tuning skills, prompt engineering and chatbot tools.">LLM 教程</a>
         </spotlight>
 
         <primary>
             <title>Python 教程</title>
-            <a href="%mysite%/python-base" summary="basic data types, conditional control flow, programming styling, regex, package management">Python 基础</a>
-            <a href="%mysite%/python-advance" summary="usages of function, class, decorator, multi-process, logging, and so on">Python 进阶</a>
-            <a href="%mysite%/pycharm" summary="advances usages of pycharm">PyCharm 使用教程</a>
+            <a href="python-base.topic" summary="basic data types, conditional control flow, programming styling, regex, package management">Python 基础</a>
+            <a href="python-advance.topic" summary="usages of function, class, decorator, multi-process, logging, and so on">Python 进阶</a>
+            <a href="pycharm.md" summary="advances usages of pycharm">PyCharm 使用教程</a>
         </primary>
 
         <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
         <secondary>
             <title>AI 教程</title>
-            <a href="%mysite%/llm" summary="usages of llm">LLM 教程</a>
-            <a href="%mysite%/ml" summary="In this tutorial, you can learn to build machine learning models(like Logistic Regression, XGBoost, LightGBM).">ML 教程</a>
-            <a href="%mysite%/asr" summary="In this tutorial, you can learn transcribe text content of audios with asr model.">ASR 教程</a>
-            <a href="%mysite%/tts" summary="In this tutorial, you can learn transfer text into audios with tts model.">TTS 教程</a>
-            <a href="%mysite%/label-studio" summary="In this tutorial, you can learn how to use label studio.">Label Studio 教程</a>
+            <a href="llm.topic" summary="usages of llm">LLM 教程</a>
+            <a href="ml.topic" summary="In this tutorial, you can learn to build machine learning models(like Logistic Regression, XGBoost, LightGBM).">ML 教程</a>
+            <a href="asr.topic" summary="In this tutorial, you can learn transcribe text content of audios with asr model.">ASR 教程</a>
+            <a href="tts.topic" summary="In this tutorial, you can learn transfer text into audios with tts model.">TTS 教程</a>
+            <a href="label-studio.md" summary="In this tutorial, you can learn how to use label studio.">Label Studio 教程</a>
         </secondary>
 
         <misc>
