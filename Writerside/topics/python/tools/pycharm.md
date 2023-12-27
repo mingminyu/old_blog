@@ -1,8 +1,8 @@
 # PyCharm 教程
 
+<show-structure depth="2"/>
 
 如果你使用的技术是 Python 生态圈的话，那么一定对 PyCharm 不陌生，可以说它是最好的一款 Python 编码的 IDE。本篇文章，我们介绍一下 PyCharm 的使用，熟悉这些操作可以让整个编码效率大大提升。
-
 
 ## 1. 快捷键
 
