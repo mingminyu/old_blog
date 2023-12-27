@@ -58,5 +58,15 @@
 
 ## 3. 激活专业版
 
+访问[网站](https://www.ajihuo.com/pycharm/4197.html) 获取 PyCharm 激活码，注意需要关注公众通过验证码才可以获取激活码，通常一个激活码也可以激活 IDEA、WebStorm、PhpStorm、GoLand 其他产品。
+
+
+> 如果你有 edu 教育邮箱的话，也可以直接去 JetBrains 官网申请免费资格，可以开庭 JetBrains 全家桶。
 
 ## 4. 常见问题
+
+### 4.1 IPython 控制台输出乱码
+
+在 2022.2 版本的 PyCharm 中会出现 IPython 控制台输出中文时出现乱码的情况，导致这个问题出现的原因是缺少 `PYTHONIOENCODING` 环境变量导致，我们需要给 PyCharm 正确设置好该环境变量。
+
+**解决方法**: 打开 <ui-path>文件 | 设置 | 构建、执行、部署 | 控制台 | Python 控制台</ui-path>，添加环境变量 `PYTHONIOENCODING='UTF8'` ，重启 PyCharm 后再次 打开 IPython 控制台就可以正常输出中文。

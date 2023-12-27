@@ -183,4 +183,7 @@
     <toc-element topic="virtural-container.topic">
         <toc-element topic="docker.topic"/>
     </toc-element>
+    <toc-element topic="softwares.topic">
+        <toc-element topic="copilot-free-activation.md"/>
+    </toc-element>
 </instance-profile>
