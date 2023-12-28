@@ -156,7 +156,9 @@
     </toc-element>
     <toc-element topic="frontend.topic">
         <toc-element topic="d3js.topic"/>
-        <toc-element topic="echartsjs.topic"/>
+        <toc-element topic="echartsjs.topic">
+            <toc-element topic="echarts-graph.md"/>
+        </toc-element>
         <toc-element topic="react.topic"/>
         <toc-element topic="vue.topic"/>
     </toc-element>
