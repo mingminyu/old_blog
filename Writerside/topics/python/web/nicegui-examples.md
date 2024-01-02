@@ -8,7 +8,7 @@ NiceGUI 提供了一个简单的 [ChatApp 的示例](https://github.com/zauberze
 
 ### 1.1 源码分析
 
-以下具体应用的源码，值得注意的是，`ui.chat_message` 组件库只能输出纯文本，无法显示 Markdown 形式的内容:
+以下具体应用的源码，通过 `ui.chat_message` 组件来构建出一个对话界面。
 
 ```Python
 from uuid import uuid4
@@ -64,11 +64,15 @@ async def main(client: Client):
 
 ui.run()
 ```
+{ collapsible="true" default-state="collapsed" collapsed-title="NiceGUI ChatApp 示例代码"}
+
+
+> 值得注意的是，`ui.chat_message` 组件库只能输出纯文本，无法显示 Markdown 形式的内容。
+{style="warning"}
 
 ### 1.2 界面预览
 
 ![ChatApp](%myimgs%/nicegui-chatapp.png?raw=true)
-
 
 
 <seealso>
