@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="home"
-                 name="欢迎来到德莱联盟"
+                 name="AiFun"
                  start-page="homepage.topic">
     <toc-element topic="homepage.topic"/>
     <toc-element topic="python.topic">
@@ -79,7 +79,9 @@
             <toc-element topic="hvplot.md"/>
             <toc-element topic="matplotlib.md"/>
             <toc-element topic="plotly.md"/>
-            <toc-element topic="pyecharts.md"/>
+            <toc-element topic="pyecharts.md">
+                <toc-element topic="pyecharts_gallery.md"/>
+            </toc-element>
             <toc-element topic="seaborn.md"/>
             <toc-element topic="superset.md"/>
         </toc-element>
@@ -133,11 +135,11 @@
             <toc-element topic="tensorflow.md"/>
         </toc-element>
         <toc-element topic="llm.topic">
+            <toc-element topic="chatglm.topic">
+                <toc-element topic="chatglm_extract_entities_info.md"/>
+            </toc-element>
+            <toc-element topic="qwen.topic"/>
             <toc-element topic="llm-tools.md"/>
-        </toc-element>
-        <toc-element topic="label-studio.md">
-            <toc-element topic="labelstudio-templates.md"/>
-            <toc-element topic="labelstudio-faq.md"/>
         </toc-element>
         <toc-element topic="ml.topic">
             <toc-element topic="catboost.md"/>
@@ -151,6 +153,10 @@
         </toc-element>
         <toc-element topic="tts.topic">
             <toc-element topic="pytts-bert-vits2.md"/>
+        </toc-element>
+        <toc-element topic="label-studio.md">
+            <toc-element topic="labelstudio-templates.md"/>
+            <toc-element topic="labelstudio-faq.md"/>
         </toc-element>
         <toc-element topic="tutorial-analysis.md"/>
     </toc-element>

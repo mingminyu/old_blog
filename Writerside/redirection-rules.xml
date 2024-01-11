@@ -18,4 +18,12 @@
         <description>Created after removal of "可视化" from 欢迎来到德莱联盟</description>
         <accepts>tutorial-visualization.html</accepts>
     </rule>
+    <rule id="58d32bec">
+        <description>Created after removal of "test" from 欢迎来到德莱联盟</description>
+        <accepts>test.html</accepts>
+    </rule>
+    <rule id="54b31347">
+        <description>Created after removal of "ChatGLM进行信息抽取" from 欢迎来到德莱联盟</description>
+        <accepts>ChatGLM进行信息抽取.html</accepts>
+    </rule>
 </rules>

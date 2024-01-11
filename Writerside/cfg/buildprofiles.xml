@@ -12,4 +12,9 @@
     <footer>
         <copyright>2023.11.28</copyright>
     </footer>
+    <build-profile instance="home">
+        <variables>
+            <noindex-content>true</noindex-content>
+        </variables>
+    </build-profile>
 </buildprofiles>
