@@ -27,7 +27,9 @@
         </toc-element>
         <toc-element topic="python-tips.md"/>
         <toc-element topic="python-pkgs.md">
-            <toc-element topic="python-dask.md"/>
+            <toc-element topic="dask.md"/>
+            <toc-element topic="envoy.md"/>
+            <toc-element topic="huey.md"/>
             <toc-element topic="jupyter.md"/>
             <toc-element topic="numpy.md"/>
             <toc-element topic="pandas.md"/>
@@ -38,8 +40,15 @@
             <toc-element topic="rich.md"/>
             <toc-element topic="python-sqlalchemy.md"/>
             <toc-element topic="scipy.md"/>
+            <toc-element topic="sqlglot.md"/>
             <toc-element topic="tqdm.md"/>
+            <toc-element topic="tortoiseorm.topic">
+                <toc-element topic="tortoiseorm_filter.md"/>
+            </toc-element>
             <toc-element topic="tenacity.md"/>
+            <toc-element topic="whoosh.topic">
+                <toc-element topic="whoosh_quickstart.md"/>
+            </toc-element>
         </toc-element>
         <toc-element topic="python-web.topic">
             <toc-element topic="atomui.md"/>
@@ -128,17 +137,15 @@
             <toc-element topic="rasa.md"/>
         </toc-element>
         <toc-element topic="asr.topic"/>
-        <toc-element topic="dl.topic">
-            <toc-element topic="keras.md"/>
-            <toc-element topic="paddlepaddle.md"/>
-            <toc-element topic="pytorch.md"/>
-            <toc-element topic="tensorflow.md"/>
-        </toc-element>
         <toc-element topic="llm.topic">
+            <toc-element topic="llm_overview.md"/>
             <toc-element topic="chatglm.topic">
                 <toc-element topic="chatglm_extract_entities_info.md"/>
+                <toc-element topic="chatglm3_quickstart.md"/>
+                <toc-element topic="chatglm4_overview.md"/>
             </toc-element>
             <toc-element topic="qwen.topic"/>
+            <toc-element topic="qwen_call_tool.md"/>
             <toc-element topic="llm-tools.md"/>
         </toc-element>
         <toc-element topic="ml.topic">
@@ -150,6 +157,12 @@
             <toc-element topic="statsmodel.md"/>
             <toc-element topic="toad.md"/>
             <toc-element topic="xgboost.md"/>
+        </toc-element>
+        <toc-element topic="dl.topic">
+            <toc-element topic="keras.md"/>
+            <toc-element topic="paddlepaddle.md"/>
+            <toc-element topic="pytorch.md"/>
+            <toc-element topic="tensorflow.md"/>
         </toc-element>
         <toc-element topic="tts.topic">
             <toc-element topic="pytts-bert-vits2.md"/>
@@ -182,6 +195,9 @@
         <toc-element topic="tutorial-rabbitmq.md"/>
         <toc-element topic="tutorial-rocketmq.md"/>
         <toc-element topic="tutorial-sqlite.md"/>
+        <toc-element topic="presto.topic">
+            <toc-element topic="presto_orderby.md"/>
+        </toc-element>
         <toc-element topic="tutorial-postgresql.md"/>
     </toc-element>
     <toc-element topic="vcs.topic">

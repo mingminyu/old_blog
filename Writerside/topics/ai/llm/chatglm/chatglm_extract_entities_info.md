@@ -1,4 +1,4 @@
-# ChatGLM2 实体抽取
+# ChatGLM2实体抽取
 
 <show-structure depth="2" />
 
@@ -59,9 +59,6 @@
 
 
 ![消融试验](https://pic2.zhimg.com/80/v2-81edc405bae74ab9edbd168a081c77ed_720w.webp)
-
-
-
 
 
 
