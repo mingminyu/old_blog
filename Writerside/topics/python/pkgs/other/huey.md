@@ -78,7 +78,7 @@ def cleanup_expired_data():
 
 在这个例子中，我们使用了 Huey 的 `crontab` 来设置任务的执行时间。`cleanup_expired_data` 任务会在每天凌晨 3 点执行，自动清理超过 30 天的数据。
 
-更多关于 Huey 的使用方法，请参与 [Huey 官方文档](https://huey.readthedocs.io/en/latest)。
+更多关于 Huey 的使用方法，请参阅 [Huey 官方文档](https://huey.readthedocs.io/en/latest)。
 
 <seealso>
 <category ref="ref_docs">
