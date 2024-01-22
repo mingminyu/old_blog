@@ -33,7 +33,7 @@ GLM-4 实现自主根据用户意图，自动理解、规划复杂指令，自�
 
 **All Tools——Function Call**：GLM4 能够根据用户提供的Function 描述，自动选择所需 Function 并生成参数，以及根据 Function 的返回值生成回复；同时也支持一次输入进行多次 Function 调用，支持包含中文及特殊符号的 Function 名字。这一方面GLM-4 All Tools 与 GPT4 Turbo 相当。
 
-> 这个在 GLM3 中也有了，且 QWEN 似乎这一块做得更好，代码这块也。
+> 这个在 GLM3 中也有了，且 QWEN 在这一块功能性做得更好，后续可以单独研究下。
 
 
 **All Tools——多工具自动调用**：除了以上单项工具自动调用外，GLM4 同样能够实现多工具自动调用，例如结合**网页浏览、CogView3、代码解释器等**的调用方式。
@@ -52,8 +52,6 @@ GLM4 的全线能力提升使得我们有机会探索真正意义上的 GLMs。
 
 <seealso>
 <category ref="ref_docs">
-<a href="https://mp.weixin.qq.com/s/QfVM52oecfjLVDz-EXRyHA?wxwork_userid=JiaWei">新一代基座模型GLM4</a>
+    <a href="https://mp.weixin.qq.com/s/QfVM52oecfjLVDz-EXRyHA?wxwork_userid=JiaWei">新一代基座模型GLM4</a>
 </category>
 </seealso>
-
-

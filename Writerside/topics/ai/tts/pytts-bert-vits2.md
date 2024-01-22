@@ -442,7 +442,10 @@ TypeError: mel() takes 0 positional arguments but 5 were given
 这是因为代码中使用 librosa 库版本的问题，需要更改下 mel_processing.py 中的相关代码，此类错误共有 2 处，都需要修改。
 
 ```Python
-mel = librosa_mel_fn(sr=sampling_rate, n_fft=n_fft, n_mels=num_mels, fmin=fmin, fmax=fmax)
+mel = librosa_mel_fn(
+    sr=sampling_rate, n_fft=n_fft, 
+    n_mels=num_mels, fmin=fmin, fmax=fmax
+    )
 ```
 
 
@@ -461,7 +464,7 @@ mel = librosa_mel_fn(sr=sampling_rate, n_fft=n_fft, n_mels=num_mels, fmin=fmin, 
         <a href="https://modelscope.cn/models/damo/speech_dfsmn_ans_psm_48k_causal/summary">DFSMN语音降噪-单麦-48k-实时近场</a>
         <a href="https://modelscope.cn/models/damo/speech_fsmn_vad_zh-cn-16k-common-pytorch/summary">FSMN语音端点检测-中文通用-16k</a>
     </category>
-    <category ref="ref_github_issues">
+    <category ref="ref_issues">
         <a href="https://github.com/YYuX-1145/Bert-VITS2-Integration-package/issues/19">YYuX-1145/Bert-VITS2-Integration-package#19</a>
         <a href="https://github.com/coqui-ai/TTS/issues/2555">coqui-ai/TTS#2555</a>
         <a href="https://github.com/coqui-ai/TTS/issues/1949">coqui-ai/TTS#1949</a>

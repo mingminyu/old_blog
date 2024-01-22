@@ -26,4 +26,8 @@
         <description>Created after removal of "ChatGLM进行信息抽取" from 欢迎来到德莱联盟</description>
         <accepts>ChatGLM进行信息抽取.html</accepts>
     </rule>
+    <rule id="3589d8d5">
+        <description>Created after removal of "Python 文件读取" from AiFun</description>
+        <accepts>python_read_files.html</accepts>
+    </rule>
 </rules>

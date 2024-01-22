@@ -27,14 +27,15 @@ pip install -r requirements.txt
 
 ## 2. 使用
 
+ChatGLM3 在 ChatGLM2 在使用上差异性并不大，都是使用如下代码进行调用。
 
 ```Python
 from transformers import AutoTokenizer, AutoModel
 
-tokenizer = AutoTokenizer.from_pretrained(
-                "THUDM/chatglm3-6b", trust_remote_code=True)
+model_id = "THUDM/chatglm3-6b"
+tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
 model = AutoModel.from_pretrained(
-        "THUDM/chatglm3-6b", trust_remote_code=True, device='cuda'
+            model_id, trust_remote_code=True, device='cuda'
         )
 model = model.eval()
 
@@ -160,7 +161,7 @@ def chat(
 
 
 <seealso>
-<category ref="ref_github_issues">
+<category ref="ref_issues">
     <a href="https://github.com/QwenLM/Qwen/issues/527">qwen-7b-chat推理效率随着遍历时间逐渐增加</a>
 </category>
 </seealso>
