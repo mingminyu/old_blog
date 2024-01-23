@@ -4,15 +4,26 @@
 
 本节我们简要介绍如何基于 transformers、peft 等框架，对 ChatGLM3-6B-chat 模型进行 Lora 微调。Lora 是一种高效微调方法，深入了解其原理可参见博客[深入浅出LORA](https://zhuanlan.zhihu.com/p/650197598)。
 
+
+> 本项目代码是有问题的，显然不能够得到预期结果。
+{style="warning"}
+
+
 ## 1. 环境配置
 
 在完成基本环境配置和本地模型部署的情况下，你还需要安装一些第三方库，可以使用以下命令：
 
 ```Bash
-pip install transformers==4.36.0.dev0
-pip install peft==0.4.0.dev0
-pip install datasets==2.10.1
-pip install accelerate==0.20.3
+pip install pydantic
+pip install pyyaml
+pip install peft
+pip install torch==2.0.1
+pip install transformers>=4.36.2
+pip install datasets>=2.16.0
+pip install astunparse>=1.6.3
+pip install accelerate>=0.25.0
+pip install sentencepiece>=0.1.99
+pip install deepspeed>=0.12.6
 ```
 
 ## 2. 指令集构建
@@ -48,9 +59,10 @@ def process_func(example: Dict[str, str]):
     MAX_LENGTH = 512
     input_ids, labels = [], []
     instruction = tokenizer.encode(
+        # 参考代码中有一点错误，这里 `intruction` 应该直接作为 system 的 prompt
         text="\n".join([
-                "<|system|>", "现在你要扮演皇帝身边的女人--甄嬛", "<|user|>", 
-                example["instruction"] + example["input"] + "<|assistant|>"
+                "<|system|>", example["instruction"], "<|user|>", 
+                 example["input"] + "<|assistant|>"
                  ]).strip() + "\n",
         add_special_tokens=True, truncation=True, max_length=MAX_LENGTH
         )
@@ -71,7 +83,8 @@ def process_func(example: Dict[str, str]):
     input_ids += [tokenizer.pad_token_id] * pad_len
     labels += [tokenizer.pad_token_id] * pad_len
     labels = [
-        (l if l != tokenizer.pad_token_id else -100) for l in labels
+        label if label != tokenizer.pad_token_id else -100 
+        for label in labels
         ]
 
     return {"input_ids": input_ids, "labels": labels}
@@ -103,7 +116,7 @@ tokenizer = AutoTokenizer.from_pretrained(
     )
 
 # 模型以半精度形式加载，
-# 如果显卡比较新的话，可以用 torch.bfolat 形式加载
+# 如果显卡比较新的话，可以用 `torch.bfolat`673 形式加载
 model = AutoModelForCausalLM.from_pretrained(
     './model/chatglm3-6b', 
     trust_remote_code=True, 
@@ -131,9 +144,22 @@ config = LoraConfig(
     target_modules=["query_key_value"],
     inference_mode=False,  # 训练模式
     r=8,  # Lora 秩
-    lora_alpha=32,  # Lora alaph
+    lora_alpha=32,  # Lora alpha
     lora_dropout=0.1  # Dropout 比例
 )
+
+model = get_peft_model(model, config)
+model.print_trainable_parameters()
+```
+
+通过 `print_trainable_parameters` 方法可以打印出可微调的参数量。
+
+```Python
+{
+    "trainable params": 1_949_696,
+    "all params": 6_245_533_696,
+    "trainable%": 0.03122
+}
 ```
 
 ## 6. 自定义 TrainingArguments 参数
@@ -225,11 +251,11 @@ p_model = PeftModel.from_pretrained(
     model_id="./output/ChatGLM/checkpoint-1000/"
     )  
 
-ipt = tokenizer(
+input_ = tokenizer(
     "<|system|>\n现在你要扮演皇帝身边的女人--甄嬛\n<|user|>\n {}\n{}".format("你是谁？", "").strip() + "<|assistant|>\n", 
     return_tensors="pt").to(model.device)
 tokenizer.decode(
-    p_model.generate(**ipt, max_length=128, do_sample=True)[0], 
+    p_model.generate(**input_, max_length=128, do_sample=True)[0], 
     skip_special_tokens=True
     )
 ```
@@ -237,7 +263,7 @@ tokenizer.decode(
 
 ## 9. 完整项目
 
-这里对项目代码进行了重构，详见 [ChatGLM3-LoRaTuning]()。
+这里对项目代码进行了重构，详见 [ChatGLM3-FineTuning](https://github.com/mingminyu/ChatGLM3-FineTuning)。
 
 
 <seealso>

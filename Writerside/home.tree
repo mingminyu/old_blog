@@ -63,7 +63,9 @@
             <toc-element topic="httpx.md"/>
             <toc-element topic="huey.md"/>
             <toc-element topic="interpret.md"/>
-            <toc-element topic="jupyter.md"/>
+            <toc-element topic="jupyter.md">
+                <toc-element topic="jupyter_kernel_usage.md"/>
+            </toc-element>
             <toc-element topic="klib.md"/>
             <toc-element topic="kornia.md"/>
             <toc-element topic="lazypredict.md">
@@ -249,6 +251,42 @@
         <toc-element topic="scala-web.topic"/>
     </toc-element>
     <toc-element topic="ai.topic">
+        <toc-element topic="asr.topic"/>
+        <toc-element topic="chatbot.topic">
+            <toc-element topic="rasa.md"/>
+            <toc-element topic="chatkbqa_llm.md"/>
+        </toc-element>
+        <toc-element topic="dl.topic">
+            <toc-element topic="torchexplorer.md"/>
+            <toc-element topic="keras.md"/>
+            <toc-element topic="paddlepaddle.md"/>
+            <toc-element topic="pytorch.md"/>
+            <toc-element topic="tensorflow.md"/>
+        </toc-element>
+        <toc-element topic="llm.topic">
+            <toc-element topic="chatglm.topic">
+                <toc-element topic="chatglm_extract_entities_info.md"/>
+                <toc-element topic="chatglm3_quickstart.md"/>
+                <toc-element topic="chatglm3-finetuning.md"/>
+                <toc-element topic="chatglm3_lora_finetuning.md"/>
+                <toc-element topic="chatglm4_overview.md"/>
+            </toc-element>
+            <toc-element topic="llm-finetune.md"/>
+            <toc-element topic="llm-tools.md"/>
+            <toc-element topic="langchain.topic">
+                <toc-element topic="langchain_rag.md"/>
+            </toc-element>
+            <toc-element topic="llama2-finetune.topic">
+                <toc-element topic="llama2-chatmodel-finetune.md"/>
+            </toc-element>
+            <toc-element topic="llm_overview.md"/>
+            <toc-element topic="qwen_call_tool.md"/>
+            <toc-element topic="qwen.topic"/>
+        </toc-element>
+        <toc-element topic="label-studio.md">
+            <toc-element topic="labelstudio-templates.md"/>
+            <toc-element topic="labelstudio-faq.md"/>
+        </toc-element>
         <toc-element topic="ml.topic">
             <toc-element topic="hdbscan.md"/>
             <toc-element topic="lime.md"/>
@@ -276,44 +314,8 @@
             <toc-element topic="xgboost.md"/>
             <toc-element topic="bagging_boosting_overview.md"/>
         </toc-element>
-        <toc-element topic="chatbot.topic">
-            <toc-element topic="rasa.md"/>
-            <toc-element topic="chatkbqa_llm.md"/>
-        </toc-element>
-        <toc-element topic="asr.topic"/>
-        <toc-element topic="llm.topic">
-            <toc-element topic="chatglm.topic">
-                <toc-element topic="chatglm_extract_entities_info.md"/>
-                <toc-element topic="chatglm3_quickstart.md"/>
-                <toc-element topic="chatglm3-finetuning.md"/>
-                <toc-element topic="chatglm3_lora_finetuning.md"/>
-                <toc-element topic="chatglm4_overview.md"/>
-            </toc-element>
-            <toc-element topic="llm-finetune.md"/>
-            <toc-element topic="llm-tools.md"/>
-            <toc-element topic="langchain.topic">
-                <toc-element topic="langchain_rag.md"/>
-            </toc-element>
-            <toc-element topic="llama2-finetune.topic">
-                <toc-element topic="llama2-chatmodel-finetune.md"/>
-            </toc-element>
-            <toc-element topic="llm_overview.md"/>
-            <toc-element topic="qwen_call_tool.md"/>
-            <toc-element topic="qwen.topic"/>
-        </toc-element>
-        <toc-element topic="dl.topic">
-            <toc-element topic="torchexplorer.md"/>
-            <toc-element topic="keras.md"/>
-            <toc-element topic="paddlepaddle.md"/>
-            <toc-element topic="pytorch.md"/>
-            <toc-element topic="tensorflow.md"/>
-        </toc-element>
         <toc-element topic="tts.topic">
             <toc-element topic="pytts-bert-vits2.md"/>
-        </toc-element>
-        <toc-element topic="label-studio.md">
-            <toc-element topic="labelstudio-templates.md"/>
-            <toc-element topic="labelstudio-faq.md"/>
         </toc-element>
         <toc-element topic="tutorial-analysis.md"/>
     </toc-element>

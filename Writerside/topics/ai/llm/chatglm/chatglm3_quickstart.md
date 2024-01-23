@@ -1,4 +1,4 @@
-# ChatGLM3初步使用
+# ChatGLM3 初步使用
 
 <show-structure depth="2"/>
 

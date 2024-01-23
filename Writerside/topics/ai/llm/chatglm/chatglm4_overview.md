@@ -1,4 +1,4 @@
-# ChatGLM4发布预览
+# ChatGLM4 发布预览
 
 <show-structure depth="2"/>
 

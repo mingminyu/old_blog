@@ -1,4 +1,4 @@
-# ChatGLM3官方微调教程
+# ChatGLM3 官方微调教程
 
 <show-structure depth="2"/>
 

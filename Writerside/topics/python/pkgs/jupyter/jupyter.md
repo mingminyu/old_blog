@@ -1,3 +1,4 @@
 # Jupyter 教程
 
-Start typing here...
+<show-structure depth="2"/>
+

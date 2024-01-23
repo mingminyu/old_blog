@@ -1,4 +1,4 @@
-# ChatGLM2实体抽取
+# ChatGLM2 实体抽取
 
 <show-structure depth="2" />
 
