@@ -1,11 +1,11 @@
-# ChatGLM3 LORA微调
+# ChatGLM3 ChatModel LORA 微调
 
 <show-structure depth="2"/>
 
 本节我们简要介绍如何基于 transformers、peft 等框架，对 ChatGLM3-6B-chat 模型进行 Lora 微调。Lora 是一种高效微调方法，深入了解其原理可参见博客[深入浅出LORA](https://zhuanlan.zhihu.com/p/650197598)。
 
 
-> 本项目代码是有问题的，显然不能够得到预期结果。
+> 参考项目代码是有问题的，目前不能得到预期结果，还需要进一步探索。
 {style="warning"}
 
 
@@ -261,9 +261,6 @@ tokenizer.decode(
 ```
 
 
-## 9. 完整项目
-
-这里对项目代码进行了重构，详见 [ChatGLM3-FineTuning](https://github.com/mingminyu/ChatGLM3-FineTuning)。
 
 
 <seealso>

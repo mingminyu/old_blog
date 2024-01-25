@@ -1,4 +1,4 @@
-# ChatGLM3 官方微调教程
+# ChatGLM3 ChatModel 官方微调教程
 
 <show-structure depth="2"/>
 
@@ -10,7 +10,7 @@
 
 ## 1. 依赖环境
 
-运行示例需要 python>=3.10，除基础的 `torch` 依赖外，示例代码运行还需要依赖，在官方仓库中找到 finetune_chatmoel_demo/requirements.txt 下载到项目中，执行如下代码：
+运行示例需要 python>=3.10，除基础的 `torch` 依赖外，示例代码运行还需要依赖，在官方仓库中找到 finetune_chatmodel_demo/requirements.txt 下载到项目中，执行如下代码：
 
 ```Bash
 pip install -r requirements.txt
@@ -212,6 +212,9 @@ pip install -r requirements.txt
         </code-block>
     </tab>
 </tabs>
+
+
+如果是 P-Tuning 的微调方式，实际应用中发现使用 `model.generate` 可以得到预期结果，但是如果直接使用 `model.chat` 的方式，所得到的效果会比较差，原因在于 `model.chat` 会以多轮对话形式将输入进行 token 化之后再进行推理，所得到的数据格式与微调数据本身就存在较大差异。而 `model.generate` 则是直接对输入的 `input_ids` 进行的操作，所以能和微调数据保持一致。
 
 
 ### 3.4 提示

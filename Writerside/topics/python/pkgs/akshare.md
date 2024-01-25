@@ -316,6 +316,7 @@ Akshare 更多是一个数据获取工具，但由于它返回的是 DataFrame �
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/d3TYcwmFqENxNHEDP7ihNA">Akshare 简介</a>
+    <a href="https://akshare.akfamily.xyz/index.html">Akshare 文档</a>
 </category>
 <category ref="ref_github">
 </category>

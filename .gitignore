@@ -10,7 +10,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+Writerside/topics/python/pkgs/built-in/
 develop-eggs/
 dist/
 downloads/
