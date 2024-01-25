@@ -56,10 +56,10 @@ jobs:
           path: artifacts/${{ env.ALGOLIA_ARTIFACT }}
           retention-days: 7
 
-  # Add the job below and artifacts/report.json on Upload documentation step above if you want to fail the built-in when documentation contains errors
+  # Add the job below and artifacts/report.json on Upload documentation step above if you want to fail the build when documentation contains errors
   test:
-    # Requires built-in job results
-    needs: built-in
+    # Requires build job results
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -78,7 +78,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    # Requires the built-in job results
+    # Requires the build job results
     needs: test
     runs-on: ubuntu-latest
     steps:
