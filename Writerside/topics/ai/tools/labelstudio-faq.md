@@ -70,7 +70,7 @@ python server.py
 在 Label Studio 安装包路径下新建 core/recordings 文件夹，将所有音频放进去，那么我们就可以在模板中直接使用 `http://127.0.0.1:8000/static/recordings/test.wav` 来访问（使用 1.2.3.4 或者 localhost 都可以）。
 
 ```Text
-PYTHONENV/lib/python3.x/site-packages/label_studio/core/static_build
+PYTHONENV/lib/python3.10/site-packages/label_studio/core/static_build
 ```
 
 > 当然浏览器与服务网络不同的情况下，本身服务是通过 NGINX 反向代理开启的，那么需要使用**域名**代替 `IP:端口`，比如使用 `http://label-studio.ai.com/static/recordings/test.wav` 来获取音频文件。

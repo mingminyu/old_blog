@@ -6,93 +6,64 @@
        title="ChatGLM" id="chatglm">
 
     <section-starting-page>
-        <title>Section starting page title</title>
+        <title>ChatGLM 教程</title>
         <description>
-            Add an introductory paragraph: explain what this section is about in 2-3 short sentences.
+            主要包含 ChatGLM 大模型的应用方式以及微调方法。
         </description>
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="" type="account" summary="This overrides the card summary of the topic">Custom card title</a>
-            <a href="" type="search" summary="This overrides the card summary of the topic">Another custom title</a>
+            <a href="chatglm4_overview.md" type="open-source">ChatGLM4 发布预览</a>
+            <a href="chatglm3-finetuning.md" type="search">ChatGLM3 官方微调教程</a>
         </spotlight>
 
-        <!--    Add several topics that are most important for this section.    -->
         <primary>
-            <title>Get started</title>
-            <a href=""/>
-            <a href="" summary="With a custom card summary"/>
-            <a href="">Custom card title</a>
-            <a href="" summary="With a custom card summary">Custom card title</a>
+            <title>ChatGLM3 系列</title>
+            <a href="chatglm3_quickstart.md"/>
+            <a href="chatglm3-finetuning.md"/>
+            <a href="chatglm3_chatmodel_multiturn_ptuning.md"/>
+            <a href="chatglm3_lora_finetuning.md"/>
         </primary>
 
-        <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
         <secondary>
-            <title>Explore advanced features</title>
-            <a href=""/>
-            <a href="" summary="With a custom card summary"/>
-            <a href="">Custom card title</a>
-            <a href="" summary="With a custom card summary">Custom card title</a>
+            <title>ChatGLM2 系列</title>
+            <a href="chatglm_extract_entities_info.md" />
         </secondary>
 
-        <!--    Optionally add additional cards and links to topics that are not in this section but may be relevant.    -->
         <misc>
             <cards>
-                <title>Other relevant topics as wide cards</title>
-                <a href=""/>
-                <a href="" summary="With a custom card summary"/>
-                <a href="">Custom card title</a>
-                <a href="" summary="With a custom card summary">Custom card title</a>
+                <title>ChatGLM 常见问题</title>
+                <a href="chatglm_faq.md"/>
             </cards>
 
             <cards narrow="true">
                 <title>Other relevant topics as narrow cards</title>
                 <a href=""/>
-                <a href=""/>
-                <a href="" summary="With a custom card summary"/>
-                <a href="">Custom card title</a>
-                <a href="">Custom card title</a>
-                <a href="" summary="With a custom card summary">Custom card title</a>
             </cards>
 
             <links>
                 <group>
                     <title>Other related topics as links</title>
                     <a href=""/>
-                    <a href="" summary="With a custom card summary"/>
-                    <a href="">Custom card title</a>
-                    <a href="" summary="With a custom card summary">Custom card title</a>
                 </group>
                 <group>
                     <title>Two in a row</title>
                     <a href=""/>
-                    <a href="" summary="With a custom card summary"/>
-                    <a href="">Custom card title</a>
-                    <a href="" summary="With a custom card summary">Custom card title</a>
                 </group>
             </links>
 
             <links narrow="true">
                 <group>
-                    <title>More related topics</title>
-                    <a href=""/>
-                    <a href="" summary="With a custom card summary"/>
-                    <a href="">Custom card title</a>
-                    <a href="" summary="With a custom card summary">Custom card title</a>
+                    <title>ChatGLM 常见问题</title>
+                    <a href="chatglm_faq.md"/>
                 </group>
                 <group>
                     <title>Three in a row</title>
                     <a href=""/>
-                    <a href=""/>
-                    <a href="">Custom card title</a>
-                    <a href="">Custom card title</a>
                 </group>
                 <group>
                     <title>Each group is narrow</title>
                     <a href=""/>
-                    <a href=""/>
-                    <a href="">Custom card title</a>
-                    <a href="">Custom card title</a>
                 </group>
             </links>
         </misc>

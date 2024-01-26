@@ -10,7 +10,6 @@ XML（可扩展标记语言）和HTML（超文本标记语言）是广泛用于�
     <a href="https://mp.weixin.qq.com/s/fX0d9O_yQGBsPGiysxv8Qgs">DataPrep，一个超实用的 Python 库</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/sfu-db/dataprep">DataPrep Github</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

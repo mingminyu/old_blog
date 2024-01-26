@@ -32,9 +32,11 @@
             <toc-element topic="python-tips.md"/>
         </toc-element>
         <toc-element topic="python_simple_tools.topic">
-            <toc-element topic="chardet.md"/>
             <toc-element topic="alive-progress.md"/>
+            <toc-element topic="art.md"/>
+            <toc-element topic="chardet.md"/>
             <toc-element topic="dataframe_image.md"/>
+            <toc-element topic="dataprep.md"/>
             <toc-element topic="envoy.md"/>
             <toc-element topic="flashtext.md"/>
             <toc-element topic="furl.md"/>
@@ -50,8 +52,10 @@
             <toc-element topic="uvloop.md"/>
         </toc-element>
         <toc-element topic="python-pkgs.md">
+            <toc-element topic="transformers.md">
+                <toc-element topic="transformers_trainer.md"/>
+            </toc-element>
             <toc-element topic="paddleocr.md"/>
-            <toc-element topic="dataprep.md"/>
             <toc-element topic="lxml.md"/>
             <toc-element topic="scikit_image.md"/>
             <toc-element topic="ttkbootstrap.md"/>
@@ -352,6 +356,11 @@
             <toc-element topic="pytts-bert-vits2.md"/>
         </toc-element>
         <toc-element topic="tutorial-analysis.md"/>
+    </toc-element>
+    <toc-element topic="linux.topic">
+        <toc-element topic="shell.topic">
+            <toc-element topic="linux_file_operations.md"/>
+        </toc-element>
     </toc-element>
     <toc-element topic="frontend.topic">
         <toc-element topic="d3js.topic"/>

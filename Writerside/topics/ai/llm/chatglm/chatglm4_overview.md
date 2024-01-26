@@ -2,8 +2,6 @@
 
 <show-structure depth="2"/>
 
-> 文章为智谱 AI 在公众号上发布的 [GLM4 文章](https://mp.weixin.qq.com/s/QfVM52oecfjLVDz-EXRyHA?wxwork_userid=JiaWei")，这里了解下更新情况。
-
 新一代基座大模型 GLM4，整体性能相比 GLM3 全面提升 **60%**，逼近GPT4；支持更长上下文；更强的多模态；支持更快推理速度，更多并发，大大降低推理成本；同时 GLM4 增强了智能体能力。
 
 ## 1. 能力评估

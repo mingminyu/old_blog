@@ -16,6 +16,12 @@
 pip install -r requirements.txt
 ```
 
+如果你使用到 deepspeed 进行训练加速的话，还需要安装 mpi4py 这个库，建议使用 conda 进行安装。
+
+```Bash
+conda install mpi4py
+```
+
 ## 2. 多轮对话下的微调
 
 多轮对话微调示例采用 ChatGLM3 对话格式约定，对不同角色添加不同 `loss_mask` 从而在一遍计算中为多轮回复计算 loss。
@@ -56,6 +62,7 @@ pip install -r requirements.txt
   }
 ]
 ```
+{collapsible="true" default-state="collapsed" collapsed-title="多轮对话微调的数据格式"}
 
 > 请注意，这种方法在微调的 `step` 较多的情况下会影响到模型的工具调用功能。
 > {style="warning"}
@@ -256,6 +263,8 @@ pip install -r requirements.txt
    - 尝试降低 `DEV_BATCH_SIZE` 并提升 `GRAD_ACCUMULARION_STEPS`
    - 尝试添加 `--quantization_bit 8` 或 `--quantization_bit 4`。
    - `PRE_SEQ_LEN=128`, `DEV_BATCH_SIZE=1`, `GRAD_ACCUMULARION_STEPS=16`, `MAX_SEQ_LEN=1024` 配置下，`--quantization_bit 8` 约需 **12GB** 显存，`--quantization_bit 4` 约需 **7.6GB** 显存。
+
+4. 对于 ChatGLM3 而言，如果使用 Input-Output P-Tuning 方式微调后的模型，直接使用 `model.chat` 得到的效果并不会很好，原因在于 input-output 与 multi-turn 数据格式格式上有较大差异；但是使用在 Multi-Turn P-Tuning 微调后的模型，是可以直接应用在 Input-Output 数据格式上的。
 
     
 <seealso>
