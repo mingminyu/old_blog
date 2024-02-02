@@ -2,9 +2,9 @@
 <!DOCTYPE categories
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/categories.dtd">
 <categories>
-    <category id="ref_github" name="Github项目" order="1"/>
+    <category id="ref_github" name="Github 项目" order="1"/>
     <category id="ref_issues" name="Github Issues" order="2"/>
-    <category id="ref_hf" name="HuggingFace模型" order="3"/>
-    <category id="ref_ms" name="ModelScope模型" order="4"/>
+    <category id="ref_hf" name="HuggingFace 模型" order="3"/>
+    <category id="ref_ms" name="ModelScope 模型" order="4"/>
     <category id="ref_docs" name="相关文档" order="5"/>
 </categories>

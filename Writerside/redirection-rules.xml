@@ -30,4 +30,12 @@
         <description>Created after removal of "Python 文件读取" from AiFun</description>
         <accepts>python_read_files.html</accepts>
     </rule>
+    <rule id="6cd2212a">
+        <description>Created after removal of "AutoProfiler: 可视化工具" from AiFun</description>
+        <accepts>autoprofiler.html</accepts>
+    </rule>
+    <rule id="1416c54d">
+        <description>Created after removal of "Pivottablejs 教程" from AiFun</description>
+        <accepts>pivottablejs.html</accepts>
+    </rule>
 </rules>

@@ -62,7 +62,6 @@ python server.py
 
 我们需要首先理解的是，如果按照上面的情况去配置是不行的，因为配置好 `audio` 的值后，它不是服务器直接对本地发起请求，而是先由浏览器向目标服务器发起请求，但是浏览器所访问的 8080 的服务实际上 NGINX 通过域名转发过来的，本身我们自己的浏览器是不能直接访问 `1.2.3.4:8080` 的服务，由于网络不通的原因，是不可能拿到具体音频的文件流数据的。
 
-
 ### 1.4 静态文件
 
 因为 Label Studio Web 服务自己本身就可以访问一下示例的静态文件，如果我们不希望另加接口的话，那么可以直接将自己的数据文件放在 Label Studio Web 服务的静态文件夹下。
@@ -74,3 +73,36 @@ PYTHONENV/lib/python3.10/site-packages/label_studio/core/static_build
 ```
 
 > 当然浏览器与服务网络不同的情况下，本身服务是通过 NGINX 反向代理开启的，那么需要使用**域名**代替 `IP:端口`，比如使用 `http://label-studio.ai.com/static/recordings/test.wav` 来获取音频文件。
+
+
+## 2. 数据库中文显示为 ASCII 编码
+
+LabelStudio 导入数据后，发现界面上中文显示一切正常，但是我们打开 sqlite 数据后，发现 `data` 字段显示的 ASCII 编码，这个对于我们后续查询和修改都非常不方便，这里需要修改 LabelStudio 的源码。尝试了一圈修改 sqlite 数据库表设置，发现都没一效果，最终通过修改 label-studio 的源码得以解决。
+
+LabelStudio 对于 `data` 字段默认使用 `JSONField`，它默认使用的就是 ASCII 编码。熟悉 json 使用的同学知道，我们想关闭默认 ascii 编码的话，需要使用 `json.dump(content, ensure_ascii=False)`。 我们修改文件 ENVS/labelstudio/lib/python3.10/site-packages/label_studio/tasks/models.py 中代码，并通过自定义实现非 ASCII 编码的 `JSONField`。
+
+
+```Python
+class NonAsciiJSONField(JSONField):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def get_prep_value(self, value):
+        return json.dumps(value, ensure_ascii=False)
+        
+
+class Task(TaskMixin, models.Model):
+    """Business tasks from project"""
+    ...
+    
+    data = NonAsciiJSONField(
+        'data',
+        null=False,
+        help_text='User imported or uploaded data for a task. Data is formatted according to '
+        'the project label config. You can find examples of data for your project '
+        'on the Import page in the Label Studio Data Manager UI.',
+    )
+```
+
+> 这里需要删除掉全部数据后，重新导入，并重启服务后才可以
+{style="warning"}

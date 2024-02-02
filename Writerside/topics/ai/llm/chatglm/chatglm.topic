@@ -14,13 +14,13 @@
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
             <a href="chatglm4_overview.md" type="open-source">ChatGLM4 发布预览</a>
-            <a href="chatglm3-finetuning.md" type="search">ChatGLM3 官方微调教程</a>
+            <a href="chatglm3_chatmodel_finetuning.md" type="search">ChatGLM3 官方微调教程</a>
         </spotlight>
 
         <primary>
             <title>ChatGLM3 系列</title>
             <a href="chatglm3_quickstart.md"/>
-            <a href="chatglm3-finetuning.md"/>
+            <a href="chatglm3_chatmodel_finetuning.md"/>
             <a href="chatglm3_chatmodel_multiturn_ptuning.md"/>
             <a href="chatglm3_lora_finetuning.md"/>
         </primary>

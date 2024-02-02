@@ -9,6 +9,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/HBAeMpys72woVDdyoIDSEw">Loguru 简介</a>
+    <a href="https://mp.weixin.qq.com/s/lNmcr_MMOCHW-cOcQqcopQ">Loguru，一个超酷的python库</a>
     <a href="https://loguru.readthedocs.io/en/stable/index.html">Loguru 文档</a>
 </category>
 <category ref="ref_github">

@@ -7,6 +7,9 @@
 > 官方仓库中只有 Base 模型给出了 LORA 微调方式，Chat 模型并没有给出，待后续研究 ChatGLM3 LORA 微调。
 {style="note"}
 
+> ChatGLM3 官方仓库对所有微调方法做了整合，此微调教程已经作废，有兴趣的也可以学习下。
+{style="warning"}
+
 
 ## 1. 依赖环境
 

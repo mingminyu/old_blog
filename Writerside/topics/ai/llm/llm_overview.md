@@ -81,5 +81,6 @@
 <category ref="ref_docs">
     <a href="https://cevalbenchmark.com/static/leaderboard_zh.html">CEval上大模型排名</a>
     <a href="https://flageval.baai.ac.cn/#/trending">FlagEval上大模型排名</a>
+    <a href="https://mp.weixin.qq.com/s/wny89l6TtujcBKq_Tms-Mg">终于有人将大模型可视化了</a>
 </category>
 </seealso>
