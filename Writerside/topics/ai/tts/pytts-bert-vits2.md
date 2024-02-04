@@ -13,21 +13,7 @@ BERT-VITS2 是一款优秀的 TTS 引擎，在中文语音合成方面有着非�
 
 ## 0. 框架流程图
 
-<code-block lang="plantuml">
-<![CDATA[
-@startmindmap
-* bert-vits2 工作流
-   * 1. 分离双声道
-   * 2. 音频降噪
-   * 3. 切分音频
-   * 4. 生成样本
-   * 5. 处理文本
-   * 6. 训练模型
-   * 7. 语音合成
-@endmindmap
-]]>
-</code-block>
-
+![BERT-VITS2 工作流](%myimgs%/bert-vits2-pipeline.png?raw=true)
 
 ## 1. 开发环境搭建
 

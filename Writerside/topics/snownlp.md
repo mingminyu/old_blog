@@ -1,16 +1,13 @@
-# ChatKBQA与大模型
+# SnowNLP 教程
 
 <show-structure depth="2"/>
 
-> 待补充
-{style="warning"}
-
-
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/gHpZeXzQ-w0ZWbG-CaMtPw">ChatKBQA与大模型结合</a>
+    <a href="https://mp.weixin.qq.com/s/TR5RsTh4wAaz2eR4dxYY9Q">强大的 Python 库: SnowNLP</a>
 </category>
 <category ref="ref_github">
+    <a href="https://github.com/isnowfy/snownlp">AutoProfiler</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

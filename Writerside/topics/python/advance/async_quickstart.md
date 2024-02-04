@@ -2,7 +2,6 @@
 
 <show-structure depth="2"/>
 
-Django Grappelli是一个开源插件，专为Django框架设计，旨在提供一个优雅而强大的管理界面，使Django应用程序的后台管理更加便捷和定制化。
 
 
 <seealso>

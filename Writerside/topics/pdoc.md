@@ -1,4 +1,4 @@
-# ArgComplete 教程
+# Pdoc 教程
 
 <show-structure depth="2"/>
 
@@ -7,11 +7,11 @@
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/KP3U0z2JsZl6PQ9C5auqRA">ArgComplete 简介</a>
-    <a href="https://mp.weixin.qq.com/s/v7FKi02W3aA7WESbrTDMOg">强大的 Python 库: ArgComplete</a>
+    <a href="https://mp.weixin.qq.com/s/aEvYfy-X6S7DvPKjcJf9rw">强大的 Python 库: Pdoc</a>
+    <a href="https://pdoc.dev/docs/pdoc.html">Pdoc 文档</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/kislyuk/argcomplete">ArgComplete</a>
+    <a href="https://github.com/mitmproxy/pdoc">PdocPdoc</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

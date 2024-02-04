@@ -38,4 +38,12 @@
         <description>Created after removal of "Pivottablejs 教程" from AiFun</description>
         <accepts>pivottablejs.html</accepts>
     </rule>
+    <rule id="3054b59b">
+        <description>Created after removal of "Qgrid 教程" from AiFun</description>
+        <accepts>qgrid.html</accepts>
+    </rule>
+    <rule id="454a026c">
+        <description>Created after removal of "Itables 教程" from AiFun</description>
+        <accepts>itables.html</accepts>
+    </rule>
 </rules>

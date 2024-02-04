@@ -2,6 +2,9 @@
 
 <show-structure depth="2"/>
 
+
+
+
 ## 1. 添加 Python 虚拟环境内核
 
 将一个 Python 虚拟环境添加到 Jupyter 内核中，以便直接在 Notebook 中直接使用。
@@ -14,7 +17,6 @@ python -m ipykernel install --user  --name chatglm3 --display-name "ChatGLM3"
 ```
 
 添加完之后如果刷新页面没有出现 ChatGLM3 的内核，那可能需要重启下 Jupyter Notebook 的服务。
-
 
 ## 2. 卸载虚拟环境内核
 

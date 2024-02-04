@@ -2,11 +2,18 @@
 
 <show-structure depth="2"/>
 
-| 插件 | 描述         |
-| --- |------------|
-| AutoProfiler | 自动对数据进行可视化 |
-| PyGWalker | 数据可视化+探索分析 |
+Jupyter 有很多非常优秀的第三方插件，学习并充分利用好这些插件能节省我们大量的代码量书写，让我们更关注数据本身的表现以及核心逻辑的实现。
 
+本篇文章就 Jupyter 中非常好用的插件做一个介绍，以下常用的插件列表。
+
+| 插件           | 描述         |
+|--------------|------------|
+| AutoProfiler | 数据可视化+探索分析 |
+| PivotTableJS | 数据可视化+探索分析 |
+| PyGWalker    | 数据可视化+探索分析 |
+| QGrid        | 数据可视化      |
+| ITables      | 数据可视化      |
+| nbextensions | 插件集合       |
 
 
 ## 1. AutoProfiler
@@ -85,7 +92,6 @@ expensive_rents = df_housing[df_housing["price"] > 5000]
 ### 1.4 总结
 
 AutoProfiler 是一款非常优秀且颜值爆表的可视化工具，但是实际上这类 Jupyter 可视化工具有很多，但都会存在一个问题，就是在数据量较大情况下可能表现不佳，有可能导致 Notebook 内核挂掉，所以如果所加载的数据较大时，请谨慎使用。此外，个人觉得如果能通过简单的代码，手动添加想要可视化的 DataFrame，在通用性上会好很多，本质上我们也不需要对每个 DataFrame 都进行可视化。
-
 
 ## 2. PivotTableJS
 
@@ -195,35 +201,49 @@ PyGWalker 提供 `Data` 和 `Visualization` 两个选项，操作上和 Tableau 
 
 ### 3.3 参数解释
 
-| 参数                   | 描述  |
-|----------------------|-----|
-| dataset              | 数据集 |
-| gid                  | GraphicWalker 的 div 元素 ID |
+| 参数                   | 描述                                                |
+|----------------------|---------------------------------------------------|
+| dataset              | 数据集                                               |
+| gid                  | GraphicWalker 的 div 元素 ID                         |
 | env                  | PyGWalker 所使用的环境，默认是 JupyterWidget，其他可选值: Jupyter |
-| fieldSpecs           | 指定字段名称 |
-| hideDataSourceConfig | 隐藏数据导入和导出的按钮 |
-| themeKey             | 
-| dark                 |
-| return_html          |
-| spec                 |
-| use_preview          |
-| store_chart_data     |
-| use_kernel_calc      |
-
-
+| fieldSpecs           | 指定字段名称                                            |
+| hideDataSourceConfig | 隐藏数据导入和导出的按钮                                      |
+| themeKey             | 主题类型: vega / g2                                   |
+| dark                 | 自动探索系统主题: media / light / dark                    |
+| return_html          | 返回 HTML                                           |
+| spec                 | 图表配置数据文件                                          |
+| use_preview          | 是否启用预览                                            |
+| store_chart_data     | 是否保存图表到本地                                         |
+| use_kernel_calc      | 是否允许进行数据计算                                        |
 
 ## 4. QGrid
 
 除了 PyGWalker 之外，QGrid 也是一个很好的工具，它可以很容易地将 DataFrame 架转换为视觉上直观的交互式数据表。
 
+> 实验证明，无论是 Jupyter Notebook 还是 JupyterLab，QGrid 都无法正常使用，如果要使用的话，建议多关注下官方仓库的更新。
+{style="warning"}
+
 ### 4.1 安装
+
+对于 Jupyter Notebook 而言，使用如下命令进行安装:
+
+```Bash
+pip install qgrid
+
+jupyter nbextension enable --py --sys-prefix qgrid
+```
+
+
+对于 JupyterLab 而言，`qgrid` 的安装需要使用 `jupyter labextension install` 进行安装:
 
 ```Bash
 jupyter labextension install qgrid2
 ```
 
+
 ### 4.2 基础使用
 
+通过 `show_grid` 函数来可视化 DataFrame，目前在 JupyterLab 中并没有办法进行使用。
 
 ```Python
 import qgrid
@@ -238,22 +258,32 @@ df_housing_qgrid
 {ignore-vars="true"}
 
 
+### 4.3 界面预览
+
+
+![QGrid 预览](https://github.com/quantopian/qgrid/blob/master/docs/images/filtering_demo.gif?raw=true)
+
+
+除了可以基础的预览数据外，QGrid 对于每个字段多可以进行筛选，并且我们可以直接在数据集上添加和删除数据。 
+
+
 ## 5. ITables
 
 ITables 和 QGrid 包对于快速查看数据模式是必要的。然而，如果我们想要进一步理解数据并进行数据转换，它们的特征是不够的。因此，在获得更复杂的见解的情况下，使用 PivotTableJS 和 PyGWalker 可能更合适。
 
 ### 5.1 安装
 
+直接使用 pip 就可以安装:
+
 ```Bash
 pip install itables
 ```
 
-
 ### 5.2 基础使用
 
+在 Jupyter 中使用 ITables 需要引入 `init_notebook_mode` 和 `show` 函数，
 
 ```Python
-import qgrid
 import pandas as pd
 from itables import init_notebook_mode, show
 
@@ -266,6 +296,29 @@ show(df_housing)
 ```
 {ignore-vars="true"}
 
+### 5.3 界面预览
+
+![ITables 界面预览](https://github.com/mwouts/itables/blob/main/docs/df_example.png?raw=true)
+
+ITables 提供了**数据分页预览、搜索、字段排序**的功能，但是没有字段筛选功能。
+
+## 6. nbextensions
+
+nbextensions 是 Jupyter 一款非常著名的插件，它将一系列 js 脚本嵌入到 Jupyter 中，增强 Jupyter 的交互式体验，可以让你的 Jupyter 变得非常强大。
+
+### 6.1 安装
+
+
+```Bash
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+jupyter nbextension enable codefolding/main
+```
+
+安装完成后有可能在当前 Notebook 上并不能看到 NBExtensions 选项，需要重启你的 Jupyter Notebook，打开 http://localhost:8888/nbextensions 就可以看到 nbextensions 插件的配置页面了。
+
+
+## Jupytext
 
 
 
@@ -273,7 +326,8 @@ show(df_housing)
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/Ff8lqk89zOz44-88Uw4ayQ">一款无代码实时自动分析Pandas DataFrame的工具</a>
-    <a href="https://mp.weixin.qq.com/s/KIZOZrpRgpC2ypByJi0KnQ">事半功倍，必看这4个Pandas神器</a>
+    <a href="https://mp.weixin.qq.com/s/KIZOZrpRgpC2ypByJi0KnQ">必看这 4 个Pandas神器</a>
+    <a href="https://mp.weixin.qq.com/s/j57blXwEc05ixaZMaBUzbQ">10 个 Python 超实用的机器学习库</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/cmudig/AutoProfiler">AutoProfiler</a>
@@ -281,6 +335,7 @@ show(df_housing)
     <a href="https://github.com/Kanaries/pygwalker">PyGWalker</a>
     <a href="https://github.com/quantopian/qgrid">QGrid</a>
     <a href="https://github.com/mwouts/itables">ITables</a>
+    <a href="https://github.com/mwouts/jupytext">Jupytext</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

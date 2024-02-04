@@ -1,14 +1,13 @@
-# ChatKBQA与大模型
+# PyGame 教程
+
 
 <show-structure depth="2"/>
-
-> 待补充
-{style="warning"}
 
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/gHpZeXzQ-w0ZWbG-CaMtPw">ChatKBQA与大模型结合</a>
+    <a href="https://mp.weixin.qq.com/s/IREqsq3qYV-nHDE9l5R8og">强大的 Python 库: PyGame</a>
+    <a href="https://www.pygame.org">PyGame 文档</a>
 </category>
 <category ref="ref_github">
 </category>

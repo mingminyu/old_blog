@@ -1,4 +1,4 @@
-# Cerberus 教程
+#d Cerberus 教程
 
 <show-structure depth="2"/>
 
@@ -179,10 +179,11 @@ Cerberus 是一个功能强大且灵活的 Python 数据验证库，可以帮助
 
 <seealso>
 <category ref="ref_github">
-    <a href="https://github.com/pyeve/cerberus">Cerberus Github</a>
+    <a href="https://github.com/pyeve/cerberus">Cerberus</a>
 </category>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/vAt95wDdC_L1WMY6UbRH7A">Cerberus 介绍</a>
+    <a href="https://mp.weixin.qq.com/s/KnRnHqLDTHBOzg0NkO_Ang">厉害的 Python 库: Cerberus</a>
     <a href="https://docs.python-cerberus.org/">Cerberus 文档</a>
 </category>
 </seealso>

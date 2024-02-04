@@ -1,16 +1,14 @@
-# ChatKBQA与大模型
+# Cherrypy 教程
 
 <show-structure depth="2"/>
-
-> 待补充
-{style="warning"}
 
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/gHpZeXzQ-w0ZWbG-CaMtPw">ChatKBQA与大模型结合</a>
+    <a href="https://mp.weixin.qq.com/s/2gc3Z9_fQ9gyku0GcALfFg">强大的 Python 库: Cherrypy</a>
 </category>
 <category ref="ref_github">
+    <a href="https://github.com/cherrypy/cherrypy">Cherrypy</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

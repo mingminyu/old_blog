@@ -7,7 +7,8 @@ dowhy 是一个开源的 Python 库，旨在简化因果推断的过程，特别
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/m_x3v_BxBRn4kC2-muew_g">dowhy 一个神奇的 python 库</a>
+    <a href="https://mp.weixin.qq.com/s/m_x3v_BxBRn4kC2-muew_g">强大的 Python 库: Dowhy</a>
+    <a href="https://mp.weixin.qq.com/s/vu0FrYZj9QOupmhlokHGtw">神奇的 Python 库: Dowhy</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/py-why/dowhy">Dowhy Github</a>
