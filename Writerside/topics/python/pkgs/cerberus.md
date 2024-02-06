@@ -1,4 +1,4 @@
-#d Cerberus 教程
+# Cerberus 教程
 
 <show-structure depth="2"/>
 
