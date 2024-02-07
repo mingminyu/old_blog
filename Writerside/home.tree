@@ -7,8 +7,9 @@
                  start-page="homepage.topic">
     <toc-element topic="homepage.topic"/>
     <toc-element topic="linux.topic">
+        <toc-element topic="linux_file_operations.md"/>
+        <toc-element topic="linux-compress-decompress-ops.md"/>
         <toc-element topic="shell.topic">
-            <toc-element topic="linux_file_operations.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="python.topic">
@@ -72,6 +73,8 @@
             <toc-element topic="uvloop.md"/>
         </toc-element>
         <toc-element topic="python-pkgs.md">
+            <toc-element topic="mimesis.md"/>
+            <toc-element topic="atexit.md"/>
             <toc-element topic="aeon.md"/>
             <toc-element topic="aesara.md"/>
             <toc-element topic="aiofiles.md"/>
@@ -81,7 +84,7 @@
             <toc-element topic="arrow.md">
             </toc-element>
             <toc-element topic="asqlcell.md"/>
-            <toc-element topic="augLy.md"/>
+            <toc-element topic="augly.md"/>
             <toc-element topic="authlib.md"/>
             <toc-element topic="autopy.md"/>
             <toc-element topic="autoviz.md"/>
@@ -136,7 +139,6 @@
                 </toc-element>
                 <toc-element topic="jupyter_kernel_usage.md"/>
             </toc-element>
-            <toc-element topic="klib.md"/>
             <toc-element topic="kornia.md"/>
             <toc-element topic="langgraph.md"/>
             <toc-element topic="lazypredict.md">
@@ -242,7 +244,6 @@
             <toc-element topic="cerberus.md"/>
         </toc-element>
         <toc-element topic="python-web.topic">
-            <toc-element topic="hug.md"/>
             <toc-element topic="atomui.md"/>
             <toc-element topic="bottle.md"/>
             <toc-element topic="celery.md"/>
@@ -271,6 +272,7 @@
             <toc-element topic="gradio.topic">
                 <toc-element topic="gradio_quickstart.md"/>
             </toc-element>
+            <toc-element topic="hug.md"/>
             <toc-element topic="jinja2.md"/>
             <toc-element topic="locust.md"/>
             <toc-element topic="nicegui.md">
@@ -421,7 +423,7 @@
             <toc-element topic="self-attention.md"/>
         </toc-element>
         <toc-element topic="ml.topic">
-            <toc-element topic="hyperas.md"/>
+            <toc-element topic="orange3.md"/>
             <toc-element topic="a2ml.md"/>
             <toc-element topic="adaboost.md"/>
             <toc-element topic="adtk.md"/>
@@ -430,6 +432,7 @@
             <toc-element topic="evalml.md"/>
             <toc-element topic="gbdt.md"/>
             <toc-element topic="hdbscan.md"/>
+            <toc-element topic="hyperas.md"/>
             <toc-element topic="imbalanced_learn.md"/>
             <toc-element topic="lime.md"/>
             <toc-element topic="lightgbm.md"/>
@@ -458,18 +461,25 @@
         </toc-element>
         <toc-element topic="asr.topic"/>
         <toc-element topic="tts.topic">
+            <toc-element topic="openvoice.md"/>
             <toc-element topic="pytts-bert-vits2.md"/>
         </toc-element>
         <toc-element topic="computer_vision.topic">
+            <toc-element topic="pytesseract.md"/>
             <toc-element topic="yolox.md"/>
         </toc-element>
         <toc-element topic="data-analysis.md">
+            <toc-element topic="dabl.md"/>
+            <toc-element topic="klib.md"/>
             <toc-element topic="pandas.md">
                 <toc-element topic="pandas-common-usages.md"/>
                 <toc-element topic="pandas-reshaping-pivottable.md"/>
                 <toc-element topic="pandas-core-functions.md"/>
                 <toc-element topic="merge_join_concatenate_compare.md"/>
             </toc-element>
+            <toc-element topic="sketch.md"/>
+            <toc-element topic="sweetviz.md"/>
+            <toc-element topic="ydata-profiling.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="frontend.topic">

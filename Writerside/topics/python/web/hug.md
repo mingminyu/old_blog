@@ -7,7 +7,8 @@ Python Hug是一个快速且可维护的API开发框架，它旨在使API开发�
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/GRYvb02WbQsHfqb2E-3I-A">hug，一个非常好用的 Python 库</a>
+    <a href="https://mp.weixin.qq.com/s/GRYvb02WbQsHfqb2E-3I-A">hug: 一个非常好用的 Python 库</a>
+    <a href="https://mp.weixin.qq.com/s/n6ZcoyiAh0d13tPxeniPAw">强大的 Python 库: Hug</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/hugapi/hug">Hug Github</a>

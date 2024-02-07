@@ -6,7 +6,6 @@
 
 Linux 使用 `find` 命令查找文件，可以结合管道或者其他 shell 命令做一些更复杂的操作。
 
-
 ### 1.1 使用正则表达式查找
 
 `-name` 参数除了可以指定完整的文件名，也可以接收一个正则表达式来匹配文件名，比如我们想要查找当前文件夹下所有 wav 文件，可以执行以下命令：
@@ -149,6 +148,25 @@ rsync -ru /mnt/d/work /mnt/e
 ```Bash
 sudo umount /mnt/e
 ```
+
+## 3. 查看文件内容
+
+Linux 中有多个命令可以用于查看文件的内容，比如 `head`、`tail`、`cat`、`more` 等，这几种用法相对也比较简单。
+
+### 3.1 筛选内容
+
+通常 Linux 中使用 `cat` 命令查看文件内容时可以结合 `grep` 命令进行内容筛选，来定位出我们比较关注的文本。
+
+```Bash
+cat run.log | grep error
+```
+
+但有时候会出现使用 `cat` 可以正常查看文件内容，但是结合 `grep` 之后会报错 “**Binary file (standard input) matches**”。 这个时候可以使用 `strings` 命令来查看文件，并结合 `grep` 命令筛选想要的文本内容:
+
+```Bash
+strings -f run.log  | grep error
+```
+
 
 
 
