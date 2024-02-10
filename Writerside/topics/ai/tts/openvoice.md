@@ -131,7 +131,7 @@ Traceback (most recent call last):
     _silero_vad_model, utils = torch.hub.load(repo_or_dir=repo_or_dir, model="silero_vad", onnx=onnx, source=source)
   File "C:\Python39\lib\site-packages\torch\hub.py", line 539, in load
     repo_or_dir = _get_cache_or_reload(repo_or_dir, force_reload, trust_repo, "load",
-...省略若干调用链...
+...
   File "C:\Python39\lib\http\client.py", line 289, in _read_status
     raise RemoteDisconnected("Remote end closed connection without"
 http.client.RemoteDisconnected: Remote end closed connection without response
