@@ -255,6 +255,7 @@
             <toc-element topic="yagmail.md"/>
             <toc-element topic="yarl.md"/>
             <toc-element topic="you-get.md"/>
+            <toc-element topic="zappa.md"/>
         </toc-element>
         <toc-element topic="python-web.topic">
             <toc-element topic="werkzeug.md"/>
