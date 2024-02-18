@@ -9,6 +9,7 @@ aiofiles是一个基于Python编写的，用于在asyncio应用程序中处理�
 
 <seealso>
 <category ref="ref_docs">
+    <a href="https://mp.weixin.qq.com/s/erKFoB3YcnzLit0OZEd9WQ">强大的 Python 库: Aiofiles</a>
     <a href="https://mp.weixin.qq.com/s/oe1EJHImTuiNFoMR4YlBKg">Aiofiles 异步文件处理库</a>
 </category>
 <category ref="ref_github">

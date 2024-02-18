@@ -315,13 +315,13 @@ Akshare 更多是一个数据获取工具，但由于它返回的是 DataFrame �
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/d3TYcwmFqENxNHEDP7ihNA">Akshare 简介</a>
+    <a href="https://mp.weixin.qq.com/s/d3TYcwmFqENxNHEDP7ihNA">强大的 Python 库: Akshare</a>
     <a href="https://akshare.akfamily.xyz/index.html">Akshare 文档</a>
 </category>
 <category ref="ref_github">
 </category>
 <category ref="ref_issues">
-    <a href="https://github.com/akfamily/akshare">Akshare Github</a>
+    <a href="https://github.com/akfamily/akshare">Akshare</a>
 </category>
 <category ref="ref_hf"></category>
 <category ref="ref_ms"></category>

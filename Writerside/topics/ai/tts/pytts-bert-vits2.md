@@ -458,6 +458,6 @@ mel = librosa_mel_fn(
     </category>
     <category ref="ref_docs">
       <a href="https://huggingface.co/docs/hub/models-downloading">HuggingFace下载模型</a>
-      <a href="https://blog.csdn.net/qq_42815746/article/details/130578340">ModelScope Audio俺安装</a>
+      <a href="https://blog.csdn.net/qq_42815746/article/details/130578340">ModelScope Audio安装</a>
     </category>
 </seealso>

@@ -2,7 +2,7 @@
 
 <show-structure depth="2"/>
 
-AugLy是facebook最新推出的数据增强库，同时支持语音，文本，图像和视频类型的数据，包含了100多种增强方式。
+AugLy 是 facebook 最新推出的数据增强库，同时支持语音、文本、图像和视频类型的数据，包含了 100 多种增强方式。
 
 
 <seealso>

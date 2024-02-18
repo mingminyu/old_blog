@@ -20,6 +20,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/d3_2BJMzxYUtwmJJz2RUxA">Python 高级语法糖</a>
+    <a href="https://mp.weixin.qq.com/s/FwSInP88VNIw_OVV5PRTqw">Python 中的魔法方法</a>
 </category>
 <category ref="ref_github">
 </category>

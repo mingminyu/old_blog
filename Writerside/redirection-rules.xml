@@ -46,4 +46,12 @@
         <description>Created after removal of "Itables 教程" from AiFun</description>
         <accepts>itables.html</accepts>
     </rule>
+    <rule id="357c9f8c">
+        <description>Created after removal of "borb" from AiFun</description>
+        <accepts>borb.html</accepts>
+    </rule>
+    <rule id="77076354">
+        <description>Created after removal of "BeautifulSoup 教程" from AiFun</description>
+        <accepts>python-beautifulsoup.html</accepts>
+    </rule>
 </rules>

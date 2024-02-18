@@ -2,8 +2,7 @@
 
 <show-structure depth="2"/>
 
-> 待补充
-{style="warning"}
+Bleach是一个基于Python的库，它可以帮助你清理HTML文档，消除潜在的安全隐患，并保留允许的标签、属性和样式。简单来说，它就像是给文本输入做消毒的工具，确保只有安全、干净的内容被展示和存储。
 
 <seealso>
 <category ref="ref_docs">

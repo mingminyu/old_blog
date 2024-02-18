@@ -9,6 +9,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/8o08utN2iBKzZ3cVaw6k_Q">HttpX 简介</a>
+    <a href="https://mp.weixin.qq.com/s/CttiIT1eYTo50RRnWaWUJw">一个可以替换request库的方案</a>
     <a href="https://www.python-httpx.org">HttpX 文档</a>
 </category>
 <category ref="ref_github">

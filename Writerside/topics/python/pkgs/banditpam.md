@@ -2,8 +2,7 @@
 
 <show-structure depth="2"/>
 
-> 待补充
-{style="warning"}
+BanditPAM 是一种高效的 k-medoids 聚类算法实现，特别适合于大数据集和高维数据。
 
 
 <seealso>

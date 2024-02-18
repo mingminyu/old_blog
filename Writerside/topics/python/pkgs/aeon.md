@@ -6,10 +6,9 @@ aeon 是一个与 scikit-learn 兼容的工具包，用于执行预测、分类�
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/FcgDklnI5tIaEH6n5yfz7w">Aeon 一个神奇的 python 库</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/aeon-toolkit/aeon">Aeon Github</a>
+    <a href="https://github.com/aeon-toolkit/aeon">Aeon</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>
