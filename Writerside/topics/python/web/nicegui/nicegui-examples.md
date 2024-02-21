@@ -74,6 +74,101 @@ ui.run()
 
 ![ChatApp](%myimgs%/nicegui-chatapp.png?raw=true)
 
+## 2. 表格插槽案例
+
+> [表格插槽案例](https://www.bilibili.com/video/BV1Gx4y1Z79V) 来自 B 站 《数据大宇宙》的发布视频，这里研究一下代码。
+
+### 2.1 源码
+
+```Python
+import ng_init
+import pandas as pd
+from nicegui import ui
+from itertools import cycle
+
+ng_init.styles()
+
+def create_chip_color(df: pd.DataFrame) -> None:
+    """给不同类别 chip 添加不同颜色"""
+    _chip_colors = cycle()
+    color_map = {
+        name: color
+        for name, color in zip(df["产品类别"].unique(), _chip_colors)
+    }
+    return df.assign(_chip_color=lambda x: df["产品类别"].map(color_map))
+
+
+df = pd.read_excel("销售数据.xlsx")
+df = create_chip_color(df)
+table = ui.table.from_pandas(df, pagination=10)
+table._props["visible-columns"] = "_chip_color"  # 设置 _chip_color 列不展示
+
+
+table.add_slot(
+    "body-cell-产品类型",
+    r'''
+        <q-td :props="props">
+            <q-chip clickable text-color="white" icon="bookmark"
+                :color="props.row['_chip_color']"
+                @click="$parent.$emit('clickChip', props.row)"
+                >
+                {{ props.value }}
+            </q-chip>
+        </q-td>
+    '''
+)
+
+def click_chip(e):
+    ui.notify(e)
+
+
+region_options = df["区域"].unique()
+table.add_slot(
+    "body-cell-区域",
+    f'''
+        <q-td :props="props">
+            <q-select outlined v-model="props.row[props.col.field]"
+                :options={str(region_options)}
+                @update:model-value="() => $parent.$emit('zoneSelect', props.row, props.rowIndex)"
+            />
+        </q-td>
+    '''
+)
+
+def region_select(e):
+    ui.notify(f"选择区域为: {e}")
+    
+
+def on_knob_value_change(e):
+    show_knob = e.value
+    
+    if show_knob:
+        table.add_slot(
+            "body-cell-预计销售成本",
+            r'''
+                <q-td :props="props">
+                    <q-knob readonly show-value 
+                        size="60px" color="primary" track-color="grey-3"
+                        class="text-primary q-ma-md"
+                        v-model="props.value"
+                        :thickness="0.22"
+                    ><q-knob>
+                </q-td>
+            '''
+        )
+    else:
+        table.slots.pop("body-cell-预计销售成本")
+    
+    table.update()
+    
+
+table.on("zoneSelect", zone_select)
+table.on("clickChip", click_chip)
+ui.checkbox("图标数值", value=False, on_change=on_knob_value_change)
+```
+
+
+
 
 <seealso>
 <category ref="ref_github">

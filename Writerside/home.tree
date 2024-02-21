@@ -258,7 +258,7 @@
             <toc-element topic="zappa.md"/>
         </toc-element>
         <toc-element topic="python-web.topic">
-            <toc-element topic="werkzeug.md"/>
+            <toc-element topic="beaker.md"/>
             <toc-element topic="atomui.md"/>
             <toc-element topic="authlib.md"/>
             <toc-element topic="bjoern.md"/>
@@ -309,6 +309,7 @@
             <toc-element topic="taipy.md"/>
             <toc-element topic="tornado.md"/>
             <toc-element topic="twisted.md"/>
+            <toc-element topic="werkzeug.md"/>
             <toc-element topic="wooey.md"/>
             <toc-element topic="uwsgi.md"/>
             <toc-element topic="uvicorn.md"/>
@@ -321,10 +322,11 @@
             <toc-element topic="textai.md"/>
         </toc-element>
         <toc-element topic="python-crawler.topic">
-            <toc-element topic="grab.md"/>
             <toc-element topic="appinum.md"/>
             <toc-element topic="beautifulsoup.md"/>
+            <toc-element topic="grab.md"/>
             <toc-element topic="grequests.md"/>
+            <toc-element topic="intelliscraper.md"/>
             <toc-element topic="pyspider.md"/>
             <toc-element topic="pyppeteer.md"/>
             <toc-element topic="requestium.md"/>
@@ -399,7 +401,10 @@
         <toc-element topic="kotlin-advance.topic"/>
     </toc-element>
     <toc-element topic="rust.topic">
-        <toc-element topic="rust-base.topic"/>
+        <toc-element topic="rust-base.topic">
+            <toc-element topic="rust-quickstart.md"/>
+            <toc-element topic="rust-cargo.md"/>
+        </toc-element>
         <toc-element topic="rust-advance.topic"/>
     </toc-element>
     <toc-element topic="scala.topic">
@@ -549,6 +554,7 @@
         <toc-element topic="tutorial-rocketmq.md"/>
         <toc-element topic="tutorial-sqlite.md"/>
         <toc-element topic="presto.topic">
+            <toc-element topic="presto-function.md"/>
             <toc-element topic="presto_orderby.md"/>
         </toc-element>
         <toc-element topic="tutorial-postgresql.md"/>

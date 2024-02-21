@@ -13,6 +13,10 @@ LIMIT 1000
 ```
 
 > 如果你的主查询是 `SELECT DISTINCT ...` 语句的话，那么不可以和 `ORDER BY RAND()` 直接连用，需要先将主查询中 `SELECT DISTINCT` 子查询的形式。
+> 
 {style="warning"}
+
+## 2. 分组排序
+
 
 
