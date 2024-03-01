@@ -1,4 +1,4 @@
-# Rust 快速入门
+# 快速入门
 
 <show-structure depth="2"/>
 
@@ -13,7 +13,12 @@ Rust 的安装在其[官方文档](https://www.rust-lang.org/tools/install)上�
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     source "$HOME/.cargo/env"
     ```
-  
+
+> 对于 Windows 系统，不推荐使用 GNU 版本的 Rust
+> 
+{style="warning"}
+
+
 ## 2. rustup 简单使用
 
 ### 2.1 Rust 更新、卸载、安装组件
@@ -123,6 +128,8 @@ Cargo 可以帮助我们创建、编译、检测、测试以及运行 Rust 项�
 | cargo test               | 测试                                |
 | cargo run                | 运行                                |
 
+
+这里对于 cargo 的使用介绍比较简单，后续我们会专门对 cargo 的各种使用方式做一个更详细的介绍。
 
 
 

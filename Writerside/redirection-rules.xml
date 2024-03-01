@@ -54,4 +54,8 @@
         <description>Created after removal of "BeautifulSoup 教程" from AiFun</description>
         <accepts>python-beautifulsoup.html</accepts>
     </rule>
+    <rule id="7be2ca80">
+        <description>Created after removal of "所有权机制" from AiFun</description>
+        <accepts>rust-ownership.html</accepts>
+    </rule>
 </rules>

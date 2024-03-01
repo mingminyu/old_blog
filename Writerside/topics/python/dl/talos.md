@@ -8,6 +8,7 @@ talos 是一个开源的 python 库，用于对 TensorFlow、Keras 和 PyTorch �
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/CXpgWkxarO6TQAEBHYHQ_A">强大的 Python 库: Talos</a>
+    <a href="https://mp.weixin.qq.com/s/eEjpP3cqMDmthjYVETksLA">神奇的 Python 库: Talos</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/autonomio/talos">Talos</a>

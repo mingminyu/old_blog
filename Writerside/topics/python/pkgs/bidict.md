@@ -1,4 +1,4 @@
-# BiDict 教程
+# Bidict 教程
 
 <show-structure depth="2"/>
 

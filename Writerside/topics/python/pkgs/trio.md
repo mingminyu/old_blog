@@ -12,7 +12,6 @@ Trio是一个用于Python异步编程的高级库，它的设计理念是让异�
 <category ref="ref_github">
     <a href="https://github.com/python-trio/trio">Trio</a>
 </category>
-<category ref="ref_issues"></category>
 <category ref="ref_hf"></category>
 <category ref="ref_ms"></category>
 </seealso>

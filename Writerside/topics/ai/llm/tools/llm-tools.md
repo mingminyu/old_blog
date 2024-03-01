@@ -22,6 +22,12 @@ python webui.py
 
 > 项目后续还会提供了 Windows 和 Mac 系统的桌面版安装版本，待开发。
 
+## 4. LibreChat
+
+[LibreChat](https://docs.librechat.ai/index.html) 是一款非常不错的开源工具，其界面几乎完全仿照 ChatGPT 界面，此外它还集成了多个其他大模型，例如 Google Gemini。
+
+
+
 
 
 <seealso>

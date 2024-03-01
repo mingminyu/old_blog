@@ -3,8 +3,6 @@
 <show-structure depth="2"/>
 
 
-
-
 ## 1. 添加 Python 虚拟环境内核
 
 将一个 Python 虚拟环境添加到 Jupyter 内核中，以便直接在 Notebook 中直接使用。
