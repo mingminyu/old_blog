@@ -351,22 +351,21 @@
             <toc-element topic="python-selenium.md"/>
         </toc-element>
         <toc-element topic="python-visualization.topic">
-            <toc-element topic="vizro.md"/>
-            <toc-element topic="knockknock.md"/>
-            <toc-element topic="animatplot.md"/>
-            <toc-element topic="bamboolib.md"/>
-            <toc-element topic="autoviz.md"/>
-            <toc-element topic="cufflinks.md"/>
             <toc-element topic="altair.md"/>
+            <toc-element topic="animatplot.md"/>
+            <toc-element topic="autoviz.md"/>
+            <toc-element topic="bamboolib.md"/>
             <toc-element topic="bokeh.md">
             </toc-element>
             <toc-element topic="bqplot.md"/>
+            <toc-element topic="cufflinks.md"/>
             <toc-element topic="dash.md"/>
             <toc-element topic="folium.md"/>
             <toc-element topic="ggpy.md"/>
             <toc-element topic="geopy.md"/>
             <toc-element topic="holoviews.md"/>
             <toc-element topic="hvplot.md"/>
+            <toc-element topic="knockknock.md"/>
             <toc-element topic="lonboard.md"/>
             <toc-element topic="mplfinance.md"/>
             <toc-element topic="matplotlib.md"/>
@@ -378,6 +377,7 @@
             <toc-element topic="seaborn.md"/>
             <toc-element topic="solara.md"/>
             <toc-element topic="superset.md"/>
+            <toc-element topic="vizro.md"/>
         </toc-element>
         <toc-element topic="automation.topic">
             <toc-element topic="wechatpy.md"/>

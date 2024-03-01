@@ -5,6 +5,7 @@ AnimatPlot是一个开源的python库，它构建在Matplotlib之上，用于创
 
 
 <seealso>
+<category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/IHzUcXGjx_95dMcPMeqibw">6个好用的Python库</a>
 </category>
 <category ref="ref_github">
