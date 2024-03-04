@@ -358,11 +358,11 @@
             <toc-element topic="python-selenium.md"/>
         </toc-element>
         <toc-element topic="python-visualization.topic">
-            <toc-element topic="bashplotlib.md"/>
             <toc-element topic="altair.md"/>
             <toc-element topic="animatplot.md"/>
             <toc-element topic="autoviz.md"/>
             <toc-element topic="bamboolib.md"/>
+            <toc-element topic="bashplotlib.md"/>
             <toc-element topic="bokeh.md">
             </toc-element>
             <toc-element topic="bqplot.md"/>
@@ -450,6 +450,10 @@
             <toc-element topic="chatkbqa_llm.md"/>
         </toc-element>
         <toc-element topic="llm.topic">
+            <toc-element topic="rawdog.md"/>
+            <toc-element topic="chapyter.md"/>
+            <toc-element topic="llm_overview.md"/>
+            <toc-element topic="demogpt.md"/>
             <toc-element topic="chatglm.topic">
                 <toc-element topic="chatglm_extract_entities_info.md"/>
                 <toc-element topic="chatglm3_quickstart.md"/>
@@ -468,7 +472,6 @@
             <toc-element topic="llama2-finetune.topic">
                 <toc-element topic="llama2-chatmodel-finetune.md"/>
             </toc-element>
-            <toc-element topic="llm_overview.md"/>
             <toc-element topic="qwen.topic">
                 <toc-element topic="qwen_v1.5_doc.md"/>
                 <toc-element topic="qwen_call_tool.md"/>
@@ -482,6 +485,7 @@
             <toc-element topic="snownlp.md"/>
         </toc-element>
         <toc-element topic="dl.topic">
+            <toc-element topic="xorbits.md"/>
             <toc-element topic="lightning.md"/>
             <toc-element topic="augly.md"/>
             <toc-element topic="talos.md"/>
@@ -494,6 +498,7 @@
             <toc-element topic="self-attention.md"/>
         </toc-element>
         <toc-element topic="ml.topic">
+            <toc-element topic="feature-engine.md"/>
             <toc-element topic="mindsdb.md"/>
             <toc-element topic="gplearn.md"/>
             <toc-element topic="pytimetk.md"/>
@@ -557,6 +562,7 @@
             <toc-element topic="yolox.md"/>
         </toc-element>
         <toc-element topic="data-analysis.md">
+            <toc-element topic="yolopandas.md"/>
             <toc-element topic="agate.md"/>
             <toc-element topic="dabl.md"/>
             <toc-element topic="klib.md"/>

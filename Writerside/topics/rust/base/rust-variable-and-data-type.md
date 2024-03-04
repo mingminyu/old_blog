@@ -212,7 +212,7 @@ println!("usize max value: {}", usize::MAX);
 </code-block>
 </tab>
 <tab title="占用字节">
-<code-block lang="javascript" ignore-vars="true" noinject="true">
+<code-block lang="javascript" ignore-vars="true">
 <![CDATA[
 println!("isize is {} bytes", std::mem::size_of::<isize>());
 println!("usize is {} bytes", std::mem::size_of::<usize>());
@@ -249,6 +249,8 @@ let char_emo: char = '😀';
 </code-block>
 </tab>
 </tabs>
+
+
 
 ## 4. 元组与数组 {collapsible="true" default-state="expanded"}
 

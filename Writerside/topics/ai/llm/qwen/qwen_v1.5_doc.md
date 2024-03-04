@@ -426,7 +426,6 @@ pip install torch torchvision torchaudio
 <tabs>
 <tab title="MacOS">
 <code-block lang="bash">
-<![CDATA[
 git clone https://github.com/oobabooga/text-generation-webui
 cd text-generation-webui
 # 苹果 M 系列芯片
@@ -434,7 +433,6 @@ pip install -r requirements_apple_silicon.txt
 # 苹果 Interl 系列芯片
 pip install -r requirements_apple_intel.txt
 ./start_macos.sh
-]]>
 </code-block>
 </tab>
 <tab title="Windows">
@@ -615,7 +613,7 @@ model = AutoAWQForCausalLM.from_pretrained(model_path, device_map="auto", safete
 
 <tabs>
 <tab title="代码">
-<code-block lang="python" noinject="true">
+<code-block lang="python">
 <![CDATA[
 data = []
 for msg in messages:
@@ -1211,6 +1209,19 @@ bash finetune.sh -m <model_path> -d <data_path> --deepspeed <config_path> [--use
 
 
 
+<tabs>
+<tab title="tab1">
+
+
+</tab>
+<tab title="tab2">
+<code-block lang="python">
+<![CDATA[
+123
+]]>
+</code-block>
+</tab>
+</tabs>
 
 
 
