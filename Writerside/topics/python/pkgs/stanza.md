@@ -9,6 +9,7 @@ Stanza是斯坦福大学NLP小组开发的一个Python库，它集成了诸多NL
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/0kwkCVm_uHZOz-t8erKANw">Stanza 简介</a>
     <a href="https://stanfordnlp.github.io/stanza">Stanza 文档</a>
+    <a href="https://mp.weixin.qq.com/s/tmxfwZ4iaN8VifvH75ytig">超棒的 Python 库: Stanza</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/stanfordnlp/stanza">Stanza Github</a>

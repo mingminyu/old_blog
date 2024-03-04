@@ -76,6 +76,10 @@
             <toc-element topic="uvloop.md"/>
         </toc-element>
         <toc-element topic="python-pkgs.md">
+            <toc-element topic="beartype.md"/>
+            <toc-element topic="pyotp.md"/>
+            <toc-element topic="beets.md"/>
+            <toc-element topic="addressrec.md"/>
             <toc-element topic="aesara.md"/>
             <toc-element topic="aiofiles.md"/>
             <toc-element topic="akshare.md"/>
@@ -129,7 +133,6 @@
             <toc-element topic="functime.md"/>
             <toc-element topic="geopandas.md"/>
             <toc-element topic="geoip2.md"/>
-            <toc-element topic="gplearn.md"/>
             <toc-element topic="gravis.md"/>
             <toc-element topic="greykite.md"/>
             <toc-element topic="gym.md"/>
@@ -201,6 +204,7 @@
             <toc-element topic="pyjanitor.md"/>
             <toc-element topic="pymeter.md"/>
             <toc-element topic="pymunk.md"/>
+            <toc-element topic="pysnooper.md"/>
             <toc-element topic="pynimate.md"/>
             <toc-element topic="pyod.md"/>
             <toc-element topic="pyparsing.md"/>
@@ -212,6 +216,7 @@
             </toc-element>
             <toc-element topic="python-socketio.md"/>
             <toc-element topic="qrcode.md"/>
+            <toc-element topic="cysimdjson.md"/>
             <toc-element topic="rdkit.md"/>
             <toc-element topic="reloading.md"/>
             <toc-element topic="rich.md"/>
@@ -226,12 +231,12 @@
             <toc-element topic="scikit_llm.md"/>
             <toc-element topic="scipy.md"/>
             <toc-element topic="sphinx.md"/>
-            <toc-element topic="stanza.md"/>
             <toc-element topic="statsforecast.md"/>
             <toc-element topic="streamparse.md"/>
             <toc-element topic="sumy.md"/>
             <toc-element topic="swifter.md"/>
             <toc-element topic="sympy.md"/>
+            <toc-element topic="talon.md"/>
             <toc-element topic="tqdm.md"/>
             <toc-element topic="tablib.md"/>
             <toc-element topic="tenacity.md"/>
@@ -263,7 +268,8 @@
             <toc-element topic="wordcloud.md"/>
             <toc-element topic="wrapt.md"/>
             <toc-element topic="xmltodict.md"/>
-            <toc-element topic="xonsh.md"/>
+            <toc-element topic="xonsh.md">
+            </toc-element>
             <toc-element topic="yagmail.md"/>
             <toc-element topic="yarl.md"/>
             <toc-element topic="you-get.md"/>
@@ -331,10 +337,11 @@
             <toc-element topic="uvicorn.md"/>
         </toc-element>
         <toc-element topic="python-connect-db.topic">
+            <toc-element topic="pony.md"/>
             <toc-element topic="python-orm.md"/>
-            <toc-element topic="smart_redis.md"/>
             <toc-element topic="python-connect-impala.md"/>
             <toc-element topic="python-connect-redis.md"/>
+            <toc-element topic="smart_redis.md"/>
             <toc-element topic="textai.md"/>
         </toc-element>
         <toc-element topic="python-crawler.topic">
@@ -351,6 +358,7 @@
             <toc-element topic="python-selenium.md"/>
         </toc-element>
         <toc-element topic="python-visualization.topic">
+            <toc-element topic="bashplotlib.md"/>
             <toc-element topic="altair.md"/>
             <toc-element topic="animatplot.md"/>
             <toc-element topic="autoviz.md"/>
@@ -380,6 +388,7 @@
             <toc-element topic="vizro.md"/>
         </toc-element>
         <toc-element topic="automation.topic">
+            <toc-element topic="pyzmail.md"/>
             <toc-element topic="wechatpy.md"/>
             <toc-element topic="borb.md"/>
             <toc-element topic="airflow.md"/>
@@ -422,7 +431,7 @@
             <toc-element topic="rust-quickstart.md"/>
             <toc-element topic="rust-cargo.md"/>
             <toc-element topic="rust-variable-and-data-type.md"/>
-            <toc-element topic="rust_memory_manage.md"/>
+            <toc-element topic="rust_ownership.md"/>
         </toc-element>
         <toc-element topic="rust-advance.topic"/>
     </toc-element>
@@ -466,12 +475,14 @@
             </toc-element>
         </toc-element>
         <toc-element topic="nlp.topic">
+            <toc-element topic="stanza.md"/>
             <toc-element topic="textblob.md"/>
             <toc-element topic="fasttext.md"/>
             <toc-element topic="spacynlp.md"/>
             <toc-element topic="snownlp.md"/>
         </toc-element>
         <toc-element topic="dl.topic">
+            <toc-element topic="lightning.md"/>
             <toc-element topic="augly.md"/>
             <toc-element topic="talos.md"/>
             <toc-element topic="keras.md"/>
@@ -483,6 +494,10 @@
             <toc-element topic="self-attention.md"/>
         </toc-element>
         <toc-element topic="ml.topic">
+            <toc-element topic="mindsdb.md"/>
+            <toc-element topic="gplearn.md"/>
+            <toc-element topic="pytimetk.md"/>
+            <toc-element topic="implicit.md"/>
             <toc-element topic="a2ml.md"/>
             <toc-element topic="adaboost.md"/>
             <toc-element topic="adtk.md"/>
@@ -542,6 +557,7 @@
             <toc-element topic="yolox.md"/>
         </toc-element>
         <toc-element topic="data-analysis.md">
+            <toc-element topic="agate.md"/>
             <toc-element topic="dabl.md"/>
             <toc-element topic="klib.md"/>
             <toc-element topic="pandas.md">

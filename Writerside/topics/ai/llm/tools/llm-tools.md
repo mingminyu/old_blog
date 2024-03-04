@@ -27,6 +27,14 @@ python webui.py
 [LibreChat](https://docs.librechat.ai/index.html) 是一款非常不错的开源工具，其界面几乎完全仿照 ChatGPT 界面，此外它还集成了多个其他大模型，例如 Google Gemini。
 
 
+## 5. LM Studio
+
+[LM Studio](https://lmstudio.ai)
+
+> 没有听过 Mac 非 M 系列的版本
+> 
+{style="warning"}
+
 
 
 

@@ -212,7 +212,7 @@ println!("usize max value: {}", usize::MAX);
 </code-block>
 </tab>
 <tab title="占用字节">
-<code-block lang="javascript" ignore-vars="true">
+<code-block lang="javascript" ignore-vars="true" noinject="true">
 <![CDATA[
 println!("isize is {} bytes", std::mem::size_of::<isize>());
 println!("usize is {} bytes", std::mem::size_of::<usize>());
@@ -364,7 +364,6 @@ let str_item = String::from("aa");
 let str_item_mv = str_item;
 // 也就是说，在上面一行代码后，你无法再使用 `str_item` 变量了
 println!("{}", str_item_mv);
-
 </code-block>
 </tab>
 </tabs>

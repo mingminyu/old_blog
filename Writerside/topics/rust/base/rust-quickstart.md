@@ -132,7 +132,6 @@ Cargo 可以帮助我们创建、编译、检测、测试以及运行 Rust 项�
 这里对于 cargo 的使用介绍比较简单，后续我们会专门对 cargo 的各种使用方式做一个更详细的介绍。
 
 
-
 <seealso>
 <category ref="ref_docs">
     <a href="https://www.bilibili.com/video/BV15y421h7j7">2024 Rust现代实用教程</a>

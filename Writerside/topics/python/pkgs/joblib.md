@@ -8,6 +8,7 @@ Joblib是一个用于Python的开源库，它提供了一些用于并行计算�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/WpxDrlbMHIWSdR3_-aeStg">强大的 Python 库: Joblib</a>
+    <a href="https://mp.weixin.qq.com/s/f8bcvGEukj4WzUFBBfQT2Q">加速 Python 程序的库: Joblib</a>
 </category>
 <category ref="ref_github">
 </category>

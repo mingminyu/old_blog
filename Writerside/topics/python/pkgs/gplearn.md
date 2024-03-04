@@ -8,6 +8,7 @@ gplearn 是一个用于执行遗传编程（Genetic Programming, GP）的 Python
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/zSzTZ4AacHv2v2VVNeiHJg">GpLearn 简介</a>
+    <a href="https://mp.weixin.qq.com/s/pPXqA-dN2GJUE-jx5ulEkQ">强大的 Python 库: GpLearn</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/trevorstephens/gplearn">GpLearn Github</a>

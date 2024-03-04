@@ -4,13 +4,11 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="首页" id="homepage">
-
     <section-starting-page>
         <title>首页</title>
         <description>
             春风若有怜花意，可否许我再少年。
         </description>
-
         <!-- 最多选择两个 -->
         <spotlight>
             <a href="python.topic" type="start" summary="In this tutorial, You can learn basic and advanced python usages, different kinds frameworks of web development(like FastAPI, Django, Flask, Sanic, NiceGUI), and how to visualize data and automate your work, and so on.">Python 教程</a>
@@ -53,5 +51,4 @@
             </cards>
         </misc>
     </section-starting-page>
-
 </topic>
