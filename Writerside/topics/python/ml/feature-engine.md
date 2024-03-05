@@ -8,7 +8,7 @@ Feature Engine 是一个开源的 Python 包，专为特征工程而设计。
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/GyrzuTxCgEunmsAeOkTImg">强大的 Python 库: Feature Engine<</a>
+    <a href="https://mp.weixin.qq.com/s/GyrzuTxCgEunmsAeOkTImg">强大的 Python 库: Feature Engine</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/feature-engine/feature_engine">Feature Engine</a>
