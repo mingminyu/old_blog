@@ -8,7 +8,6 @@ Xorbits 是一个开源计算框架，旨在简化数据科学和机器学习工
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/i3rWlO68uuzoDA_Brvo61A">超酷的 Python 库: Xorbits</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/xorbitsai/xorbits">Xorbits</a>

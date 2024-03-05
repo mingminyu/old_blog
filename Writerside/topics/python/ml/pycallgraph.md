@@ -1,4 +1,4 @@
-# Shapash 教程
+# PyCallGraph 教程
 
 <show-structure depth="2"/>
 
@@ -11,7 +11,7 @@
     <a href="https://mp.weixin.qq.com/s/YtvfjR7_gsDTJFmqx1i0hg">实用的 Python 库: Shapash</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/MAIF/shapash">Shapash</a>
+    <a href="https://github.com/gak/pycallgraph">PyCallGraph</a>
 </category>
 <category ref="ref_issues">
 </category>

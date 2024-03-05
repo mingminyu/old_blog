@@ -1,4 +1,4 @@
-# Umap 教程
+# UMAP 教程
 
 <show-structure depth="2"/>
 
@@ -9,6 +9,7 @@
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/WFC0HmgI3kZrmWqGmaJdwA">Umap 简介</a>
     <a href="https://mp.weixin.qq.com/s/CDHpvUYhvQU6hFm2y2offg">使用UMAP降维可视化RAG嵌入</a>
+    <a href="https://mp.weixin.qq.com/s/iDZmQLOy9nD1oGs0KDt2vg">强大的 Python 库: UMAP</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/lmcinnes/umap">Umap</a>

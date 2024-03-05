@@ -2,8 +2,8 @@
 
 <show-structure depth="2"/>
 
-> 待补充
-{style="warning"}
+Loguru是一个旨在简化Python日志管理的库。
+与标准的logging模块相比，Loguru提供了一个简单的方式来添加日志记录到你的应用程序，无需繁琐的配置。
 
 
 <seealso>
@@ -14,7 +14,7 @@
     <a href="https://loguru.readthedocs.io/en/stable/index.html">Loguru 文档</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/Delgan/loguru">Loguru Github</a>
+    <a href="https://github.com/Delgan/loguru">Loguru</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

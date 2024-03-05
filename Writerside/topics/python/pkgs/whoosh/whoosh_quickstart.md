@@ -102,6 +102,6 @@ print(f"一共发现 {len(results)} 份文档")
 <seealso>
 <category ref="ref_docs">
     <a href="https://whoosh.readthedocs.io/en/latest/intro.html">Whoosh 文档</a>
-    <a href="https://mp.weixin.qq.com/s/VFk9cSox76KNAYFjCwpKnw">Python轻量级搜索工具——Whoosh</a>
+    <a href="https://mp.weixin.qq.com/s/VFk9cSox76KNAYFjCwpKnw">Python 轻量级搜索工具——Whoosh</a>
 </category>
 </seealso>

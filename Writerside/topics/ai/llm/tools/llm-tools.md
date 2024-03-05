@@ -1,4 +1,4 @@
-# LLM 工具
+# 大模型工具
 
 <show-structure depth="2"></show-structure>
 
@@ -34,7 +34,6 @@ python webui.py
 > 没有听过 Mac 非 M 系列的版本
 > 
 {style="warning"}
-
 
 
 

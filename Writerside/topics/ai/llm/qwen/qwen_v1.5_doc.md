@@ -1,6 +1,6 @@
 # Qwen1.5 教程
 
-<show-structure depth="4"/>
+<show-structure depth="3"/>
 
 Qwen 是阿里开源出来的大语言模型和大多模态模型系列，目前大语言模型已经升级到Qwen1.5。语言模型和多模态模型都是在大规模多语言和多模态数据上进行预训练，并在高质量数据上进行**后训练**，以更符合人类偏好。Qwen 作为 AI Agent，能够进行**自然语言理解、文本生成、视觉理解、音频理解、工具使用、角色扮演**等。
 
@@ -51,7 +51,7 @@ conda install conda-forge::transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
 device = "cuda"  # 使用 GPU 载入模型
 
-# 不需要再手动添加 "trust_remote_code=True"
+## 不需要再手动添加 "trust_remote_code=True"
 model = AutoModelForCausalLM.from_pretrained(
     "Qwen/Qwen1.5-7B-Chat",
     torch_dtype="auto",
@@ -59,8 +59,8 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen1.5-7B-Chat")
 
-# 我们直接 `model.generate` 替换 `model.chat`，这一点与之前不一样
-# 但是我们需要使用 `tokenizer.apply_chat_template` 来格式化输入
+## 我们直接 `model.generate` 替换 `model.chat`，这一点与之前不一样
+## 但是我们需要使用 `tokenizer.apply_chat_template` 来格式化输入
 prompt = "Give me a short introduction to large language model."
 messages = [
     {"role": "system", "content": "You are a helpful assistant."},
@@ -73,8 +73,8 @@ text = tokenizer.apply_chat_template(
 )
 model_inputs = tokenizer([text], return_tensors="pt").to(device)
 
-# 直接使用 `model.generate` 和 `tokenizer.decode` 来获取输出
-# 使用 `max_new_tokens` 来控制输出的最大长度 
+## 直接使用 `model.generate` 和 `tokenizer.decode` 来获取输出
+## 使用 `max_new_tokens` 来控制输出的最大长度 
 generated_ids = model.generate(
     model_inputs.input_ids,
     max_new_tokens=512
@@ -179,7 +179,7 @@ print("Chat response:", chat_response)
 from transformers import AutoModelForCausalLM, AutoTokenizer
 device = "cuda"  # 使用 GPU 载入模型
 
-# 不需要再手动添加 "trust_remote_code=True"
+## 不需要再手动添加 "trust_remote_code=True"
 model = AutoModelForCausalLM.from_pretrained(
     "Qwen/Qwen1.5-7B-Chat",
     torch_dtype="auto",
@@ -187,8 +187,8 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen1.5-7B-Chat")
 
-# 我们直接 `model.generate` 替换 `model.chat`，这一点与之前不一样
-# 但是我们需要使用 `tokenizer.apply_chat_template` 来格式化输入
+## 我们直接 `model.generate` 替换 `model.chat`，这一点与之前不一样
+## 但是我们需要使用 `tokenizer.apply_chat_template` 来格式化输入
 prompt = "Give me a short introduction to large language model."
 messages = [
     {"role": "system", "content": "You are a helpful assistant."},
@@ -201,8 +201,8 @@ text = tokenizer.apply_chat_template(
 )
 model_inputs = tokenizer([text], return_tensors="pt").to(device)
 
-# 直接使用 `model.generate` 和 `tokenizer.decode` 来获取输出
-# 使用 `max_new_tokens` 来控制输出的最大长度 
+## 直接使用 `model.generate` 和 `tokenizer.decode` 来获取输出
+## 使用 `max_new_tokens` 来控制输出的最大长度 
 generated_ids = model.generate(
     model_inputs.input_ids,
     max_new_tokens=512
@@ -369,7 +369,7 @@ ollama run qwen:0.5b
 ```Bash
 FROM qwen1_5-7b-chat-q4_0.gguf
 
-# 将 temperature 设置为 1，值越高表现越有创造力，越低则表示更稳定
+## 将 temperature 设置为 1，值越高表现越有创造力，越低则表示更稳定
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8
 PARAMETER repeat_penalty 1.05
@@ -382,7 +382,7 @@ TEMPLATE """{{ if and .First .System }}<|im_start|>system
 <|im_start|>assistant
 {{ .Response }}"""
 
-# 设置系统消息
+## 设置系统消息
 SYSTEM """
 You are a helpful assistant.
 """
@@ -428,10 +428,8 @@ pip install torch torchvision torchaudio
 <code-block lang="bash">
 git clone https://github.com/oobabooga/text-generation-webui
 cd text-generation-webui
-# 苹果 M 系列芯片
-pip install -r requirements_apple_silicon.txt
-# 苹果 Interl 系列芯片
-pip install -r requirements_apple_intel.txt
+pip install -r requirements_apple_silicon.txt  # 苹果 M 系列芯片
+pip install -r requirements_apple_intel.txt  # 苹果 Inter 系列芯片
 ./start_macos.sh
 </code-block>
 </tab>
@@ -563,8 +561,7 @@ curl http://localhost:8000/v1/chat/completions \
 ```Bash
 from openai import OpenAI
 
-# 设置 OpenAI API Key（本地服务设置为空）以及 URL
-# Set OpenAI's API key and API base to use vLLM's API server.
+## 设置 OpenAI API Key（本地服务设置为空）以及 URL
 openai_api_key = "EMPTY"
 openai_api_base = "http://localhost:8000/v1"
 
@@ -599,12 +596,12 @@ pip install -e .
 from awq import AutoAWQForCausalLM
 from transformers import AutoTokenizer
 
-# 指定路径和量化的超参数
+## 指定路径和量化的超参数
 model_path = "your_model_path"
 quant_path = "your_quantized_model_path"
 quant_config = { "zero_point": True, "q_group_size": 128, "w_bit": 4, "version": "GEMM" }
 
-# 加载自己的 tokenizer 和 AutoAWQ 模型
+## 加载自己的 tokenizer 和 AutoAWQ 模型
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoAWQForCausalLM.from_pretrained(model_path, device_map="auto", safetensors=True)
 ```
@@ -620,10 +617,9 @@ for msg in messages:
     msg = c['messages']
     text = tokenizer.apply_chat_template(msg, tokenize=False, add_generation_prompt=False)
     data.append(text.strip())
-# 使用数据进行校准
-model.quantize(tokenizer, quant_config=quant_config, calib_data=data)
-# 保存校准后的模型
-model.save_quantized(quant_path, safetensors=True, shard_size="4GB")
+
+model.quantize(tokenizer, quant_config=quant_config, calib_data=data)  # 使用数据进行校准
+model.save_quantized(quant_path, safetensors=True, shard_size="4GB")  # 保存校准后的模型
 tokenizer.save_pretrained(quant_path)
 ]]>
 </code-block>
@@ -720,8 +716,8 @@ curl http://localhost:8000/v1/chat/completions \
 ```Bash
 from openai import OpenAI
 
-# 设置 OpenAI API Key（本地服务设置为空）以及 URL
-# Set OpenAI's API key and API base to use vLLM's API server.
+## 设置 OpenAI API Key（本地服务设置为空）以及 URL
+## Set OpenAI's API key and API base to use vLLM's API server.
 openai_api_key = "EMPTY"
 openai_api_base = "http://localhost:8000/v1"
 
@@ -757,7 +753,7 @@ pip install -e .
 from awq import AutoAWQForCausalLM
 from transformers import AutoTokenizer
 
-# 指定路径和量化的超参数
+## 指定路径和量化的超参数
 model_path = "your_model_path"
 quant_path = "your_quantized_model_path"
 quantize_config = BaseQuantizeConfig(
@@ -773,7 +769,7 @@ quantize_config = BaseQuantizeConfig(
 )
 max_len = 8192
 
-# 加载自己的 tokenizer 和 AutoGPTQ 模型
+## 加载自己的 tokenizer 和 AutoGPTQ 模型
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoAWQForCausalLM.from_pretrained(model_path, device_map="auto", safetensors=True)
 ```
@@ -886,17 +882,16 @@ vLLM 支持离线 Qwen1.5 和 Qwen2 Code 的离线批推理，以下是示例代
 ```Python
 from transformers import AutoTokenizer
 from vllm import LLM, SamplingParams
-# 初始化 tokenizer
+
+## 初始化 tokenizer
 tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen1.5-7B-Chat")
-# Pass the default decoding hyperparameters of Qwen1.5-7B-Chat
+## Pass the default decoding hyperparameters of Qwen1.5-7B-Chat
 sampling_params = SamplingParams(
     temperature=0.7, top_p=0.8, repetition_penalty=1.05, max_tokens=512
     )
 
-# 模型路径，也可以是 GPTQ 或者 AWQ 模型
+## 模型路径，也可以是 GPTQ 或者 AWQ 模型
 llm = LLM(model="Qwen/Qwen1.5-7B-Chat")
-
-# Prepare your prompts
 prompt = "Tell me something about large language models."
 messages = [
     {"role": "system", "content": "You are a helpful assistant."},
@@ -908,10 +903,9 @@ text = tokenizer.apply_chat_template(
     add_generation_prompt=True
 )
 
-# 生成输出
+## 生成输出
 outputs = llm.generate([text], sampling_params)
-
-# 打印输出
+## 打印输出
 for output in outputs:
     prompt = output.prompt
     generated_text = output.outputs[0].text
@@ -948,8 +942,7 @@ curl http://localhost:8000/v1/chat/completions \
 ```Bash
 from openai import OpenAI
 
-# 设置 OpenAI API Key（本地服务设置为空）以及 URL
-# Set OpenAI's API key and API base to use vLLM's API server.
+## 设置 OpenAI API Key（本地服务设置为空）以及 URL
 openai_api_key = "EMPTY"
 openai_api_base = "http://localhost:8000/v1"
 
@@ -1204,30 +1197,381 @@ bash finetune.sh -m <model_path> -d <data_path> --deepspeed <config_path> [--use
 
 #### II) Python 脚本
 
-我们主要
+微调脚本主要使用 HuggingFace 的 `trainer` 和 `peft` 来训练模型，与此同时，我们同样使用 `deepspeed` 加速训练过程。
+
+```Python
+@dataclass
+class ModelArguments:
+    model_name_or_path: Optional[str] = field(default="Qwen/Qwen-7B")
 
 
+@dataclass
+class DataArguments:
+    data_path: str = field(
+        default=None, metadata={"help": "Path to the training data."}
+    )
+    eval_data_path: str = field(
+        default=None, metadata={"help": "Path to the evaluation data."}
+    )
+    lazy_preprocess: bool = False
 
 
-<tabs>
-<tab title="tab1">
+@dataclass
+class TrainingArguments(transformers.TrainingArguments):
+    cache_dir: Optional[str] = field(default=None)
+    optim: str = field(default="adamw_torch")
+    model_max_length: int = field(
+        default=8192,
+        metadata={
+            "help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."
+        },
+    )
+    use_lora: bool = False
 
 
-</tab>
-<tab title="tab2">
-<code-block lang="python">
-<![CDATA[
-123
-]]>
-</code-block>
-</tab>
-</tabs>
+@dataclass
+class LoraArguments:
+    lora_r: int = 64
+    lora_alpha: int = 16
+    lora_dropout: float = 0.05
+    lora_target_modules: List[str] = field(
+        default_factory=lambda: [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "up_proj",
+            "gate_proj",
+            "down_proj",
+        ]
+    )
+    lora_weight_path: str = ""
+    lora_bias: str = "none"
+    q_lora: bool = False
+```
+{collapsible="true" default-state="expanded"}
+
+上面代码定义了模型、数据、训练以及 LoRA/Q-LoRA 的超参数，其中 `model_max_length` 是一个非常重要的参数，它决定了训练数据的最大序列长度。
+
+| LoRAArguments         | 描述                        |
+|-----------------------|---------------------------|
+| `lora_r`              | LoRA 的秩                   |
+| `lora_alpha`          | LoRA 的 alpha 值            |
+| `lora_dropout`        | LoRA 的 dropout 值          |
+| `lora_target_modules` | LoRA 的目标模块，默认情况下我们调整所有线性层 |
+| `lora_weight_path`    | LoRA 权重的路径                |
+| `lora_bias`           | LoRA 偏置                   |
+| `q_lora`              | 是否使用 Q-LoRA               |
 
 
+```Python
+def maybe_zero_3(param):
+    if hasattr(param, "ds_id"):
+        assert param.ds_status == ZeroParamStatus.NOT_AVAILABLE
+        with zero.GatheredParameters([param]):
+            param = param.data.detach().cpu().clone()
+    else:
+        param = param.detach().cpu().clone()
+    return param
 
 
+# Borrowed from peft.utils.get_peft_model_state_dict
+def get_peft_state_maybe_zero_3(named_params, bias):
+    if bias == "none":
+        to_return = {k: t for k, t in named_params if "lora_" in k}
+    elif bias == "all":
+        to_return = {k: t for k, t in named_params if "lora_" in k or "bias" in k}
+    elif bias == "lora_only":
+        to_return = {}
+        maybe_lora_bias = {}
+        lora_bias_names = set()
+        for k, t in named_params:
+            if "lora_" in k:
+                to_return[k] = t
+                bias_name = k.split("lora_")[0] + "bias"
+                lora_bias_names.add(bias_name)
+            elif "bias" in k:
+                maybe_lora_bias[k] = t
+        for k, t in maybe_lora_bias:
+            if bias_name in lora_bias_names:
+                to_return[bias_name] = t
+    else:
+        raise NotImplementedError
+    to_return = {k: maybe_zero_3(v) for k, v in to_return.items()}
+    return to_return
 
 
+def safe_save_model_for_hf_trainer(
+    trainer: transformers.Trainer, 
+    output_dir: str, bias="none"
+):
+    """Collects the state dict and dump to disk."""
+    # check if zero3 mode enabled
+    if deepspeed.is_deepspeed_zero3_enabled():
+        state_dict = trainer.model_wrapped._zero3_consolidated_16bit_state_dict()
+    else:
+        if trainer.args.use_lora:
+            state_dict = get_peft_state_maybe_zero_3(
+                trainer.model.named_parameters(), bias
+            )
+        else:
+            state_dict = trainer.model.state_dict()
+    if trainer.args.should_save and trainer.args.local_rank == 0:
+        trainer._save(output_dir, state_dict=state_dict)
+```
+{collapsible="true" default-state="expanded"}
+
+`safe_save_model_for_hf_trainer` 函数中使用了 `get_peft_state_maybe_zero_3` 函数，有助于在保存模型（使用或者不使用 Zero3）时出现的问题。
+
+```Python
+def preprocess(
+    messages,
+    tokenizer: transformers.PreTrainedTokenizer,
+    max_len: int,
+) -> Dict:
+    """预处理 SFT 数据"""
+    texts = []
+    for i, msg in enumerate(messages):
+        texts.append(
+            tokenizer.apply_chat_template(
+                msg,
+                tokenize=True,
+                add_generation_prompt=False,
+                padding=True,
+                max_length=max_len,
+                truncation=True,
+            )
+        )
+    input_ids = torch.tensor(texts, dtype=torch.int)
+    target_ids = input_ids.clone()
+    target_ids[target_ids == tokenizer.pad_token_id] = IGNORE_TOKEN_ID
+    attention_mask = input_ids.ne(tokenizer.pad_token_id)
+
+    return dict(
+        input_ids=input_ids, target_ids=target_ids, attention_mask=attention_mask
+    )
+```
+{collapsible="true" default-state="expanded"}
+
+对于数据预处理，我们使用 `preprocess` 来整理数据，具体来说会将 ChatML 模板在文本上进行应用。当然，我们也可以使用其他更喜欢的聊天模板，只需要使用其他 `tokenizer` 的 `apply_chat_template` 方法。此外，我们会将所有训练样本填充到最大长度。
+
+> 聊天模板储存在 HuggingFace 仓库的 tokenizer_config.json 中
+
+```Python
+class SupervisedDataset(Dataset):
+    """SFT 训练数据集"""
+    def __init__(
+        self, raw_data, tokenizer: transformers.PreTrainedTokenizer, max_len: int
+    ):
+        super(SupervisedDataset, self).__init__()
+
+        rank0_print("Formatting inputs...")
+        messages = [example["messages"] for example in raw_data]
+        data_dict = preprocess(messages, tokenizer, max_len)
+
+        self.input_ids = data_dict["input_ids"]
+        self.target_ids = data_dict["target_ids"]
+        self.attention_mask = data_dict["attention_mask"]
+
+    def __len__(self):
+        return len(self.input_ids)
+
+    def __getitem__(self, i) -> Dict[str, torch.Tensor]:
+        return dict(
+            input_ids=self.input_ids[i],
+            labels=self.labels[i],
+            attention_mask=self.attention_mask[i],
+        )
+
+
+class LazySupervisedDataset(Dataset):
+    """Dataset for supervised fine-tuning."""
+
+    def __init__(
+        self, raw_data, tokenizer: transformers.PreTrainedTokenizer, max_len: int
+    ):
+        super(LazySupervisedDataset, self).__init__()
+        self.tokenizer = tokenizer
+        self.max_len = max_len
+
+        rank0_print("Formatting inputs...Skip in lazy mode")
+        self.tokenizer = tokenizer
+        self.raw_data = raw_data
+        self.cached_data_dict = {}
+
+    def __len__(self):
+        return len(self.raw_data)
+
+    def __getitem__(self, i) -> Dict[str, torch.Tensor]:
+        if i in self.cached_data_dict:
+            return self.cached_data_dict[i]
+
+        ret = preprocess([self.raw_data[i]["messages"]], self.tokenizer, self.max_len)
+        ret = dict(
+            input_ids=ret["input_ids"][0],
+            labels=ret["target_ids"][0],
+            attention_mask=ret["attention_mask"][0],
+        )
+        self.cached_data_dict[i] = ret
+
+        return ret
+
+
+def make_supervised_data_module(
+    tokenizer: transformers.PreTrainedTokenizer,
+    data_args,
+    max_len,
+) -> Dict:
+    """Make dataset and collator for supervised fine-tuning."""
+    dataset_cls = (
+        LazySupervisedDataset if data_args.lazy_preprocess else SupervisedDataset
+    )
+    rank0_print("Loading data...")
+
+    train_data = []
+    with open(data_args.data_path, "r") as f:
+        for line in f:
+            train_data.append(json.loads(line))
+    train_dataset = dataset_cls(train_data, tokenizer=tokenizer, max_len=max_len)
+
+    if data_args.eval_data_path:
+        eval_data = []
+        with open(data_args.eval_data_path, "r") as f:
+            for line in f:
+                eval_data.append(json.loads(line))
+        eval_dataset = dataset_cls(eval_data, tokenizer=tokenizer, max_len=max_len)
+    else:
+        eval_dataset = None
+
+    return dict(train_dataset=train_dataset, eval_dataset=eval_dataset)
+```
+{collapsible="true" default-state="expanded"}
+
+这里我们调用 `make_supervised_data_module` 方法（使用了 `SupervisedDataset` 或者 `LazySupervisedDataset`）来构建数据集。
+
+
+```Python
+def train():
+    global local_rank
+
+    parser = transformers.HfArgumentParser(
+        (ModelArguments, DataArguments, TrainingArguments, LoraArguments)
+    )
+    (
+        model_args,
+        data_args,
+        training_args,
+        lora_args,
+    ) = parser.parse_args_into_dataclasses()
+
+    # 适用于单 GPU Q-LoRA 微调
+    if (
+        getattr(training_args, "deepspeed", None)
+        and int(os.environ.get("WORLD_SIZE", 1)) == 1
+    ):
+        training_args.distributed_state.distributed_type = DistributedType.DEEPSPEED
+
+    local_rank = training_args.local_rank
+
+    device_map = None
+    world_size = int(os.environ.get("WORLD_SIZE", 1))
+    ddp = world_size != 1
+    if lora_args.q_lora:
+        device_map = {"": int(os.environ.get("LOCAL_RANK") or 0)} if ddp else "auto"
+        if len(training_args.fsdp) > 0 or deepspeed.is_deepspeed_zero3_enabled():
+            logging.warning("FSDP or ZeRO3 is incompatible with QLoRA.")
+
+    model_load_kwargs = {
+        "low_cpu_mem_usage": not deepspeed.is_deepspeed_zero3_enabled(),
+    }
+
+    compute_dtype = (
+        torch.float16
+        if training_args.fp16
+        else (torch.bfloat16 if training_args.bf16 else torch.float32)
+    )
+
+    # 加载 model 和 tokenizer
+    config = transformers.AutoConfig.from_pretrained(
+        model_args.model_name_or_path,
+        cache_dir=training_args.cache_dir,
+    )
+    config.use_cache = False
+
+    model = AutoModelForCausalLM.from_pretrained(
+        model_args.model_name_or_path,
+        config=config,
+        cache_dir=training_args.cache_dir,
+        device_map=device_map,
+        quantization_config=BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=compute_dtype,
+        )
+        if training_args.use_lora and lora_args.q_lora
+        else None,
+        **model_load_kwargs,
+    )
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_args.model_name_or_path,
+        cache_dir=training_args.cache_dir,
+        model_max_length=training_args.model_max_length,
+        padding_side="right",
+        use_fast=False,
+    )
+
+    if training_args.use_lora:
+        lora_config = LoraConfig(
+            r=lora_args.lora_r,
+            lora_alpha=lora_args.lora_alpha,
+            target_modules=lora_args.lora_target_modules,
+            lora_dropout=lora_args.lora_dropout,
+            bias=lora_args.lora_bias,
+            task_type="CAUSAL_LM",
+        )
+        if lora_args.q_lora:
+            model = prepare_model_for_kbit_training(
+                model, use_gradient_checkpointing=training_args.gradient_checkpointing
+            )
+
+        model = get_peft_model(model, lora_config)
+
+        # Print peft trainable params
+        model.print_trainable_parameters()
+
+        if training_args.gradient_checkpointing:
+            model.enable_input_require_grads()
+
+    # 加载数据
+    data_module = make_supervised_data_module(
+        tokenizer=tokenizer, data_args=data_args, max_len=training_args.model_max_length
+    )
+
+    # Start trainer
+    trainer = Trainer(
+        model=model, tokenizer=tokenizer, args=training_args, **data_module
+    )
+
+    # `not training_args.use_lora` is a temporary workaround for the issue that there are problems with
+    # loading the checkpoint when using LoRA with DeepSpeed.
+    # Check this issue https://github.com/huggingface/peft/issues/746 for more information.
+    if (
+        list(pathlib.Path(training_args.output_dir).glob("checkpoint-*"))
+        and not training_args.use_lora
+    ):
+        trainer.train(resume_from_checkpoint=True)
+    else:
+        trainer.train()
+    trainer.save_state()
+
+    safe_save_model_for_hf_trainer(
+        trainer=trainer, output_dir=training_args.output_dir, bias=lora_args.lora_bias
+    )
+```
+{collapsible="true" default-state="expanded"}
+
+这里的 `train` 方法是整个微调训练中的核心方法，如果我们使用 LoRA，该方法会使用 `LoraConfig` 来初始化 LoRA 配置。如果我们使用 Q-LoRA，我们还需要使用 `prepare_model_for_kbit_training`。**值得注意的是，目前该脚本不支持 LoRA 训练恢复**。
 
 
 <seealso>
@@ -1238,6 +1582,8 @@ bash finetune.sh -m <model_path> -d <data_path> --deepspeed <config_path> [--use
     <a href="https://platform.openai.com/docs/api-reference/chat/completions/create">OpenAI create chat interface</a>
     <a href="https://lmstudio.ai">LM Studio</a>
     <a href="https://ollama.com">Ollama</a>
+    <a href="https://docs.vllm.ai/en/latest/index.html">vLLM 文档</a>
+    <a href="https://qwenlm.github.io/blog/qwen1.5">Introduce Qwen1.5</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/QwenLM">QwenLM</a>
@@ -1253,11 +1599,14 @@ bash finetune.sh -m <model_path> -d <data_path> --deepspeed <config_path> [--use
     <a href="https://github.com/marella/ctransformers">CTransformers</a>
     <a href="https://github.com/Cornell-RelaxML/quip-sharp">Quip#</a>
     <a href="https://github.com/oobabooga/text-generation-webui">Text Generation WebUI</a>
+    <a href="https://github.com/OpenAccess-AI-Collective/axolotl">Axolotl</a>
+    <a href="https://github.com/hiyouga/LLaMA-Factory">LLaMA-Factory</a>
 </category>
 <category ref="ref_issues">
 </category>
 <category ref="ref_hf">
     <a href="https://huggingface.co/Qwen">Qwen</a>
+    <a href="https://docs.vllm.ai/en/latest/index.html">Qwen1.5 HF 示例</a>
 </category>
 <category ref="ref_ms">
     <a href="https://modelscope.cn/organization/qwen">Qwen</a>

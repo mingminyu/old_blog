@@ -4,9 +4,8 @@
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Rust 基础" id="rust-base">
-
     <section-starting-page>
-        <title>Section starting page title</title>
+        <title>Rust 基础</title>
         <description>
             Add an introductory paragraph: explain what this section is about in 2-3 short sentences.
         </description>

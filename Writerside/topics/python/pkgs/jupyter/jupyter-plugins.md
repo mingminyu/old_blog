@@ -331,7 +331,8 @@ jupyter nbextension enable codefolding/main
     <a href="https://mp.weixin.qq.com/s/Ff8lqk89zOz44-88Uw4ayQ">一款无代码实时自动分析Pandas DataFrame的工具</a>
     <a href="https://mp.weixin.qq.com/s/KIZOZrpRgpC2ypByJi0KnQ">必看这 4 个Pandas神器</a>
     <a href="https://mp.weixin.qq.com/s/j57blXwEc05ixaZMaBUzbQ">10 个 Python 超实用的机器学习库</a>
-    <a href="https://mp.weixin.qq.com/s/m9LX9ymL6_zBElvYc9nDPg">一个有趣且实用的Jupyter插件: StickyLand</a>
+    <a href="https://mp.weixin.qq.com/s/m9LX9ymL6_zBElvYc9nDPg">一个有趣且实用的 Jupyter 插件: StickyLand</a>
+    <a href="https://mp.weixin.qq.com/s/WjXO9hIDc9bGvoYdmHDEYg">一个有趣且实用的 Jupyter 插件: PyGWalker</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/cmudig/AutoProfiler">AutoProfiler</a>

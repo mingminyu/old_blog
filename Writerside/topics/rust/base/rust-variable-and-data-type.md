@@ -211,16 +211,6 @@ println!("usize max value: {}", usize::MAX);
 ]]>
 </code-block>
 </tab>
-<tab title="占用字节">
-<code-block lang="javascript" ignore-vars="true">
-<![CDATA[
-println!("isize is {} bytes", std::mem::size_of::<isize>());
-println!("usize is {} bytes", std::mem::size_of::<usize>());
-println!("u64 is {} bytes", std::mem::size_of::<u64>());
-]]>
-</code-block>
-</tab>
-
 <tab title="浮点型">
 <code-block lang="javascript">
 <![CDATA[
@@ -249,6 +239,16 @@ let char_emo: char = '😀';
 </code-block>
 </tab>
 </tabs>
+
+接下来，我们看下不同数据类型占用字节数：
+
+```Javascript
+println!("isize is {} bytes", std::mem::size_of::<isize>());
+println!("usize is {} bytes", std::mem::size_of::<usize>());
+println!("u64 is {} bytes", std::mem::size_of::<u64>());
+```
+
+
 
 
 

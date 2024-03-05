@@ -58,4 +58,8 @@
         <description>Created after removal of "所有权机制" from AiFun</description>
         <accepts>rust-ownership.html</accepts>
     </rule>
+    <rule id="59ed1832">
+        <description>Created after removal of "DALEX 教程" from AiFun</description>
+        <accepts>dalex.html</accepts>
+    </rule>
 </rules>

@@ -115,6 +115,7 @@ conda config --set show_channel_urls yes
     <a href="https://mp.weixin.qq.com/s/n4LJRLSqZr9TvWNbX54uXQ">virtualenv，一个神奇的python工具</a>
     <a href="https://mp.weixin.qq.com/s/57kk3G23VMreqARLXCUCHg">Python环境管理大比拼</a>
     <a href="https://mp.weixin.qq.com/s/AJajWInAOtMTkkSBO21ZNQ">实用的 Python 库: Poetry</a>
+    <a href="https://mp.weixin.qq.com/s/N4E2Tka9Y83ghu2bv2mn1Q">实用的 Python 库: PDM</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/python-poetry/poetry">Poetry</a>

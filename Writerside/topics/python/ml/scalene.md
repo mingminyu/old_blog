@@ -1,4 +1,4 @@
-# Shapash 教程
+# Scalene 教程
 
 <show-structure depth="2"/>
 
@@ -7,11 +7,10 @@
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/rM9fAtSYAo6X0hpNeL1V2w">神奇的 Python 库: Shapash</a>
-    <a href="https://mp.weixin.qq.com/s/YtvfjR7_gsDTJFmqx1i0hg">实用的 Python 库: Shapash</a>
+    <a href="https://mp.weixin.qq.com/s/SSSPEnUkY16uKwoeJzt9Wg">神奇的 Python 库: Scalene</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/MAIF/shapash">Shapash</a>
+    <a href="https://github.com/emeryberger/scalene">Scalene</a>
 </category>
 <category ref="ref_issues">
 </category>
