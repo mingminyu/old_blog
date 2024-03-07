@@ -2,8 +2,7 @@
 
 <show-structure depth="2"/>
 
-> 待补充
-{style="warning"}
+a2ml是一个强大的Python库，用于自动化多个供应商的机器学习工作流程。它提供了一个统一的接口，让用户能够轻松地使用不同的机器学习平台和工具。
 
 
 <seealso>

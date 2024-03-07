@@ -2,7 +2,7 @@
 
 <show-structure depth="3"/>
 
-Rust 中字符串有两种类型，分别为 String 和 `&str`（后面我们统一称之为字面量）。String 是一个堆分配的可变字符串类型，而 `&str` 则是指字符串切片借用，它实在栈上分配的。此外，`&str` 是不可变借用，指向存储在其他地方的 UTF-8 编码的字符串数据，由指针和长度构成。
+Rust 中字符串有两种类型，分别为 `String` 和 `&str`（称为字面量）。String 是一个堆分配的可变字符串类型，而 `&str` 则是指字符串切片借用，它实在栈上分配的。此外，`&str` 是不可变借用，指向存储在其他地方的 UTF-8 编码的字符串数据，由指针和长度构成。
 
 之前也简单提到过，String 类型实际上就是使用了 `Vec` 类型，这个从源码中也能直观看出来。
 
@@ -22,7 +22,7 @@ String 是具有所有权的，而 `&str` 是没有的。`Struct` 中属性使�
 <code-block lang="javascript">
 <![CDATA[
 let name = String::from("C++");
-let course = "Rust".to_owned();
+let course = "Rust".to_string();
 let new_name = name.replace("C++", "CPP");
 println!("{name} {course} {new_name}");
 
@@ -52,7 +52,7 @@ fn main() {
 ]]>
 </code-block>
 </tab>
-<tab title="标记生命周期">
+<tab title="手动标记生命周期">
 <code-block lang="python">
 <![CDATA[
 struct Person<'a> {
@@ -60,12 +60,12 @@ struct Person<'a> {
     age: i32,
 }
 
-fn print<'0>(data: &'0 str) {
+fn print(data: &str) {
     println!("{}", data);
 }
 
 // 只能传 String 的借用
-fn print_string_borrow<'0>(data: &'0 String) {
+fn print_string_borrow(data: &String) {
     println!("{}", data);
 }
 

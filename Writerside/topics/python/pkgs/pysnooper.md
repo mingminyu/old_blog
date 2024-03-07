@@ -9,9 +9,10 @@ PySnooper 是一个 Python 调试库，它允许你跟踪代码的执行过程�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/6H33400RLNkXR-OxaHJx3g">强大的 Python 库: Pysnooper</a>
+    <a href="https://mp.weixin.qq.com/s/ChFtmiwS53R2JqLD47jmmw">有趣的 Python 库: Pysnooper</a>
 </category>
 <category ref="ref_github">
-    <a href="https://mp.weixin.qq.com/s/6H33400RLNkXR-OxaHJx3g">Pysnooper</a>
+    <a href="https://github.com/cool-RR/PySnooper">Pysnooper</a>
 </category>
 <category ref="ref_issues">
 </category>

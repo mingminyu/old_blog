@@ -8,6 +8,7 @@ bamboolib是一个用于数据探索和可视化的Python库，旨在简化数�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/sEh0ZPmNOB9nqpmXxgCYsg">强大的 Python 库: Bamboolib</a>
+    <a href="https://mp.weixin.qq.com/s/P4QxxO5hQdwvbZ64agw7TA">有趣的 Python 库: Bamboolib</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/tkrabel/bamboolib">Bamboolib</a>

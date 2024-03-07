@@ -12,7 +12,7 @@
     <a href="https://mp.weixin.qq.com/s/PLXopcmbm3CsJKG9ng_JsA">ImbalancedLearn 简介</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/scikit-learn-contrib/imbalanced-learn">ImbalancedLearn Github</a>
+    <a href="https://github.com/scikit-learn-contrib/imbalanced-learn">ImbalancedLearn</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

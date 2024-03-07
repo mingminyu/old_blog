@@ -60,7 +60,7 @@ delete ptr;
 
 除了上面这几种，还有堆栈溢出、不匹配的 new/delete 或者 malloc/free。
 
-## 2. Rust 的内存管理模型 {collapsible="true" default-state="expanded"}
+## 2. Rust 内存管理模型 {collapsible="true" default-state="expanded"}
 
 Rust 中内存管理模型共分为以下几部分内容：
 - 所有权系统
@@ -197,13 +197,13 @@ fn not_recommend_method() -> &'static str {
 
 ```Javascript
 fn first_word(s: &str) -> &str {
-  let bytes = s.as_bytes();
-  for (i, &item) in bytes.iter().enumerate() {
-    if item == b' ' {
-      return &s[0..i];
+    let bytes = s.as_bytes();
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
     }
-  }
-  &s[..]  // 使用 &s 也可以
+    &s[..]  // 使用 &s 也可以
 }
 
 fn main() {
@@ -218,15 +218,15 @@ fn main() {
 
 ```Javascript
 fn main() {
-  let s1 = "hello rust";
-  let s2 = String::from("hello python");
-
-  // 都可以使用 borrowing 方式来切片
-  println!("{}", &s1[6..10]);
-  println!("{}", &s1[0..8]);
-  println!("{}", &s1[0..]);
-  println!("{}", &s1[..]);
-  println!("{}", &s2[6..12]);
-  println!("{}", &s2[6..]);
+    let s1 = "hello rust";
+    let s2 = String::from("hello python");
+    
+    // 都可以使用 borrowing 方式来切片
+    println!("{}", &s1[6..10]);
+    println!("{}", &s1[0..8]);
+    println!("{}", &s1[0..]);
+    println!("{}", &s1[..]);
+    println!("{}", &s2[6..12]);
+    println!("{}", &s2[6..]);
 }
 ```

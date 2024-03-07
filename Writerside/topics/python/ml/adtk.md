@@ -12,7 +12,7 @@
     <a href="https://mp.weixin.qq.com/s/F-0lGJR-TmHcZCuE4vUwDA">Adtk 简介</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/arundo/adtk">Adtk Github</a>
+    <a href="https://github.com/arundo/adtk">Adtk</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>
