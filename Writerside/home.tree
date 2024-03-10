@@ -539,13 +539,12 @@
             <toc-element topic="self-attention.md"/>
         </toc-element>
         <toc-element topic="ml.topic">
-            <toc-element topic="autogluon.md"/>
-            <toc-element topic="scikit-optimize.md"/>
             <toc-element topic="a2ml.md"/>
             <toc-element topic="adaboost.md"/>
             <toc-element topic="adtk.md"/>
             <toc-element topic="aeon.md"/>
             <toc-element topic="annoy.md"/>
+            <toc-element topic="autogluon.md"/>
             <toc-element topic="banditpam.md"/>
             <toc-element topic="bentoml.md"/>
             <toc-element topic="catboost.md"/>
@@ -576,6 +575,7 @@
             <toc-element topic="pytimetk.md"/>
             <toc-element topic="shap.md"/>
             <toc-element topic="scikit-learn.md"/>
+            <toc-element topic="scikit-optimize.md"/>
             <toc-element topic="shapash.md"/>
             <toc-element topic="statsmodel.md"/>
             <toc-element topic="statsmodels.md"/>
