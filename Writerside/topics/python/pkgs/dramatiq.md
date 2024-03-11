@@ -7,6 +7,7 @@ Dramatiq是一个快速、可靠的Python异步任务处理库，它旨在提供
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/AlB1oTmVyP-FaXu-QECzPw">强大的 Python 库: Dramatiq</a>
+    <a href="https://mp.weixin.qq.com/s/jGPqU78vDeAB-mK3r3fIMA">实用的 Python 库: Dramatiq</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/Bogdanp/dramatiq">Dramatiq</a>

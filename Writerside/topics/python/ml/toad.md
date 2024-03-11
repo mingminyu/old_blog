@@ -122,6 +122,7 @@ toad.quality(df_train.drop(drop_cols,axis=1), 'target', iv_only=True)
 
 ## 4. 特征筛选
 
+### 4.1 基于 IV 的特征筛选
 
 Toad 提供了 `toad.selection.select` 函数用于特征筛选，它根据特征的缺失值占比、iv值、高相关性进行筛选，其可设置参数有:
 - `empty`: 若变量缺失率大于阈值则会被删除，默认为 0.9
@@ -143,6 +144,60 @@ df_train_selected, dropped = toad.selection.select(
 print(dropped)
 print(df_train_selected.shape)
 ```
+
+> 因为特征的 IV 值计算并不需要进行参数拟合，所以整个过程是飞常高效的。
+
+### 4.2 基于逐步回归的特征筛选
+
+除了基于 IV 的方法筛选特征之外，Toad 还提供了 `toad.selection.stepwise` 来逐步递归的方式来筛选特征。相较于前面提到的 IV 筛选特征的方法，此方法是需要不断通过裁剪或者添加入模特征列表，基于训练后模型的表现来决定哪些特征被删除或者保留，所以必然时耗会长点。
+
+`stepwise` 方法支持前向、后向以及双向，可用参数如下:
+- `estimator`: 用于拟合的模型，支持 ols、lr、lasso、ridge
+- `direction`: 逐步回归的方向
+  - forward: 前向
+  - backward: 后向
+  - both: 双向
+- `criterion`: 评估标准
+  - aic
+  - bic
+  - ks
+  - auc
+- `max_iter`: 最大训练次数
+- `return_drop`: 是否返回被提出的特征
+- `exclude`: 不需要被训练的字段，比如 ID 或者时间字段
+
+> 经过验证 `direction="both"` 的效果最好，`estimator="ols"` 以及 `criterion="aic"` 运行速度快且结果对逻辑回归建模有较好的代表性。
+> 
+> 需要的注意的是，递归特征的筛选需要将特征先进行 WOE 转换。
+> 
+{style="note"}
+
+```Python
+## 将woe转化后的数据做逐步回归
+df_final_train = toad.selection.stepwise(
+    df_train_woe,
+    target='target',
+    estimator='ols', 
+    direction='both', 
+    criterion='aic',
+    exclude=drop_cols
+    )
+## 将选出的变量应用于 test/OOT 数据
+df_final_oot = df_oot_woe[df_final.columns]
+## 逐步回归从 31 个变量中选出了 10 个
+print(df_final_train.shape)
+cols = list(df_final.drop(drop_cols + ['target'], axis=1).columns)
+```
+
+
+### 4.3 变量评估
+
+熟悉建模的同学肯定知道，我们不光要看变量的 IV 表现，有时间也要看挑选后的变量是否稳定，这就用到 PSI 这样的指标来评估变量的稳定性，`toad.metrics.PSI` 就为我们提供了这样的功能。
+
+```Python
+toad.metrics.PSI(df_final_train[cols], df_final_oot[cols])
+```
+
 
 ## 5. 分箱
 
@@ -305,7 +360,7 @@ WOE 转化在分箱调整好之后进行，步骤如下：
 3. 通过 `fit_transform` 训练并输出 woe 转化的数据，这会转化所有变量，包括未被分箱 transform 的列，通过 `exclude` 删去不要 WOE 转化的列，特别是 `target` 字段。参数如下:
    - `target`: 目标列数据（非列名）
    - `exclude`: 不需要被 WOE 转化的变量
-4. 根据训练好的 WOE Transer，转化验证集数据
+4. 根据训练好的 WOE Transer 调用 `transform` 方法转化验证集数据
 
 
 ```Python
@@ -322,14 +377,162 @@ print(df_train_woe.head(3))
 ```
 
 
+## 7. 训练模型
+
+Toad 对于模型训练做了高度封装，你可以像
+
+```Python
+from sklearn.linear_model import LogisticRegression
+
+lr = LogisticRegression()
+lr.fit(df_final_train[cols], df_final_train['target'])
+
+```
 
 
+## 8. 模型评估
+
+`toad.metrics` 模块用于评估模型的性能，目前提供了 KS、AUC、F1 评估指标，此外我们之前提及的 PSI 也是可以评估预测的稳定性。 
+
+### 8.1 KS 和 AUC
+
+<tabs>
+<tab title="评估模型性能">
+<code-block lang="python">
+<![CDATA[
+from toad.metrics import KS, AUC
+## 预测训练和隔月的OOT
+pred_train = lr.predict_proba(df_final_train[cols])[:, 1]
+print("Train KS: ", KS(pred_train, df_final_train['target']))
+print("Train AUC: ", AUC(pred_train, df_final_train['target']))
+pred_oot5 = lr.predict_proba(
+    df_final_oot.loc[df_final_oot.month == '2019-05', cols]
+    )[:, 1]
+pred_oot6 = lr.predict_proba(
+    df_final_oot.loc[df_final_oot.month == '2019-06', cols]
+    )[:, 1]
+pred_oot7 = lr.predict_proba(
+    df_final_oot.loc[df_final_oot.month == '2019-07', cols]
+    )[:, 1]
+]]>
+</code-block>
+</tab>
+<tab title="输出">
+<code-block lang="python">
+<![CDATA[
+Train KS: 0.3707986228750539
+Train AUC: 0.75060723924743
+5月 KS: 0.3686687175756087
+6月 KS: 0.3495273403486497
+7月 KS: 0.3796914199845523
+]]>
+</code-block>
+</tab>
+</tabs>
 
 
+此外，PSI 也可以用于验证分数的稳定性。
+
+<tabs>
+<tab title="OOT KS表现">
+<code-block lang="python">
+<![CDATA[
+print("May PSI: ", toad.metrics.PSI(pred_train, pred_oot5))
+print("June PSI: ", toad.metrics.PSI(pred_train, pred_oot6))
+print("July PSI: ", toad.metrics.PSI(pred_train, pred_oot7))
+]]>
+</code-block>
+</tab>
+<tab title="输出">
+<code-block lang="python">
+<![CDATA[
+May PSI: 0.12760761722158315
+June PSI: 0.1268648506657109
+July PSI: 0.1268648506657109
+]]>
+</code-block>
+</tab>
+</tabs>
 
 
+### 8.2 KS_bucket
+
+`KS_bucket` 输出模型预测分箱后的评判信息，包括每组的分数区间样本量、坏账率 、KS等，具体参数如下:
+- `bucket`: 分箱的数量
+- `method`: 分箱方法，建议使用 `quantile`（等频）或者 `step`（等步长）。
 
 
+坏账率(Bad Rate)
+: - 组之间的坏账率差距越大越好
+: - 可以用于观察是否有跳点
+: - 可以用与找最佳切点
+: - 可以对比
+
+
+```Python
+toad.metrics.KS_bucket(
+    pred_train, 
+    df_final_train['target'], 
+    bucket=10,
+    method='quantile'
+    )
+```
+
+## 9. 建立评分卡
+
+`toad.ScoreCard` 可以将逻辑回归模型转换为标准评分卡，支持传入逻辑回归参数，参数如下:
+- `combiner`: Combiner 实例
+- `transer`: WOE Transer
+- `pdo`: 默认值位 60
+- `rate`: 默认值位 2
+- `base_odds`: 默认值为 20
+- `base_score`: 基础分，默认为 750
+- `card`: 支持传入专家评分卡
+- `C`: 
+- `kwargs`: 支持传入逻辑回归参数(`sklearn.linear_model.LogisticRegression`)
+
+
+```Python
+card = toad.ScoreCard(
+    combiner=c,
+    transer=transer,
+    # class_weight='balanced',
+    # C=0.1,
+    # base_score=600,
+    # base_odds=35 ,
+    # pdo=60,
+    # rate=2
+)
+card.fit(df_final_trains[col], df_final_train['target'])
+## 直接使用原始数据进行评分
+card.predict(df_train)
+## 输出标准评分卡
+card.export()
+```
+
+> 评分卡在 `fit` 时使用 WOE 转换后的数据来计算最终的分数，分数一旦计算完成，便无需 WOE 值，可以直接使用 原始数据进行评分。
+> 
+{style="warning"}
+
+### 9.1 评分卡的转换逻辑
+
+Toad 采用标准评分卡转换逻辑进行评分转换，详见[评分转换逻辑](https://toad.readthedocs.io/en/latest/reference.html)。
+
+
+## 10. 其他功能
+
+此外，Toad 还提供了 `toad.tranform.GBDTransformer` 用于 GBDT 编码，通过 LR+GBDT 建立建模，这一操作主要用于创建更强的特征。
+
+
+```Python
+gbdt_transer = toad.transform.GBDTTransformer()
+gbdt_transer.fit(
+    df_final_train[cols + ['target']], 'target', 
+    n_estimators=10, max_depth=2
+    )
+df_gbdt_vars = gbdt_transer.transform(df_final_train[cols])
+print(df_gbdt_vars.shape)  # (43576, 40)
+```
 
 
 <seealso>
@@ -341,6 +544,7 @@ print(df_train_woe.head(3))
     <a href="https://github.com/amphibian-dev/toad">Toad</a>
 </category>
 <category ref="ref_issues">
+    <a href="https://github.com/amphibian-dev/toad/issues/31">Toad#31</a>
 </category>
 <category ref="ref_hf">
 </category>

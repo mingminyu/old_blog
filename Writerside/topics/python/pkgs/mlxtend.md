@@ -8,12 +8,13 @@ mlxtend（Machine Learning Extensions）是一个流行的 Python 库，其中�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/QcnpQuVHOoTjugmpJLjN1A">Mlxtend 简介</a>
-    <a href="https://mp.weixin.qq.com/s/OZN6u5nOAs7m2nunPjIeBg">Mlxtend 简介</a>
+    <a href="https://mp.weixin.qq.com/s/OZN6u5nOAs7m2nunPjIeBg">强大的 Python 库: Mlxtend </a>
+    <a href="https://mp.weixin.qq.com/s/VLsE6WHu0iRaywR3o4GPeQ">实用的 Python 库: Mlxtend </a>
 </category>
 <category ref="ref_github">
 </category>
 <category ref="ref_issues">
-    <a href="https://github.com/rasbt/mlxtend">Mlxtend Github</a>
+    <a href="https://github.com/rasbt/mlxtend">Mlxtend</a>
 </category>
 <category ref="ref_hf"></category>
 <category ref="ref_ms"></category>
