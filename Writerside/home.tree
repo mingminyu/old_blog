@@ -47,6 +47,7 @@
             <toc-element topic="cpython.md"/>
         </toc-element>
         <toc-element topic="python-built-pkgs.topic">
+            <toc-element topic="gzip.md"/>
             <toc-element topic="base64.md"/>
             <toc-element topic="dataclass.md"/>
         </toc-element>
@@ -78,6 +79,8 @@
             <toc-element topic="uvloop.md"/>
         </toc-element>
         <toc-element topic="python-pkgs.md">
+            <toc-element topic="unoconv.md"/>
+            <toc-element topic="luigi.md"/>
             <toc-element topic="signal.md"/>
             <toc-element topic="retrying.md"/>
             <toc-element topic="pywal.md"/>
@@ -369,6 +372,7 @@
             <toc-element topic="uvicorn.md"/>
         </toc-element>
         <toc-element topic="python-connect-db.topic">
+            <toc-element topic="pypika.md"/>
             <toc-element topic="pony.md"/>
             <toc-element topic="python-orm.md"/>
             <toc-element topic="python-connect-impala.md"/>
@@ -427,16 +431,17 @@
             <toc-element topic="vizro.md"/>
         </toc-element>
         <toc-element topic="automation.topic">
-            <toc-element topic="xlwt.md"/>
-            <toc-element topic="xlrd.md"/>
-            <toc-element topic="pyautogui.md"/>
-            <toc-element topic="rocketry.md"/>
+            <toc-element topic="xlsxwriter.md"/>
             <toc-element topic="airflow.md"/>
             <toc-element topic="borb.md"/>
+            <toc-element topic="pyautogui.md"/>
             <toc-element topic="pyzmail.md"/>
+            <toc-element topic="rocketry.md"/>
             <toc-element topic="wechatpy.md"/>
             <toc-element topic="win32com.md"/>
+            <toc-element topic="xlrd.md"/>
             <toc-element topic="xlwings.md"/>
+            <toc-element topic="xlwt.md"/>
         </toc-element>
         <toc-element topic="python-gui.topic">
             <toc-element topic="qtpy.md"/>
@@ -465,7 +470,10 @@
         <toc-element topic="java-advance.topic"/>
         <toc-element topic="javaweb.topic">
             <toc-element topic="springcloud.md"/>
-            <toc-element topic="springboot.topic"/>
+            <toc-element topic="springboot.topic">
+                <toc-element topic="springboot-overview.md"/>
+                <toc-element topic="springboot-settings.md"/>
+            </toc-element>
             <toc-element topic="spring.topic"/>
         </toc-element>
     </toc-element>
@@ -630,6 +638,7 @@
             <toc-element topic="yolox.md"/>
         </toc-element>
         <toc-element topic="data-analysis.md">
+            <toc-element topic="petl.md"/>
             <toc-element topic="xalpha.md"/>
             <toc-element topic="agate.md"/>
             <toc-element topic="dabl.md"/>
