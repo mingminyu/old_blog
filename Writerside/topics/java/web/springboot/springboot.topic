@@ -5,9 +5,9 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="SpringBoot 教程" id="springboot">
     <section-starting-page>
-        <title>Section starting page title</title>
+        <title>SpringBoot 教程</title>
         <description>
-            Add an introductory paragraph: explain what this section is about in 2-3 short sentences.
+            SpringBoot 学习文档
         </description>
 
         <spotlight>
@@ -26,22 +26,22 @@
             <a href="" summary="With a custom card summary">Custom card title</a>
         </secondary>
 
-        <!--    Optionally add additional cards and links to topics that are not in this section but may be relevant.    -->
         <misc>
             <cards>
-                <title>Other relevant topics as wide cards</title>
-                <a href="" summary="With a custom card summary">Custom card title</a>
+                <title>基础篇</title>
+                <a href="springboot-quickstart.md">SpringBoot 快速入门</a>
             </cards>
 
             <cards narrow="true">
-                <title>Other relevant topics as narrow cards</title>
+                <title>进阶篇</title>
                 <a href="" summary="With a custom card summary">Custom card title</a>
             </cards>
 
             <links>
                 <group>
-                    <title>Other related topics as links</title>
-                    <a href="" summary="With a custom card summary">Custom card title</a>
+                    <title>SpringBoot 文档</title>
+                    <a href="https://springdoc.cn/spring-boot" summary="chinese tutorials for springboot">SpringBoot 中文文档</a>
+                    <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle" summary="official tutorials for springboot">SpringBoot 官方文档</a>
                 </group>
                 <group>
                     <title>Two in a row</title>

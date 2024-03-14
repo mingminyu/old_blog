@@ -79,14 +79,8 @@
             <toc-element topic="uvloop.md"/>
         </toc-element>
         <toc-element topic="python-pkgs.md">
-            <toc-element topic="unoconv.md"/>
-            <toc-element topic="luigi.md"/>
-            <toc-element topic="signal.md"/>
-            <toc-element topic="retrying.md"/>
-            <toc-element topic="pywal.md"/>
-            <toc-element topic="spei-python.md"/>
-            <toc-element topic="returns.md"/>
-            <toc-element topic="rauth.md"/>
+            <toc-element topic="pyyaml.md"/>
+            <toc-element topic="doit.md"/>
             <toc-element topic="addressrec.md"/>
             <toc-element topic="aesara.md"/>
             <toc-element topic="aiofiles.md"/>
@@ -152,12 +146,15 @@
             <toc-element topic="geoip2.md"/>
             <toc-element topic="gravis.md"/>
             <toc-element topic="greykite.md"/>
+            <toc-element topic="grumpy.md"/>
             <toc-element topic="gym.md">
             </toc-element>
             <toc-element topic="handcalcs.md"/>
             <toc-element topic="hatchling.md"/>
             <toc-element topic="httpx.md"/>
             <toc-element topic="hummingbird.md"/>
+            <toc-element topic="icecream.md"/>
+            <toc-element topic="indico.md"/>
             <toc-element topic="interpret.md"/>
             <toc-element topic="joblib.md"/>
             <toc-element topic="json-flatten.md"/>
@@ -167,6 +164,7 @@
                 </toc-element>
                 <toc-element topic="jupyter_kernel_usage.md"/>
             </toc-element>
+            <toc-element topic="kangas.md"/>
             <toc-element topic="kornia.md"/>
             <toc-element topic="langgraph.md"/>
             <toc-element topic="latexify.md"/>
@@ -174,6 +172,7 @@
             </toc-element>
             <toc-element topic="librosa.md"/>
             <toc-element topic="loguru.md"/>
+            <toc-element topic="luigi.md"/>
             <toc-element topic="lxml.md"/>
             <toc-element topic="magenta.md"/>
             <toc-element topic="maya.md"/>
@@ -239,9 +238,13 @@
             <toc-element topic="python_markdown2.md">
             </toc-element>
             <toc-element topic="python-socketio.md"/>
+            <toc-element topic="pywal.md"/>
             <toc-element topic="qrcode.md"/>
+            <toc-element topic="rauth.md"/>
             <toc-element topic="rdkit.md"/>
             <toc-element topic="reloading.md"/>
+            <toc-element topic="retrying.md"/>
+            <toc-element topic="returns.md"/>
             <toc-element topic="rich.md"/>
             <toc-element topic="rsa.md"/>
             <toc-element topic="ruff.md"/>
@@ -255,7 +258,9 @@
             <toc-element topic="scikit_llm.md">
             </toc-element>
             <toc-element topic="scipy.md"/>
+            <toc-element topic="signal.md"/>
             <toc-element topic="smtplib.md"/>
+            <toc-element topic="spei-python.md"/>
             <toc-element topic="sphinx.md"/>
             <toc-element topic="statsforecast.md"/>
             <toc-element topic="streamparse.md"/>
@@ -284,9 +289,9 @@
             <toc-element topic="twython.md"/>
             <toc-element topic="typer.md"/>
             <toc-element topic="uv.md"/>
+            <toc-element topic="unoconv.md"/>
             <toc-element topic="vaex.md"/>
             <toc-element topic="vcrpy.md"/>
-            <toc-element topic="grumpy.md"/>
             <toc-element topic="vidgear.md">
             </toc-element>
             <toc-element topic="voluptuous.md"/>
@@ -300,10 +305,9 @@
             <toc-element topic="xmltodict.md"/>
             <toc-element topic="xonsh.md">
             </toc-element>
-            <toc-element topic="yapf.md"/>
             <toc-element topic="yagmail.md"/>
+            <toc-element topic="yapf.md"/>
             <toc-element topic="yarl.md"/>
-            <toc-element topic="kangas.md"/>
             <toc-element topic="you-get.md"/>
             <toc-element topic="zvt.md"/>
             <toc-element topic="zappa.md"/>
@@ -395,6 +399,7 @@
             <toc-element topic="python-selenium.md"/>
         </toc-element>
         <toc-element topic="python-visualization.topic">
+            <toc-element topic="pycirclize.md"/>
             <toc-element topic="altair.md"/>
             <toc-element topic="animatplot.md"/>
             <toc-element topic="autoviz.md"/>
@@ -466,13 +471,16 @@
         <toc-element topic="go-base.topic"/>
     </toc-element>
     <toc-element topic="java.topic">
+        <toc-element topic="jetbrains-idea-ide.md"/>
         <toc-element topic="java-base.topic"/>
         <toc-element topic="java-advance.topic"/>
         <toc-element topic="javaweb.topic">
             <toc-element topic="springcloud.md"/>
             <toc-element topic="springboot.topic">
-                <toc-element topic="springboot-overview.md"/>
-                <toc-element topic="springboot-settings.md"/>
+                <toc-element topic="springboot-quickstart.md"/>
+                <toc-element topic="springboot-config-file.md"/>
+                <toc-element topic="springboot-integerate-mybatis.md"/>
+                <toc-element topic="springboot-bean-manage.md"/>
             </toc-element>
             <toc-element topic="spring.topic"/>
         </toc-element>

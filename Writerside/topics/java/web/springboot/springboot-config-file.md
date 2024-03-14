@@ -327,6 +327,9 @@ public class EmailProperties {
 
 > 1. 当配置变量比较多时，推荐使用 `@ConfigurationProperties` 注解
 > 2. 使用 `@ConfigurationProperties` 时需要注意 `prefix` 以及变量名需要与配置文件中完全能对应上
+> 
 {style="warning"}
 
+
+> 这里提出一个问题，就是我们将配置信息都是放在 application.yml 或者 application.properties 文件中的，这两个文件实际上都是被 SpringBoot 应用自动读取并加载的，但是如果文件名为 application.yml 的情况下，我们如何指定所加载文件？
 

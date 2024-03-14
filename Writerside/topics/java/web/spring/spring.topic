@@ -19,18 +19,12 @@
         <!--    Add several topics that are most important for this section.    -->
         <primary>
             <title>Get started</title>
-            <a href=""/>
-            <a href="" summary="With a custom card summary"/>
-            <a href="">Custom card title</a>
             <a href="" summary="With a custom card summary">Custom card title</a>
         </primary>
 
         <!--    Add several topics that are less important or are relevant only for advanced/experienced users.    -->
         <secondary>
             <title>Explore advanced features</title>
-            <a href=""/>
-            <a href="" summary="With a custom card summary"/>
-            <a href="">Custom card title</a>
             <a href="" summary="With a custom card summary">Custom card title</a>
         </secondary>
 
@@ -38,35 +32,21 @@
         <misc>
             <cards>
                 <title>Other relevant topics as wide cards</title>
-                <a href=""/>
-                <a href="" summary="With a custom card summary"/>
-                <a href="">Custom card title</a>
                 <a href="" summary="With a custom card summary">Custom card title</a>
             </cards>
 
             <cards narrow="true">
                 <title>Other relevant topics as narrow cards</title>
-                <a href=""/>
-                <a href=""/>
-                <a href="" summary="With a custom card summary"/>
-                <a href="">Custom card title</a>
-                <a href="">Custom card title</a>
                 <a href="" summary="With a custom card summary">Custom card title</a>
             </cards>
 
             <links>
                 <group>
                     <title>Other related topics as links</title>
-                    <a href=""/>
-                    <a href="" summary="With a custom card summary"/>
-                    <a href="">Custom card title</a>
                     <a href="" summary="With a custom card summary">Custom card title</a>
                 </group>
                 <group>
                     <title>Two in a row</title>
-                    <a href=""/>
-                    <a href="" summary="With a custom card summary"/>
-                    <a href="">Custom card title</a>
                     <a href="" summary="With a custom card summary">Custom card title</a>
                 </group>
             </links>
@@ -74,23 +54,14 @@
             <links narrow="true">
                 <group>
                     <title>More related topics</title>
-                    <a href=""/>
-                    <a href="" summary="With a custom card summary"/>
-                    <a href="">Custom card title</a>
                     <a href="" summary="With a custom card summary">Custom card title</a>
                 </group>
                 <group>
                     <title>Three in a row</title>
-                    <a href=""/>
-                    <a href=""/>
-                    <a href="">Custom card title</a>
                     <a href="">Custom card title</a>
                 </group>
                 <group>
                     <title>Each group is narrow</title>
-                    <a href=""/>
-                    <a href=""/>
-                    <a href="">Custom card title</a>
                     <a href="">Custom card title</a>
                 </group>
             </links>

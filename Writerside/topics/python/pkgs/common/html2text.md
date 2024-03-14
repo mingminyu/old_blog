@@ -7,7 +7,8 @@ html2text是一个Python库，它能够将HTML文档转换为纯文本格式。�
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/MKkDEsYyWQFHZfRUHt1TGA">Html2Text 一个超酷的 Python 库</a>
+    <a href="https://mp.weixin.qq.com/s/MKkDEsYyWQFHZfRUHt1TGA">超酷的 Python 库: Html2Text</a>
+    <a href="https://mp.weixin.qq.com/s/OHxLYel8n7yFk3Nrz8tFoQ">实用的 Python 库: Html2Text</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/Alir3z4/html2text">Html2Text Github</a>

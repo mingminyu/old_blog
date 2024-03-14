@@ -54,7 +54,7 @@
     </dependency>
 </dependencies>
 ```
-{collapsible="true" default-state="expanded" collapsed-title="大量的依赖需要维护"}
+{collapsible="true" default-state="expanded" collapsed-title="大量依赖项需要维护"}
 
 
 - **项目配置繁琐**: 非常多的配置文件（web.xml、applicationContext.xml、springMvc.xml 等）以及配置项
@@ -81,6 +81,7 @@
     </bean>
 </beans>
 ```
+{collapsible="true" default-state="expanded"}
 
 面对如此繁琐的操作，简直让人头大。SpringBoot 的诞生极大地解决这些问题，让创建 Spring 应用变得更加简单。
 
@@ -143,6 +144,7 @@ SpringBoot 主要具备起步依赖和自动配置的特性，当然它也有其
     <version>3.0.0</version>
 </dependency>
 ```
+{collapsible="true" default-state="expanded"}
 
 
 ### 2.3 其他特性
@@ -166,7 +168,7 @@ SpringBoot 主要具备起步依赖和自动配置的特性，当然它也有其
 1. 创建 Maven 工程: 
    - 在 IDEA 新建项目配置中选择 **Spring Initializr**，类型选择 **Maven**，打包直接默认 **Jar** 包即可
    - 选择 **SpringBoot** 的版本，以及 **Web** 选项下 **Spring Web**
-   - 
+   
 2. 引入依赖，这里只需要引入一个起步依赖就可以了
 
     ```xml
@@ -175,6 +177,7 @@ SpringBoot 主要具备起步依赖和自动配置的特性，当然它也有其
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     ```
+   {collapsible="true" default-state="expanded"}
 
 3. 无需更改配置，在 springbootquickstart 包创建一个 controller 子包，并创建 HelloController.java 文件，直接编写 Controller
 
@@ -188,6 +191,7 @@ SpringBoot 主要具备起步依赖和自动配置的特性，当然它也有其
         }
     }
     ```
+   {collapsible="true" default-state="expanded"}
    
 4. 提供启动类
 
@@ -199,9 +203,9 @@ SpringBoot 主要具备起步依赖和自动配置的特性，当然它也有其
         }
     }
     ```
+   {collapsible="true" default-state="expanded"}
 
 5. 打成 JAR 包后可直接运行
-
 
 
 <tabs>
@@ -257,8 +261,8 @@ public class HelloController {
 ## 4. 手动创建 SpringBoot 工程
 
 先前我们是通过 IDEA 的 Spring Initializr 插件创建的 SpringBoot 应用，下面我们也演示下不借助这个插件，我们应该如何创建 SpringBoot 项目:
-1. 创建 Maven 工程:
-   - 在 IDEA 新建项目配置中选择 **Maven Archetype**，在 Archetype 选项中选择 `org.apache.maven.archetypes:maven-archetype-quickstart`
+1. 创建 Maven 工程: 在 IDEA 新建项目配置中选择 **Maven Archetype**，在 Archetype 选项中选择 `org.apache.maven.archetypes:maven-archetype-quickstart`
+
 2. 引入依赖: 在 pom.xml 文件中引入新增 SpringBoot 启动项依赖
 
     ```xml
@@ -275,8 +279,9 @@ public class HelloController {
         </dependencies>
     </project>
     ```
+   {collapsible="true" default-state="expanded"}
 
-3. 提供启动类，在 App.java 文件中添加注解
+3. 提供启动类: 在 MyApplication.java 文件中添加注解
 
     ```Java
     import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -289,23 +294,39 @@ public class HelloController {
         }
     }
     ```
+   {collapsible="true" default-state="expanded"}
 
 4. 新建 resources 文件夹（与 java 文件夹同级），新建 application.properties 文件。
 
 5. 新建 controller 包，并新增 HelloController.java 文件
 
-```Java
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class HelloController {
-    @RequestMapping("/hello")
-    public String hello() {
-        return "Hello, Spring Boot!";
+    ```Java
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RestController;
+    
+    @RestController
+    public class HelloController {
+        @RequestMapping("/hello")
+        public String hello() {
+            return "Hello, Spring Boot!";
+        }
     }
-}
-```
+    ```
+    {collapsible="true" default-state="expanded"}
 
 接下来我们就可以像之前那样启动我们的 SpringBoot 应用了。
+
+## 5. 打 Jar 包独立运行
+
+如果程序正常运行没有问题，那么可以借助 `maven package` 命令来将 SpringBoot 应用打成 Jar 包（最便捷的方式借助 IDEA 的 Maven 插件进行打包），然后在终端中运行:
+
+```Bash
+java -Dfile.encoding=UTF-8 \
+    -Dsun.stdout.encoding=UTF-8 \
+    -Dsun.stderr.encoding=UTF-8 \
+    -jar ./target/springboot-quickstart-0.0.1-SNAPSHOT.jar
+```
+{collapsible="true" default-state="expanded"}
+
+我们就可以看到打包后的应用正常启动了，访问的方式还是和之前的一样。
 
