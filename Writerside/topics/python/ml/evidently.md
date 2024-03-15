@@ -8,6 +8,7 @@ Evidently是用来监测模型效果的工具，可从Pandas DataFrame或csv文�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/j57blXwEc05ixaZMaBUzbQ">10 个 Python 超实用的机器学习库</a>
+    <a href="https://mp.weixin.qq.com/s/LQVEgTgsl3Nx_J4ucjaQKA">强大的 Python 库: Evidently</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/evidentlyai/evidently">Evidently</a>

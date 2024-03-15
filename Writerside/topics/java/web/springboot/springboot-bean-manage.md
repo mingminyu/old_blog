@@ -427,7 +427,6 @@ public class SpringbootRegisterApplication {
         ApplicationContext context = SpringApplication.run(SpringBootRegisterApplication.class, args);
         Country country = context.getBean(Country.class);
         System.out.println(country);
-        // 这里使用 province 获取对象是会报错的
         System.out.println(context.getBean("province"));
     }
 }
@@ -440,9 +439,9 @@ public class SpringbootRegisterApplication {
 
 ## 3. 注册条件
 
-
 前面介绍的比较简单，显然我们使用 `Country` 对象时一般会类属性进行赋值的，比如我们需要将 `Country` 实例的`name` 属性赋值为 China。
 
+### 3.1 给 Bean 对象属性赋值
 
 <tabs>
 <tab title="CommonConfig.java">
@@ -491,7 +490,7 @@ country:
 ]]>
 </code-block>
 </tab>
-<tab title="tab2">
+<tab title="CommonConfig.java">
 <code-block lang="python">
 <![CDATA[
 package com.aifun.springbootregister.config;
@@ -525,4 +524,117 @@ Province inner: Country{name='China', system='Socialism'}
 </tabs>
 
 
+### 3.2 条件注解
 
+SpringBoot 提供了设置注册条件生效的 `@Conditional` 注解，但这个注解使用起来比较麻烦，所以 SpringBoot 封装了一些更易用的条件注解。
+
+| 注解                        | 说明                         |
+|---------------------------|----------------------------|
+| @ConditionalOnProperty    | 配置文件中存在对应的属性，才会声明该 Bean    |
+| @ConditionalOnMissingBean | 当不存在当前类型的 Bean 时，才声明该 Bean |
+| @ConditionalOnClass       | 当前环境存在指定的这个类时，才声明该 Bean    |
+
+
+<tabs>
+<tab title="@ConditionalOnProperty">
+<code-block lang="java">
+<![CDATA[
+package com.aifun.springbootregister.config;
+
+@Configuration
+public class CommonConfig {
+    // 如果配置文件中具备了指定的信息时就注入，否则不注入
+    @ConditionalOnProperty(prefix="country", name={"name", "system"})
+    @Bean
+    public Country country(@Value("${country.name}") String name, @Value("${country.system}")  String system) {
+        Country country  = new Country();
+        country.setName(name);
+        country.setSystem(system);
+        return country;
+    }
+    
+    // 如果 IoC 容器中不存在 Country，则注入 Province，否则不注入
+    @ConditionalOnMissingBean(Country.class)
+    @Bean
+    public Province province() {
+        return new Province();
+    }
+}
+]]>
+</code-block>
+</tab>
+<tab title="启动类">
+<code-block lang="java">
+<![CDATA[
+@SpringBootApplication
+@EnableCommonConfig
+public class SpringbootRegisterApplication {
+    public static void main(String[] args) {
+        ApplicationContext context = SpringApplication.run(SpringBootRegisterApplication.class, args);
+        // 下面代码会报错，因为 Province 并没有 Bean 对象被注入
+        System.out.println(context.getBean("province"));
+    }
+}
+]]>
+</code-block>
+</tab>
+</tabs>
+
+
+> 我们可以把 application.yml 文件中 country 部分注释掉，看看结果如何？
+
+我们知道如果当前项目引入了 Web 起步依赖，则环境中就会有 DispatcherServlet，否则就没有。接下来我们实现一个功能: 如果当前环境中存在 DispatcherServlet 类，则注入 Province，否则不注入。
+
+
+<tabs>
+<tab title="@ConditionalOnClass">
+<code-block lang="java">
+<![CDATA[
+package com.aifun.springbootregister.config;
+
+@Configuration
+public class CommonConfig {
+// 如果配置文件中具备了指定的信息时就注入，否则不注入
+@ConditionalOnProperty(prefix="country", name={"name", "system"})
+@Bean
+public Country country(@Value("${country.name}") String name, @Value("${country.system}")  String system) {
+Country country  = new Country();
+country.setName(name);
+country.setSystem(system);
+return country;
+}
+
+    @ConditionalOnClass(name="org.springframework.web.servlet.DispatcherServlet")
+    @Bean
+    public Province province() {
+        return new Province();
+    }
+}
+]]>
+</code-block>
+</tab>
+<tab title="启动类">
+<code-block lang="java">
+<![CDATA[
+@SpringBootApplication
+@EnableCommonConfig
+public class SpringbootRegisterApplication {
+    public static void main(String[] args) {
+        ApplicationContext context = SpringApplication.run(SpringBootRegisterApplication.class, args);
+        // 下面代码会报错，因为 Province 并没有 Bean 对象被注入
+        System.out.println(context.getBean("province"));
+    }
+}
+]]>
+</code-block>
+</tab>
+</tabs>
+
+如果希望修正该程序，则需要在 pom.xml 中添加 spring-boot-starter-web 依赖:
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+```

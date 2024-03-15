@@ -62,4 +62,8 @@
         <description>Created after removal of "DALEX 教程" from AiFun</description>
         <accepts>dalex.html</accepts>
     </rule>
+    <rule id="53f8cacd">
+        <description>Created after removal of "SpringBoot 中文文档" from AiFun</description>
+        <accepts>springboot-tutorial-zh.html</accepts>
+    </rule>
 </rules>
