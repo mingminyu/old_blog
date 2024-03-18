@@ -493,6 +493,8 @@
                 <toc-element topic="springboot-autowiring.md"/>
             </toc-element>
             <toc-element topic="springcloud.md"/>
+            <toc-element topic="springboot-examples.topic"/>
+            <toc-element topic="springboot-articles-crm.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="kotlin.topic">

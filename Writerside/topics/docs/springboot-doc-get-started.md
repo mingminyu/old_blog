@@ -559,7 +559,8 @@ export JAVA_OPTS=-Xmx1024m
 
 ## 8. 开发者工具(Developer Tools)
 
-SpringBoot 提供了一套额外的工具，可以让你更加愉快的开发应用。 `spring-boot-devtools` 模块可以包含在任何项目中，以在开发期间提供一些有用的特性。 要使用 devtools，请添加以下依赖到项目中。
+SpringBoot 提供了一套额外的工具，可以让你更加愉快的开发应用。`spring-boot-devtools` 模块可以包含在任何项目中，以在开发期间提供一些有用的特性。要使用 devtools，请添加以下依赖到项目中。
+
 
 <tabs>
 <tab title="Maven">
@@ -604,8 +605,310 @@ dependencies {
 
 为了诊断类加载问题是否确实是由 devtools 和它的两个类加载器引起的，[请试着禁用 restart](https://springdoc.cn/spring-boot/using.html#using.devtools.restart.disable)。如果这能解决你的问题，[请定制 restart 类加载器](https://springdoc.cn/spring-boot/using.html#using.devtools.restart.customizing-the-classload) 以包括你的整个项目。
 
+### 8.2. 属性的默认值
+
+在 SpringBoot 支持的一些库中，会使用缓存来提高性能。例如[模板引擎](https://springdoc.cn/spring-boot/web.html#web.servlet.spring-mvc.template-engines)会缓存已编译的模板，以避免重复解析模板文件。另外，SpringMVC 可以在响应静态资源时往响应中添加 HTTP 缓存头。
+
+虽然缓存在生产中是非常有益的，但在开发过程中可能会产生反作用，使你无法看到你在应用程序中刚做的改动。由于这个原因，`spring-boot-devtools`  默认禁用了缓存选项。
+
+缓存的选项通常是通过 `application.properties` 文件中的属性来配置的，例如 Thymeleaf 提供了 `spring.thymeleaf.cache[]` 属性。与其需要手动设置这些属性，`spring-boot-devtools` 模块会在开发场景下合理的设置这些属性。
+
+| 名称                                               | 默认值               |
+|:-------------------------------------------------|:------------------|
+| `server.error.include-binding-errors`            | `always`          |
+| `server.error.include-message`                   | `always`          |
+| `server.error.include-stacktrace`                | `always`          |
+| `server.servlet.jsp.init-parameters.development` | `true`            |
+| `server.servlet.session.persistent`              | `true`            |
+| `spring.docker.compose.readiness.wait`           | `only-if-started` |
+| `spring.freemarker.cache`                        | `false`           |
+| `spring.graphql.graphiql.enabled`                | `true`            |
+| `spring.groovy.template.cache`                   | `false`           |
+| `spring.h2.console.enabled`                      | `true`            |
+| `spring.mustache.servlet.cache`                  | `false`           |
+| `spring.mvc.log-resolved-exception`              | `true`            |
+| `spring.reactor.netty.shutdown-quiet-period`     | `0s`              |
+| `spring.template.provider.cache`                 | `false`           |
+| `spring.thymeleaf.cache`                         | `false`           |
+| `spring.web.resources.cache.period`              | `0`               |
+| `spring.web.resources.chain.cache`               | `false`           |
+
+> 如果你不希望设置属性的默认值，你可以在你的 application.properties 中把 `spring.devtools.add-properties[]` 设置为 `false`。
+
+在开发 SpringMVC 和 Spring WebFlux 应用程序时，你可能需要更多关于 Web 请求的信息，开发者工具建议你为 Web 日志组启用 DEBUG 日志。这将给你提供关于客户端的请求信息，哪个 handler 正在处理它、对应的响应结果以及其他细节。如果你希望记录所有的请求细节（包括潜在的敏感信息），你可以打开 `spring.mvc.log-request-details[]` 或 `spring.codec.log-request-details[]` 配置。
+
+###  8.3. 自动重启
+
+使用 spring-boot-devtools 的应用程序会在 classpath 上的文件发生变化时自动重启。当在 IDE 中工作时，这可能是一个有用的功能，因为它为代码变化提供了一个非常快速的反馈。默认情况下，classpath 上任何指向目录的条目都会被监测到变化。注意，某些资源，如静态资源和视图模板发生变化时，[不需要重启应用程序](https://springdoc.cn/spring-boot/using.html#using.devtools.restart.excluding-resources)。
 
 
+触发重启
+: 由于 DevTools 监控 classpath 资源，触发重启的唯一方法是更新 classpath。无论你使用的是 IDE 还是构建插件，被修改的文件都必须被重新编译以触发重启，导致更新 classpath 的方式取决于你所使用的工具。
+: - 在 Eclipse 中，保存一个修改过的文件会导致 classpath 被更新并触发重启。
+: - 在 IntelliJ IDEA中，构建项目（ Build +→+ Build Project ）有同样的效果。
+: - 如果使用构建插件，运行 Maven 的 mvn compile 或 Gradle的 gradle build 会触发重启。
+
+
+> 如果你用 Maven 或 Gradle 的构建插件重启，你必须将 `forking` 设置为 `enabled`。如果你禁用 `forking`，devtools 使用的“应用隔离类加载器（isolated application classloader）”将不会被创建，重启功能将无法正常运行。
+
+
+与 LiveReload 一起使用时，自动重启的效果非常好，详见 [LiveReload 部分](https://springdoc.cn/spring-boot/using.html#using.devtools.livereload)。如果你使用 JRebel，自动重启将被禁用，而采用动态类重载，其他 devtools 特性（如LiveReload和属性覆盖）仍然可以使用。
+
+DevTools 依靠应用程序上下文的关机 hook 来在重启期间关闭它，如果你禁用了关机钩子（`SpringApplication.setRegisterShutdownHook(false)`），它就不能正确工作。
+
+DevTools 需要定制 `ApplicationContext` 所使用的 `ResourceLoader`。如果你的应用程序已经提供了一个，它将被“包装”（装饰者设计模式）起来。不支持直接覆盖 `ApplicationContext` 上的 `getResource` 方法
+
+> 在使用AspectJ 切面时，不支持自动重启。
+> 
+{style="warning"}
+
+
+重启 vs 重载
+: Spring Boot 通过两个类加载器实现了重启，不变的类（例如，来自第三方jar的类）被加载到一个 *base* classloader。你正在开发的类被加载到 *restart* classloader中。当应用程序被重新启动时，*restart* classloader 被丢弃，并被创建一个新的。这种方法意味着应用程序的重启通常比 “冷启动” 快得多，因为 *base* classloader 已经可用并被填充。
+: 如果你发现重启对你的应用程序来说不够快，或者你遇到了类加载相关的问题，你可以考虑重载技术，如 `ZeroTurnaround` 的 [JRebel](https://jrebel.com/software/jrebel)。这些技术的工作原理是在类被加载时对其进行重写，使其更容易被重载。
+
+
+#### I) 记录条件评估的变化
+
+默认情况下，每次你的应用程序重新启动时，都会记录一份显示条件评估 delta 的报告。该报告显示了你的应用程序的自动配置的变化，因为你做了一些改变，如添加或删除Bean和设置配置属性。
+
+要禁用报告的记录，请设置以下属性:
+
+<tabs>
+<tab title="Properties">
+<code-block lang="python">
+<![CDATA[
+spring.devtools.restart.log-condition-evaluation-delta=false
+]]>
+</code-block>
+</tab>
+<tab title="Yaml">
+<code-block lang="yaml">
+<![CDATA[
+spring:
+  devtools:
+    restart:
+      log-condition-evaluation-delta: false
+]]>
+</code-block>
+</tab>
+</tabs>
+
+#### II) 排除资源
+
+某些资源在被改变时不一定需要触发重启，例如 Thymeleaf 模板可以就地编辑。默认情况下，改变 `/META-INF/maven`、`/META-INF/resources`、`/resources`、`/static`、`/public`、`/templates` 中的资源不会触发重启，但会触发[实时重载](https://springdoc.cn/spring-boot/using.html#using.devtools.livereload)。如果你想自定义这些排除项，可以使用 `spring.devtools.restart.exclude` 属性。例如，要只排除 `/static` 和 `/public` ，你可以设置以下属性。
+
+<tabs>
+<tab title="Properties">
+<code-block lang="python">
+<![CDATA[
+spring.devtools.restart.exclude=static/**,public/**
+
+]]>
+</code-block>
+</tab>
+<tab title="Yaml">
+<code-block lang="yaml">
+<![CDATA[
+spring:
+  devtools:
+    restart:
+      exclude: "static/**,public/**"
+]]>
+</code-block>
+</tab>
+</tabs>
+
+#### III) 监控额外的路径
+
+当你对不在 classpath 上的文件进行修改时，你可能希望你的应用程序被重新启动或重新加载。为此，使用 `spring.devtools.restart.extra-paths` 属性来配置监控变化的额外路径。你可以使用[前面说过的](https://springdoc.cn/spring-boot/using.html#using.devtools.restart.excluding-resources)的 `spring.devtools.restart.exclude` 属性来控制额外路径下的变化是触发完全重启还是[实时重载](https://springdoc.cn/spring-boot/using.html#using.devtools.livereload)。
+
+
+#### IV) 禁止重启
+
+如果你不想使用重启功能，你可以通过使用 `spring.devtools.restart.enabled` 属性来禁用它。在大多数情况下，你可以在你的 application.properties 中设置这个属性（这样做仍然会初始化 restart 类加载器，但它不会监控文件变化）。
+
+如果你需要完全禁用重启支持（例如，因为它不能与特定的库一起工作），你需要在调用 `SpringApplication.run(…)` 之前将 `spring.devtools.restart.enabled` 属性设置为 `false` ，如下面的例子中所示。
+
+<tabs>
+<tab title="Java">
+<code-block lang="java">
+<![CDATA[
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MyApplication {
+    public static void main(String[] args) {
+        System.setProperty("spring.devtools.restart.enabled", "false");
+        SpringApplication.run(MyApplication.class, args);
+    }
+}
+]]>
+</code-block>
+</tab>
+<tab title="Kotlin">
+<code-block lang="kotlin">
+<![CDATA[
+import org.springframework.boot.SpringApplication
+import org.springframework.boot.autoconfigure.SpringBootApplication
+
+@SpringBootApplication
+object MyApplication {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        System.setProperty("spring.devtools.restart.enabled", "false")
+        SpringApplication.run(MyApplication::class.java, *args)
+    }
+}
+]]>
+</code-block>
+</tab>
+</tabs>
+
+#### V) 使用 trigger file
+
+如果你只想在在特定时间触发重启，你可以使用 “trigger file”，这是一个特殊的文件，当你想实际触发重启检查时，那你就对这个文件进行修改。
+
+> 对文件的任何更新都会触发检查，但只有当 Devtools 检测到它有改动发生时，才会实际重新启动。
+
+
+通过属性 `spring.devtools.restart.trigger-file` 设置trigger file 文件的名称（不包括任何路径）。trigger file 必须在 classpath 路径上。
+
+例如，如果你有一个结构如下的项目，那么你的 “trigger-file” 属性应该设置为如下。
+
+<tabs>
+<tab title="文件结构">
+<code-block lang="python">
+<![CDATA[
+src
++- main
+   +- resources
+      +- .reloadtrigger
+]]>
+</code-block>
+</tab>
+<tab title="Properties">
+<code-block lang="java">
+<![CDATA[
+spring.devtools.restart.trigger-file=.reloadtrigger
+]]>
+</code-block>
+</tab>
+<tab title="Yaml">
+<code-block lang="yaml">
+<![CDATA[
+spring:
+  devtools:
+    restart:
+      trigger-file: ".reloadtrigger"
+]]>
+</code-block>
+</tab>
+</tabs>
+
+现在只有当 src/main/resources/.reloadtrigger 被更新时才会重新启动。
+
+> 你可能想把 `spring.devtools.restart.trigger-file` 设置为[全局设置](https://springdoc.cn/spring-boot/using.html)，这样你的所有项目都会以同样的方式行事。
+
+有些 IDE 有一些功能，使你不需要手动更新你的触发器文件。[Spring Tools for Eclipse](https://spring.io/tools) 和 [IntelliJ IDEA (Ultimate Edition)](https://www.jetbrains.com/idea/)）都有这种支持，对于Spring Tools，你可以使用控制台视图中的 “reload” 按钮（需要把你的 `trigger-file` 命名为 `.reloadtrigger`）。对于 IntelliJ IDEA，你可以按照其文档中的说明进行操作。
+
+#### VI) 自定义重启类加载器(Restart Classloader)
+
+正如前面在["Restart vs Reload"](https://springdoc.cn/spring-boot/using.html)所描述的，重启功能是通过使用两个 classloader 实现的。如果这导致了其他的问题，你可能需要自定义类加载器。
+
+默认情况下，你的 IDE 中任何打开的项目都是用 “restart” 类加载器加载的，而任何常规的 `.jar` 文件都是用 “base” 类加载器加载。如果你使用 `mvn spring-boot:run` 或 `gradle bootRun` 也是一样：包含了 `@SpringBootApplication` 的项目用 “restart” 类加载器加载，其他都用 “base” 类加载器。
+
+你可以通过创建 `META-INF/spring-devtools.properties` 文件来指定 SpringBoot 用不同的类加载器来加载你的项目的不同部分。`spring-devtools.properties` 文件可以包含以 `restart.exclude` 和 `restart.include` 开头的属性，该属性的值是一个基于 classpath 的正则表达式，如以下例子所示。
+- `include` 元素是应该被“拉”到 “restart” 类加载器中的项目，
+- `exclude` 元素是应该被“推”到 “base” 类加载器中的项目。
+
+<tabs>
+<tab title="Properties">
+<code-block lang="java">
+<![CDATA[
+restart.exclude.companycommonlibs=/mycorp-common-[\\w\\d-\\.]+\\.jar
+restart.include.projectcommon=/mycorp-myproj-[\\w\\d-\\.]+\\.jar
+]]>
+</code-block>
+</tab>
+<tab title="Yaml">
+<code-block lang="yaml">
+<![CDATA[
+restart:
+  exclude:
+    companycommonlibs: "/mycorp-common-[\\w\\d-\\.]+\\.jar"
+  include:
+    projectcommon: "/mycorp-myproj-[\\w\\d-\\.]+\\.jar"
+]]>
+</code-block>
+</tab>
+</tabs>
+
+
+> 所有的 key 必须是唯一的，只要一个属性以 `restart.include.` 或 `restart.exclude.` 开头，就会被考虑进去。
+> 
+{style="note"}
+
+####  VII) 已知的限制
+
+如果你使用标准的 `ObjectInputStream` 来反序列化对象，那么重启功能的效果可能并不好。如果你需要反序列化数据，你可能需要使用到 Spring 的 `ConfigurableObjectInputStream` 与 `Thread.currentThread().getContextClassLoader()`。
+
+不幸的是，一些第三方库在反序列化时没有考虑到上下文的类加载器。如果你发现这样的问题，你需要向原作者请求修复。
+
+
+### 8.4 LiveReload
+
+`spring-boot-devtools` 模块包括一个内嵌的 LiveReload 服务器，可以用来在资源发生变化时触发浏览器刷新。LiveReload 浏览器扩展可以从 [livereload.com](http://livereload.com/extensions/)免费获得，支持Chrome、Firefox和Safari。
+
+如果你不想在应用程序运行时启动LiveReload服务器，你可以将 `spring.devtools.livereload.enabled` 属性设置为 `false`。
+
+> 你一次只能运行一个LiveReload服务器，在启动你的应用程序之前，确保没有其他 LiveReload 服务器正在运行。如果你从你的 IDE 启动多个应用程序，只有第一个有 LiveReload 支持。
+
+
+> 为了在文件变化时触发LiveReload，必须启用 [“自动重启”](https://springdoc.cn/spring-boot/using.html#using.devtools.restart)。
+>
+{style="warning"}
+
+### 8.5 全局设置
+
+你可以通过在 `$HOME/.config/spring-boot` 目录下添加以下任何文件来配置全局的 devtools 设置。
+
+1. `spring-boot-devtools.properties`
+2. `spring-boot-devtools.yaml`
+3. `spring-boot-devtools.yml`
+
+添加到这些文件中的任何属性都适用于你机器上使用 devtools 的 *所有* SpringBoot 应用程序。例如，如果要将重启配置为总是使用[trigger file](https://springdoc.cn/spring-boot/using.html#using.devtools.restart.triggerfile)，你可以在 `spring-boot-devtools` 文件中添加以下属性。
+
+<tabs>
+<tab title="Properties">
+<code-block lang="python">
+<![CDATA[
+spring.devtools.restart.trigger-file=.reloadtrigger
+]]>
+</code-block>
+</tab>
+<tab title="Yaml">
+<code-block lang="yaml">
+<![CDATA[
+spring:
+  devtools:
+    restart:
+      trigger-file: ".reloadtrigger"
+]]>
+</code-block>
+</tab>
+</tabs>
+
+默认情况下，`$HOME` 是用户的主目录。要自定义这个位置，请设置 `SPRING_DEVTOOLS_HOME` 环境变量或 `spring.devtools.home` 系统属性。
+
+> 如果在 `$HOME/.config/spring-boot` 中找不到 devtools 配置文件，则会在 `$HOME` 目录的根部搜索是否有 `.spring-boot-devtools.properties` 文件。这允许你与那些不支持 `$HOME/.config/spring-boot` 位置的旧版 SpringBoot 的应用程序共享 devtools 全局配置。
+
+
+
+
+
+ 
 <seealso>
 <category ref="ref_docs">
     <a href="https://springdoc.cn/spring-boot/using.html">使用SpringBoot进行开发</a>

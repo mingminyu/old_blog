@@ -287,4 +287,147 @@ public @interface AutoConfiguration {
 - 创建 imybatis-spring-boot-starter 模块，在 starter 中引入自动配置模块
 
 
+对于 imybatis-spring-boot-autoconfigure 工程，修改如下所示:
+
+<tabs>
+<tab title="pom.xml">
+<code-block lang="xml">
+<![CDATA[
+<dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <version>3.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+      <version>3.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.14</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>3.0.3</version>
+    </dependency>
+</dependencies>
+]]>
+</code-block>
+</tab>
+<tab title="MyBatisAutoConfig.java">
+<code-block lang="java">
+<![CDATA[
+package com.aifun.config;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.mapper.MapperScannerConfigurer;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.AutoConfigurationPackages;
+import org.springframework.context.annotation.Bean;
+
+import javax.sql.DataSource;
+import java.util.List;
+
+@AutoConfiguration  // 当前类是一个自动配置类
+public class MyBatisAutoConfig {
+    // SqlSessionFactoryBean
+    @Bean
+    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
+        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        sqlSessionFactoryBean.setDataSource(dataSource);
+        return sqlSessionFactoryBean;
+    }
+
+    // MapperScannerConfigure
+    public MapperScannerConfigurer mapperScannerConfigurer(BeanFactory beanFactory) {
+        MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
+        // 扫描的包: 启动类所在的包
+        List<String> packages = AutoConfigurationPackages.get(beanFactory);
+        String p = packages.get(0);
+        mapperScannerConfigurer.setBasePackage(p);
+        // 扫描的注解
+        mapperScannerConfigurer.setAnnotationClass(Mapper.class);
+        return mapperScannerConfigurer;
+    }
+}
+]]>
+</code-block>
+</tab>
+<tab title=".imports 文件">
+<code-block lang="java">
+<![CDATA[
+// src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfigurations.imports
+com.aifun.config.MyBatisAutoConfig
+]]>
+</code-block>
+</tab>
+</tabs>
+
+> 这个项目中我们用不到 App.java 文件以及 tests 文件夹，所以可以直接删除掉。
+> 
+{style="note"}
+
+
+对于 imybatis-spring-boot-starter 工程，在 pom.xml 引入 imybatis-spring-boot-autoconfigure 项目，并将其 pom.xml 中引入的依赖重新引入一遍(便于后续排查问题，且官方推荐这么做):
+
+```xml
+<dependencies>
+    <dependency>
+      <groupId>com.aifun</groupId>
+      <artifactId>imybatis-spring-boot-autoconfigure</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <version>3.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+      <version>3.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.14</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>3.0.3</version>
+    </dependency>
+</dependencies>
+```
+
+
+> 同样地，这个项目我们也用不到 App.java 文件以及 tests 文件夹，并且我们并没有写代码逻辑，所以 java 文件夹也可以不要，甚至说 src 也可以直接删除，这个工程只做一个事情，就是依赖管理。
+>
+{style="note"}
+
+
+这个时候我们就可以使用我们自己的定义的 imybatis-spring-boot-starter 了，如果启动时报错 “不支持发行版本 5” 的话，那么需要在 imybatis-spring-boot-autoconfigure 以及 imybatis-spring-boot-starter 项目中 pom.xml 文件中引入 Maven 编译插件，就可以解决这个问题。
+
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+                <source>17</source>
+                <source>17</source>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+
 
