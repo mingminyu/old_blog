@@ -63,9 +63,6 @@
 
 以下激活码截至 2024/10/13 过期，有需要的自己使用:
 
-```Bash
-```
-
 
 Mac: https://mp.weixin.qq.com/s/7GY9_APwwXVIe-tcQhRlfw
 Windows: https://mp.weixin.qq.com/s/vgTko0lyNkCyqWTiF3Ueww
