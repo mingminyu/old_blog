@@ -66,4 +66,8 @@
         <description>Created after removal of "SpringBoot 中文文档" from AiFun</description>
         <accepts>springboot-tutorial-zh.html</accepts>
     </rule>
+    <rule id="6d3399b3">
+        <description>Created after removal of "文章管理 API 接口文档" from AiFun</description>
+        <accepts>api-doc-big-event-md.html</accepts>
+    </rule>
 </rules>

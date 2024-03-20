@@ -668,7 +668,7 @@ DevTools 需要定制 `ApplicationContext` 所使用的 `ResourceLoader`。如�
 : 如果你发现重启对你的应用程序来说不够快，或者你遇到了类加载相关的问题，你可以考虑重载技术，如 `ZeroTurnaround` 的 [JRebel](https://jrebel.com/software/jrebel)。这些技术的工作原理是在类被加载时对其进行重写，使其更容易被重载。
 
 
-#### I) 记录条件评估的变化
+#### 8.3.1 记录条件评估的变化
 
 默认情况下，每次你的应用程序重新启动时，都会记录一份显示条件评估 delta 的报告。该报告显示了你的应用程序的自动配置的变化，因为你做了一些改变，如添加或删除Bean和设置配置属性。
 
@@ -694,7 +694,7 @@ spring:
 </tab>
 </tabs>
 
-#### II) 排除资源
+#### 8.3.2 排除资源
 
 某些资源在被改变时不一定需要触发重启，例如 Thymeleaf 模板可以就地编辑。默认情况下，改变 `/META-INF/maven`、`/META-INF/resources`、`/resources`、`/static`、`/public`、`/templates` 中的资源不会触发重启，但会触发[实时重载](https://springdoc.cn/spring-boot/using.html#using.devtools.livereload)。如果你想自定义这些排除项，可以使用 `spring.devtools.restart.exclude` 属性。例如，要只排除 `/static` 和 `/public` ，你可以设置以下属性。
 
@@ -719,12 +719,16 @@ spring:
 </tab>
 </tabs>
 
-#### III) 监控额外的路径
+####  8.3.3 监控额外的路径
+
+当你对不在classpath上的文件进行修改时，你可能希望你的应用程序被重新启动或重新加载。为此，使用 `spring.devtools.restart.extra-paths` 属性来配置监控变化的额外路径。你可以使用[前面说过的](https://springdoc.cn/spring-boot/using.html#using.devtools.restart.excluding-resources)的 `spring.devtools.restart.exclude` 属性来控制额外路径下的变化是触发完全重启还是[实时重载](https://springdoc.cn/spring-boot/using.html#using.devtools.livereload)。
+
+#### 8.3.4 监控额外的路径
 
 当你对不在 classpath 上的文件进行修改时，你可能希望你的应用程序被重新启动或重新加载。为此，使用 `spring.devtools.restart.extra-paths` 属性来配置监控变化的额外路径。你可以使用[前面说过的](https://springdoc.cn/spring-boot/using.html#using.devtools.restart.excluding-resources)的 `spring.devtools.restart.exclude` 属性来控制额外路径下的变化是触发完全重启还是[实时重载](https://springdoc.cn/spring-boot/using.html#using.devtools.livereload)。
 
 
-#### IV) 禁止重启
+#### 8.3.5 禁止重启
 
 如果你不想使用重启功能，你可以通过使用 `spring.devtools.restart.enabled` 属性来禁用它。在大多数情况下，你可以在你的 application.properties 中设置这个属性（这样做仍然会初始化 restart 类加载器，但它不会监控文件变化）。
 
@@ -766,7 +770,7 @@ object MyApplication {
 </tab>
 </tabs>
 
-#### V) 使用 trigger file
+#### 8.3.6 使用 trigger file
 
 如果你只想在在特定时间触发重启，你可以使用 “trigger file”，这是一个特殊的文件，当你想实际触发重启检查时，那你就对这个文件进行修改。
 
@@ -850,7 +854,7 @@ restart:
 > 
 {style="note"}
 
-####  VII) 已知的限制
+#### 8.3.7 已知的限制
 
 如果你使用标准的 `ObjectInputStream` 来反序列化对象，那么重启功能的效果可能并不好。如果你需要反序列化数据，你可能需要使用到 Spring 的 `ConfigurableObjectInputStream` 与 `Thread.currentThread().getContextClassLoader()`。
 
@@ -903,12 +907,125 @@ spring:
 默认情况下，`$HOME` 是用户的主目录。要自定义这个位置，请设置 `SPRING_DEVTOOLS_HOME` 环境变量或 `spring.devtools.home` 系统属性。
 
 > 如果在 `$HOME/.config/spring-boot` 中找不到 devtools 配置文件，则会在 `$HOME` 目录的根部搜索是否有 `.spring-boot-devtools.properties` 文件。这允许你与那些不支持 `$HOME/.config/spring-boot` 位置的旧版 SpringBoot 的应用程序共享 devtools 全局配置。
+> devtools properties/yaml 文件中不支持 Profiles。
+> 任何在 `.spring-boot-devtools.properties` 中激活的 Profiles 都不会影响指定配置文件的加载。不支持在 YAML 和 Properties 文件中配置 Profiles（形式为 `spring-boot-devtools-<profile>.properties`）和 `spring.config.activate.on-profile`。
+
+
+#### 8.5.1 配置文件系统的监控
+
+[FileSystemWatcher](https://github.com/spring-projects/spring-boot/tree/main/spring-boot-project/spring-boot-devtools/src/main/java/org/springframework/boot/devtools/filewatch/FileSystemWatcher.java) 的工作方式是以一定的时间间隔轮询类的变化，然后等待一个预定义的安静期，以确保不再有变化。由于 SpringBoot 完全依赖 IDE 来编译并将文件复制到 SpringBoot 可以读取的位置，你可能会发现有时 devtools 重新启动应用程序时，某些变化并没有反映出来（没有立即生效）。如果你经常观察到这样的问题，可以尝试增加 `spring.devtools.restart.poll-interval` 和 `spring.devtools.restart.quiet-period` 参数到适合你开发环境的值。
+
+<tabs>
+<tab title="Properties">
+<code-block lang="python">
+<![CDATA[
+spring.devtools.restart.poll-interval=2s
+spring.devtools.restart.quiet-period=1s
+]]>
+</code-block>
+</tab>
+<tab title="Yaml">
+<code-block lang="python">
+<![CDATA[
+spring:
+  devtools:
+    restart:
+      poll-interval: "2s"
+      quiet-period: "1s"
+]]>
+</code-block>
+</tab>
+</tabs>
+
+受监控的 classpath 目录现在每 2 秒轮询一次变化，并保持 1 秒的安静期以确保没有额外的类变化。
+
+### 8.6. 远程应用
+
+SpringBoot 的开发者工具并不局限于本地开发，你也可以在远程运行应用程序时使用一些功能。远程支持是可选的，因为启用它可能会有安全风险。只有在受信任的网络上运行时，或在用 SSL 保护时，才应启用它。如果这两个选项对你来说都不可用，你就不应该使用 DevTools 的远程支持，你更不应该在生产环境中启用它。
+
+要启用它，你需要确保 `devtools` 包含在重新打包的归档文件（jar）中，如以下所示。
+
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <excludeDevtools>false</excludeDevtools>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+
+
+然后你需要设置 `spring.devtools.remote.secret` 属性，就像任何重要的密码或密钥一样，这个值应该是唯一的和足够强大的，以至于它不能被猜到或被暴力破解。
+
+远程 devtools 支持由两部分组成：一个接受连接的服务器端端点和一个你在 IDE 中运行的客户端应用程序。当 `spring.devtools.remote.secret` 属性被设置时，服务器组件会自动启用，客户端组件必须手动启动。
+
+> Spring WebFlux 应用程序不支持远程 devtools。
+
+#### 8.6.1 运行远程客户端程序
+
+远程客户端应用程序被设计成可以在你的IDE中运行。你需要运行 `org.springframework.boot.devtools.RemoteSpringApplication` ，其 classpath 与你所连接的远程项目相同，该应用程序的唯一必要参数是它所连接的远程URL。
+
+例如，如果你使用的是 Eclipse 或 Spring Tools，并且你有一个名为 `my-app` 的项目，并已将其部署到 Cloud Foundry，你可以执行以下操作。
+
+- 从 `Run` 菜单中选择 `Run Configurations…`。
+- 创建一个新的 `Java Application` “launch configuration”。
+- 浏览 `my-app` 项目。
+- 使用 `org.springframework.boot.devtools.RemoteSpringApplication` 作为main类。
+- 在 `Program arguments` 中添加 `https://myapp.cfapps.io`（或者你的远程URL）。
+
+一个正在运行的远程客户端可能类似于如下:
+
+```Bash
+  .   ____          _                                              __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _          ___               _      \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` |        | _ \___ _ __  ___| |_ ___ \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| []::::::[]   / -_) '  \/ _ \  _/ -_) ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, |        |_|_\___|_|_|_\___/\__\___|/ / / /
+ =========|_|==============|___/===================================/_/_/_/
+ :: Spring Boot Remote ::  (v3.2.0-SNAPSHOT)
+
+2023-09-10T13:32:07.711+08:00  INFO 16764 --- [           main] o.s.b.devtools.RemoteSpringApplication   : Starting RemoteSpringApplication v3.2.0-SNAPSHOT using Java 17 with PID 16764 (/Users/myuser/.m2/repository/org/springframework/boot/spring-boot-devtools/3.2.0-SNAPSHOT/spring-boot-devtools-3.2.0-SNAPSHOT.jar started by myuser in /opt/apps/)
+2023-09-10T13:32:07.764+08:00  INFO 16764 --- [           main] o.s.b.devtools.RemoteSpringApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-09-10T13:32:08.094+08:00  INFO 16764 --- [           main] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-10T13:32:08.121+08:00  INFO 16764 --- [           main] o.s.b.devtools.RemoteSpringApplication   : Started RemoteSpringApplication in 1.388 seconds (process running for 2.843)
+```
+
+
+因为远程客户端使用的是与真实应用程序相同的 classpath，它可以直接读取应用程序属性。`spring.devtools.remote.secret` 属性就是这样被读取并传递给服务器进行验证的。
+
+> 始终建议使用 https:// 作为连接协议，这样流量会被加密，密码也不会被截获。
+> 
+> 如果你需要使用代理来访问远程应用程序，可以配置 `spring.devtools.remote.proxy.host` 和 `spring.devtools.remote.proxy.port` 属性。
+> 
+{style="note"}
+
+
+#### 8.6.2 远程更新
+
+远程客户端以与[本地 restart](https://springdoc.cn/spring-boot/using.html#using.devtools.restart)相同的方式监控你的应用程序classpath的变化。任何更新的资源都会被推送到远程应用程序，并（如果需要）触发重启。如果你在一个云服务上进行功能迭代，而你在本地没有云服务，这可能会很有帮助。一般来说，远程更新和重启要比完整的重建和部署周期快得多。
+
+
+在一个较慢的开发环境中，可能会发生“等待时间”不够的情况，类的变化可能被分成几批。 在第一批类的变化被上传后，服务器被重新启动。 下一批则不能被发送到应用程序，因为服务器正在重启。
+
+
+这通常表现为 `RemoteSpringApplication` 日志中的警告，即未能上传一些类，并随之重试。 但它也可能导致应用程序代码不一致，以及在第一批修改上传后无法重新启动。 如果你经常观察到这样的问题，可以尝试增加 `spring.devtools.restart.poll-interval` 和 `spring.devtools.restart.quiet-period` 参数到适合你开发环境的值。 参见["配置文件系统监听器"](https://springdoc.cn/spring-boot/using.html#using.devtools.globalsettings.configuring-file-system-watcher)一节，以配置这些属性。
+
+> 文件只在远程客户端运行时被监控，如果你在启动远程客户端之前改变了一个文件，它不会被推送到远程服务器上。
+
+##  9. 打包应用，部署到生产环境
+
+可执行 jar 可以用于生产环境，由于它们是独立的，非常适合部署到云服务中。
+
+对于额外的“**生产就绪**”功能，如健康、审计和度量 REST 或 JMX 端点，考虑添加 `spring-boot-actuator`。详情见 [actuator](https://springdoc.cn/spring-boot/actuator.html#actuator)。
 
 
 
 
-
- 
 <seealso>
 <category ref="ref_docs">
     <a href="https://springdoc.cn/spring-boot/using.html">使用SpringBoot进行开发</a>
