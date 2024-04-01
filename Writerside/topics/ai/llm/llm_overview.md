@@ -1,6 +1,6 @@
 # 大模型综述
 
-<show-structure depth="2"/>
+<show-structure depth="3"/>
 
 ## 1. 大模型打榜排名
 

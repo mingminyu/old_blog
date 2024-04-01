@@ -10,6 +10,7 @@ Solara是一个开源的Python库，旨在简化交云端数据处理和交互�
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/8vzB0p8SeCHFR2xRzEMokQ">Solara 简介</a>
     <a href="https://mp.weixin.qq.com/s/OkwRM6kBODl06LfikkLzDA">强大的 Python 库: Solara</a>
+    <a href="https://mp.weixin.qq.com/s/0nUFcqA5a3AkrKUuQpWZbQ">有趣的 Python 库: Solara</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/widgetti/solara">Solara</a>

@@ -1,0 +1,3 @@
+apis:
+  Writerside/topics/examples/api/api-doc-big-event.yaml:
+    alias: "big-event-openapi-3.0"

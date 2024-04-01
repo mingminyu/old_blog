@@ -9,6 +9,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/IpgGrd_fRbLOc5z4blAq4Q">Pandas+PlotTable: 表格可视化从此再无敌手</a>
+    <a href="https://mp.weixin.qq.com/s/CqGQ_Gt9hfxWbFj3QoYGpA">Pandas+PlotTable: 表格可视化从此再无敌手</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/znstrider/plottable">PlotTable</a>

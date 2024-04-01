@@ -7,9 +7,10 @@ CherryPy 是一个轻量级的 Python Web 框架，它使开发 Web 应用变得
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/2gc3Z9_fQ9gyku0GcALfFg">强大的 Python 库: Cherrypy</a>
+    <a href="https://mp.weixin.qq.com/s/0alc6-L48lxw6S9SwxJPJQ">有趣的 Python 库: Cherrypy</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/cherrypy/cherrypy">Cherrypy</a>
+    <a href="https://github.com/cherrypy/cherrypy">CherryPy</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

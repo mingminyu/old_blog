@@ -1,10 +1,9 @@
 # Missingno 教程
 
-<show-structure depth="2"/>
+<show-structure depth="3"/>
 
 
-> 待补充
-{style="warning"}
+missingno库(其官方github:https://github.com/ResidentMario/missingno)是基于matplotlib库二次开发的数据可视化python库,主要用于对数据集缺失情况进行直观统计可视化，在数据探索的初期是至关重要的。下面给大家介绍missingno结合pandas进行各种类型图表来直观统计缺失情况。其他用法可参考官方github仓库。
 
 
 <seealso>

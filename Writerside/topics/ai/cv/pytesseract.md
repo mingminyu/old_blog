@@ -8,6 +8,7 @@ Pytesseract 是一个由Python编写的OCR（光学字符识别）工具，它�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/EvQtuy2aPNwUnk6gdd2-uQ">强大的 Python 库: Pytesseract</a>
+    <a href="https://mp.weixin.qq.com/s/iBfUmnkMfBywuucwAxlXhg">实用的 Python 库: Pytesseract</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/madmaze/pytesseract">Pytesseract</a>

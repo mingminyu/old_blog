@@ -9,6 +9,7 @@ Python Shiny 是一个用于创建交互式 Web 应用程序的开源库，它�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/i16XlxDxSYIe-efbz5c5vg">有趣的 Python 库: Shiny</a>
+    <a href="https://mp.weixin.qq.com/s/F1yYk4zLaoghlHC4hSvuUA">实用的 Python 库: Shiny</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/posit-dev/py-shiny">Shiny</a>

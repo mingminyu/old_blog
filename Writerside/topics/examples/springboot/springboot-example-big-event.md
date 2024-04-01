@@ -2,7 +2,7 @@
 
 <show-structure depth="3" />
 
-## 1. 项目初始化
+## 1. 项目初始化 {collapsible="true" default-state="expanded"}
 
 ### 1.1 创建数据库表
 
@@ -152,7 +152,7 @@ public class BigEventApplication
 }
 ```
 
-## 2. 用户接口
+## 2. 用户接口 {collapsible="true" default-state="expanded"}
 
 首先我们先来完善下实体类，这里介绍一个新工具 lombok，它的用处是在编译阶段，为实体类自动生成 `setter`、`getter`、`toString` 方法。
 
@@ -287,7 +287,7 @@ public class Result<T> {
 |---------|--------|------|------------------|
 | code    | number | 必须   | 响应码，0 表示成功，1表示失败 |
 | message | string |      | 提示信息             |
-| data    | object |      |                  |
+| data    | object |      | 返回数据             |
 
 <tabs>
 <tab title="请求数据">
@@ -427,10 +427,6 @@ public interface UserMapper {
 
 接下来我们使用 Postman 来测试下接口的效果，注意选择 x-www-form-urlencoded，在 Body 中填入 `username->zhangsan` 以及 `password=1234`。
 
-> 需要注意的是，使用 IDEA 自带的 HTTP Client 发送表单数据，似乎不起作用，无法将请求发送到正确的 endpoint 上。
-> 
-{style="warning"}
-
 
 #### 2.1.3 参数校验
 
@@ -539,7 +535,7 @@ public class GlobalExceptionHandler {
 |---------|--------|------|------------------|
 | code    | number | 必须   | 响应码，0 表示成功，1表示失败 |
 | message | string |      | 提示信息             |
-| data    | string |      | 返回 jwt 字符串       |
+| data    | string |      | 返回 jwt 令牌字符串     |
 
 
 <tabs>
@@ -562,6 +558,78 @@ username=zhangsan&password=1234
 </code-block>
 </tab>
 </tabs>
+
+
+> 用户登录成功后，系统会自动下发 JWT 令牌，然后在后续的每次请求中，浏览器都需要在请求头中 `Header` 中携带到服务端，请求头的名称为 `Authorization`，值为登录时下发的 JWT 令牌。
+> 
+> 如果检测到用户未登录，则 HTTP 响应状态码为 401
+
+#### 2.2.2 简单的登录
+
+接下来，我们需要在 UserController.java 接口中添加一个 `/login` 接口，然后根据请求数据中 `username` 和 `password` 与数据库中的数据进行匹配，如果匹配成功则返回 jwt 令牌，不成功则返回“用户名或密码错误”。
+
+```Java
+package com.aifun.controller;
+
+import com.aifun.pojo.Result;
+import com.aifun.pojo.User;
+import com.aifun.service.UserService;
+import jakarta.validation.constraints.Pattern;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.DigestUtils;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/user")
+@Validated
+public class UserController {
+    @Autowired
+    private UserService userService;
+
+    @PostMapping("/login")
+    public Result login(@Pattern(regexp="^\\S{5,16}$") String username, @Pattern(regexp="^\\S{5,16}$") String password) {
+        // 查询用户
+        User user = userService.findByUserName(username);
+        String md5Password = DigestUtils.md5DigestAsHex(password.getBytes());
+
+        if (user != null && user.getPassword().equals(md5Password)) {
+            // 登录成功
+            return Result.success("jwt 令牌");
+        } else {
+            // 登录失败
+            return Result.error("用户名或密码错误");
+        }
+    }
+}
+```
+{collapsible="true" default-state="expanded"}
+
+#### 2.2.3 登录认证
+
+当用户访问 `/login` 接口不成功，理论上访问文章接口也不应该成功。但是我们创建一个 `/article/list` 也是正常返回数据的，显然这是很大的 BUG。
+
+```Java
+package com.aifun.controller;
+
+import com.aifun.pojo.Result;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/article")
+public class ArticleController {
+    @GetMapping("/list")
+    public Result<String> list() {
+        return Result.success("文章数据");
+    }
+}
+```
+
+
 
 
 
