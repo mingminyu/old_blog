@@ -19,7 +19,7 @@
 
 首先，大多数文档都在基本的训练/测试拆分上使用 SHAP 值，而不是在交叉验证上使用（见图1）。使用交叉验证可以更好地了解结果的泛化能力，而简单的训练/测试拆分的结果可能会根据数据的分割方式而发生较大变化。正如我在我的最新文章“营养研究中的机器学习”中解释的那样，**除非你处理的数据集非常庞大，否则几乎总是应该优先使用交叉验证，而不是拆分训练/测试**。
 
-![](%myimgs%shap_crossvalidation_1.png?raw=true)
+![图1](%myimgs%/shap_crossvalidation_1.png?raw=true)
 
 另一个不足之处是，我所找到的所有文档**都没有使用多次重复的交叉验证来计算它们的 SHAP 值**。虽然交叉验证在简单的训练/测试拆分上是一个重大进步，但最好的做法是使用不同的数据拆分多次重复进行交叉验证。这在数据较小的情况下尤为重要，因为结果可能会根据数据的拆分方式而发生很大变化。这就是为什么通常建议重复 100 次交叉验证以确保结果的可信度。
 
@@ -64,7 +64,7 @@ shap_values = explainer.shap_values(X_test)
 shap.summary_plot(shap_values, features = X.columns)
 ```
 
-![](%myimgs%shap_crossvalidation_2.png?raw=true)
+![图2](%myimgs%/shap_crossvalidation_2.png?raw=true)
 
 ## 3. 将交叉验证与SHAP值结合
 
@@ -120,7 +120,7 @@ new_index = [ix for ix_test_fold in ix_test for ix in ix_test_fold]
 shap.summary_plot(np.array(SHAP_values_per_fold), X.reindex(new_index))
 ```
 
-![](%myimgs%shap_crossvalidation_3.png?raw=true)
+![图3](%myimgs%/shap_crossvalidation_3.png?raw=true)
 
 从图中可以看出，与仅使用训练/测试拆分相比，现在有更多的数据点（事实上，所有数据点）。这已经改善了我们的过程，因为我们可以使用整个数据集，而不仅仅是一部分。
 
@@ -285,7 +285,7 @@ shap.summary_plot(np.array(average_shap_values), X, show=False)
 plt.title('Average SHAP values after 10x cross-validation')
 ```
 
-![](%myimgs%shap_crossvalidation_4.png?raw=true)
+![图4](%myimgs%/shap_crossvalidation_4.png?raw=true)
 
 
 由于我们的结果已经在多次重复的交叉验证中进行了平均，因此它们比仅执行一次的简单训练/测试拆分更稳健且可信。
@@ -319,7 +319,7 @@ sns.catplot(data=long_df, x='Features', y='Values').set(
 plt.xticks(rotation=45)
 ```
 
-![](%myimgs%shap_crossvalidation_5.png?raw=true)
+![图5](%myimgs%/shap_crossvalidation_5.png?raw=true)
 
 在上面的 catplot 中，我们看到了每个样本的每个交叉验证重复的范围（最大值减去最小值）。理想情况下，我们希望Y轴上的值尽可能小，因为这意味着更一致的特征重要性。
 
@@ -339,7 +339,7 @@ sns.catplot(data=standardized, x='Features', y='Values').set(
 plt.xticks(rotation=45)
 ```
 
-![](%myimgs%shap_crossvalidation_6.png?raw=true)
+![图6](%myimgs%/shap_crossvalidation_6.png?raw=true)
 
 
 请注意，LSTAT 和 RM 两个我们最重要的特征的情况看起来不同。现在，我们更好地反映了按特征的整体重要性进行缩放的变异性，这取决于我们的研究问题，这可能更相关或不相关。
