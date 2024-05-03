@@ -8,6 +8,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/HWomvqBPBT7ZYlKmktGDZQ">强大的 Python 库: Prospector</a>
+    <a href="https://mp.weixin.qq.com/s/IgAmdqz1DFNLTKcvia2P9w">神奇的 Python 库: Prospector</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/landscapeio/prospector">Prospector</a>

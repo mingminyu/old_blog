@@ -9,6 +9,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/ey9ti9Mf3wvi4Tq-czTpJQ">强大的 Python 库: Python-Magic</a>
+    <a href="https://mp.weixin.qq.com/s/we8Ha-p_bgrxjRdRpQ4ySQ">实用的 Python 库: Python-Magic</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/ahupp/python-magic">Python-Magic</a>

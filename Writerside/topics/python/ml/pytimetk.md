@@ -9,6 +9,7 @@ pytimetk 提供了使时间序列分析更易于访问的工具和方法。它�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/BXU3zylrE_DqkICfBM0Jqw">强大的 Python 库: Pytimetk</a>
+    <a href="https://mp.weixin.qq.com/s/3O9db_vrHnGisc3LaDbJ2g">有趣的 Python 库: Pytimetk</a>
 </category>
 <category ref="ref_github">
     <a href="https://mp.weixin.qq.com/s/BXU3zylrE_DqkICfBM0Jqw">Pytimetk</a>

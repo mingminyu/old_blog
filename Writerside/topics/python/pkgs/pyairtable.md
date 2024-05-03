@@ -8,6 +8,7 @@ pyairtable是一个Python库，它提供了一个简单的接口来与Airtable�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/79aUfdlMElxQokAy3-I59Q">强大的 Python 库: PyAirtable</a>
+    <a href="https://mp.weixin.qq.com/s/iwh_4mKhMVyJl-sfX4PI4w">实用的 Python 库: Airtable</a>
 </category>
 <category ref="ref_github">
 </category>

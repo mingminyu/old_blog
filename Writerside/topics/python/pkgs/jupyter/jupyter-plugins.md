@@ -320,6 +320,12 @@ jupyter nbextension enable codefolding/main
 
 ## Jupytext
 
+相信大家对Jupyter Notebook都不陌生。
+
+当你有了Jupytext这个小插件就可以将Jupyter Notebook和IDE完美结合，听起来是不是很棒！
+
+从此Jupyter Notebook可以被存储为Markdown文件或多种语言的脚本文件。
+
 
 ## StickyLand
 
@@ -333,6 +339,7 @@ jupyter nbextension enable codefolding/main
     <a href="https://mp.weixin.qq.com/s/j57blXwEc05ixaZMaBUzbQ">10 个 Python 超实用的机器学习库</a>
     <a href="https://mp.weixin.qq.com/s/m9LX9ymL6_zBElvYc9nDPg">一个有趣且实用的 Jupyter 插件: StickyLand</a>
     <a href="https://mp.weixin.qq.com/s/WjXO9hIDc9bGvoYdmHDEYg">一个有趣且实用的 Jupyter 插件: PyGWalker</a>
+    <a href="https://mp.weixin.qq.com/s/w4_DqR6LzSC9NtSyGMQ3xg">10 个机器学习包</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/cmudig/AutoProfiler">AutoProfiler</a>

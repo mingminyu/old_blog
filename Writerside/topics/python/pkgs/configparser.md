@@ -8,6 +8,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/VFinNdSac7DPL2rAMTDDZQ">强大的 Python 库: configparser</a>
+    <a href="https://mp.weixin.qq.com/s/imorPlUymeRXvIRt5kyU9g">有趣的 Python 库: configparser</a>
 </category>
 <category ref="ref_github">
 </category>

@@ -9,6 +9,7 @@ Zipline是一个Python编写的量化交易策略回测库。它为用户提供�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/G8toRE_A8FowozJJ6zWTKA">强大的 Python 库: Zipline</a>
+    <a href="https://mp.weixin.qq.com/s/p96VgsFvvDUQhxZq9SPWmA">实用的 Python 库: Zipline</a>
 </category>
 <category ref="ref_github">
 </category>

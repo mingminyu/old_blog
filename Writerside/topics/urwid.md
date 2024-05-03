@@ -8,6 +8,7 @@ Urwid 是一个功能强大的 Python 库，用于创建基于文本的用户界
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/dB5r_hIfAE0QhdZdqoTzdQ">强大的 Python 库: Urwid</a>
+    <a href="https://mp.weixin.qq.com/s/gy_70lBRFvrfVZwBoZVxmw">有趣的 Python 库: Urwid</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/urwid/urwid">Urwid</a>

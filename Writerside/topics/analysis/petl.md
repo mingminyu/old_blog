@@ -10,6 +10,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/dtnVokZzh123wP4w8GPd8g">强大的 Python 库: Petl</a>
+    <a href="https://mp.weixin.qq.com/s/SAZDmDi5hG9_ozNeyO2Crw">实用的 Python 库: Petl</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/petl-developers/petl">Petl</a>

@@ -9,6 +9,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/yIlt2nVHQfR6aqh6KWBQAA">强大的 Python 库: Mutagen</a>
+    <a href="https://mp.weixin.qq.com/s/X0rj6mwHvM9burRhNXY4gQ">实用的 Python 库: Mutagen</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/quodlibet/mutagen">Mutagen</a>

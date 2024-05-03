@@ -11,6 +11,7 @@
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/oLTCrbNZpNyvtg96GlilBQ">SHAP 简介</a>
     <a href="https://mp.weixin.qq.com/s/PB9RZ3LIafYfR8tpdyqT5w">神奇的 Python 库: SHAP</a>
+    <a href="https://mp.weixin.qq.com/s/Q0R5tCDJoIszdrTJyrNFXw">实用的 Python 库: SHAP</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/shap/shap">SHAP Github</a>

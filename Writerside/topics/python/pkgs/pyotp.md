@@ -8,6 +8,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/kDhA7FZk4MZKlLtXoGaTYg">强大的 Python 库: pyotp</a>
+    <a href="https://mp.weixin.qq.com/s/59gZf6KMBKLXF7AQJ1vD0Q">是要的 Python 库: PyOTP</a>
 </category>
 <category ref="ref_issues">
 </category>

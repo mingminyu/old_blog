@@ -7,6 +7,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/YPO_t-L1KjVVecwFT6ophQ">强大的 Python 库: Boto3</a>
+    <a href="https://mp.weixin.qq.com/s/3S9pkd0a9YABpqRUBl62MA">实用的 Python 库: Boto3</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/boto/boto3">Boto3</a>

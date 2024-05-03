@@ -7,6 +7,7 @@ HandCalcs是一个非常实用的Python模块，可以帮助开发者轻松地�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/IHzUcXGjx_95dMcPMeqibw">6个好用的Python库</a>
+    <a href="https://mp.weixin.qq.com/s/dOOjQq_56bHaZ4iJ3RZjNA">强大的 Python 库: HandCalcs</a>
 </category>
 <category ref="ref_github">
 </category>

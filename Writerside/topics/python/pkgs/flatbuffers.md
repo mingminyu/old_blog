@@ -8,6 +8,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/zOH6rMEc1qhdnar3BFpAXQ">强大的 Python 库: FlatBuffers</a>
+    <a href="https://mp.weixin.qq.com/s/AAnhP9l6PWaiqlf-yZA2Ow">强有趣的 Python 库: FlatBuffers</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/google/flatbuffers">FlatBuffers</a>

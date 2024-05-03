@@ -62,9 +62,10 @@ ax3.set_title("ax3")
 
 <seealso>
     <category ref="ref_docs">
-        <a href="https://mp.weixin.qq.com/s/NzP_LWSHABYqGOLWLDwH6A">Patchworklib 介绍</a>
+        <a href="https://mp.weixin.qq.com/s/NzP_LWSHABYqGOLWLDwH6A">强大的 Python 库: Patchworklib</a>
+        <a href="https://mp.weixin.qq.com/s/LmNUmonlGkNLYvGdFQp7hg">有趣的 Python 库: Patchworklib</a>
     </category>
     <category ref="ref_github">
-        <a href="https://github.com/ponnhide/patchworklib">Patchworklib Github</a>
+        <a href="https://github.com/ponnhide/patchworklib">Patchworklib</a>
     </category>
 </seealso>

@@ -7,6 +7,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/iPqqrYImN-uXrkoKEAVqWQ">神奇的 Python 库: Pymatting</a>
+    <a href="https://mp.weixin.qq.com/s/EsJEu7rFyZm0uGUYy8fQWA">强大的 Python 库: Pymatting</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/pymatting/pymatting">Pymatting</a>

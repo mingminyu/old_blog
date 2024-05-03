@@ -8,8 +8,9 @@
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/3Eqc8k-Cnco7FfXli8sEVw">Docopt 简介</a>
+    <a href="https://mp.weixin.qq.com/s/3Eqc8k-Cnco7FfXli8sEVw">实用的 Python 库: Docopt</a>
     <a href="https://mp.weixin.qq.com/s/roy06UwqlJzuEFXnhfTM0g">强大的 Python 库: Docopt</a>
+    <a href="https://mp.weixin.qq.com/s/di7cydptUfkpbZewXrjMvA">有趣的 Python 库: Docopt</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/docopt/docopt">Docopt</a>

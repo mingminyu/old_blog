@@ -83,10 +83,11 @@ def cleanup_expired_data():
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/lQpatjBfxQqtU0-7Hebg6A">Huey介绍</a>
+    <a href="https://mp.weixin.qq.com/s/PlpZOdmeVWGNwAm7nPbTuQ">强大的 Python 库: Huey</a>
     <a href="https://huey.readthedocs.io/en/latest/">Huey 文档</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/coleifer/huey">Huey Github</a>
+    <a href="https://github.com/coleifer/huey">Huey</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

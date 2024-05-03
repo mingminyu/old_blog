@@ -8,10 +8,11 @@ Python Networkx 库是一个用于创建、操作和分析复杂网络的 Python
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/lyhAHQgTa-UPgoa8tY4BGQ">一个神奇的python网络库networkx</a>
+    <a href="https://mp.weixin.qq.com/s/OSk2M8VONUlOOC_z0dH3Eg">神奇的 Python库: Networkx</a>
     <a href="https://networkx.org/documentation/stable/">NetworkX 文档</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/networkx/networkx">Networkx Github</a>
+    <a href="https://github.com/networkx/networkx">Networkx</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

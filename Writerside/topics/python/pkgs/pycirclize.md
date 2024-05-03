@@ -6,7 +6,8 @@ pyCirclize 是一个开源的 Python 库，用于创建 Circos 图，这是一�
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/pp_LekVKDpXRrxm1_p25yA">pyCirclize</a>
+    <a href="https://mp.weixin.qq.com/s/pp_LekVKDpXRrxm1_p25yA">强大的 Python 库: PyCirclize</a>
+    <a href="https://mp.weixin.qq.com/s/Da7OSEOr4UiACWA3xnQy7w">酷炫的 Python 库: PyCirclize</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/moshi4/pyCirclize">PyCirclize</a>
