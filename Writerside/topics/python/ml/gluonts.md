@@ -8,6 +8,7 @@ gluonts 是一个用于时间序列预测的开源 Python 库，由 Amazon Resea
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/T8dS-Di57wEzS6WkazMHow">强大的 Python 库: Gluonts</a>
+    <a href="https://mp.weixin.qq.com/s/7Xx2uNFXBGcQclip01HGbg">实用的 Python 库: Gluonts</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/awslabs/gluonts">Gluonts</a>

@@ -6,10 +6,11 @@
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/49L295wAZ7FsJ-mQOvBWdA">Bjoern</a>
+    <a href="https://mp.weixin.qq.com/s/49L295wAZ7FsJ-mQOvBWdA">强大的 Python 库: Bjoern</a>
+    <a href="https://mp.weixin.qq.com/s/AJTHbz9wTLzevhIdP8XFgw">实用的 Python 库: Bjoern</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/jonashaag/bjoern">Bjoern Github</a>
+    <a href="https://github.com/jonashaag/bjoern">Bjoern</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

@@ -8,6 +8,7 @@ PynamoDB是一个Python库，它提供了一个简单的接口来操作Amazon Dy
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/iqfQDTbpVdjXSoOiG5i8qQ">强大的 Python 库: PynamoDB</a>
+    <a href="https://mp.weixin.qq.com/s/Xnju7cTfPSedhzQkurtpyg">实用的 Python 库: PynamoDB</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/pynamodb/PynamoDB">PynamoDB</a>

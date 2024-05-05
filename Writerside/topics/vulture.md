@@ -8,6 +8,7 @@ Python Vulture 是一个基于静态分析的工具库，旨在帮助开发者�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/Qpc5iA4wRoG2jz_Sk92T9g">强大的 Python 库: Vulture</a>
+    <a href="https://mp.weixin.qq.com/s/9hXavjeObtizi4_OI_aPPQ">实用的 Python 库: Vulture</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/jendrikseipp/vulture">Vulture</a>

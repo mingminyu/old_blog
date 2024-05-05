@@ -8,6 +8,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/WODnRWmhz0JJu26pHWJaJA">PyForms：简化Python GUI开发的利器</a>
+    <a href="https://mp.weixin.qq.com/s/l5qmAOZrvf0tDuzpEWusYg">强大的 Python 库: PyForms</a>
 </category>
 <category ref="ref_github">
 </category>

@@ -11,6 +11,7 @@
     <a href="https://mp.weixin.qq.com/s/IpgGrd_fRbLOc5z4blAq4Q">Pandas+PlotTable: 表格可视化从此再无敌手</a>
     <a href="https://mp.weixin.qq.com/s/CqGQ_Gt9hfxWbFj3QoYGpA">PlotTable: 强大的表格可视化工具</a>
     <a href="https://mp.weixin.qq.com/s/vuvWWNlKFXB8cKwsdmlq3Q">PlotTable: 实用的表格可视化工具</a>
+    <a href="https://mp.weixin.qq.com/s/dcBxe8sKdXoUYDHDXgJ7yQ">PlotTable: 超酷的表格可视化工具</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/znstrider/plottable">PlotTable</a>

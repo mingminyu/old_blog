@@ -2,8 +2,7 @@
 
 <show-structure depth="2"/>
 
-> 待补充
-{style="warning"}
+Python statsmodels是一个强大的统计分析库，提供了丰富的统计模型和数据处理功能，可用于数据分析、预测建模等多个领域。本文将介绍statsmodels库的安装、特性、基本功能、高级功能、实际应用场景等方面。
 
 
 <seealso>
@@ -12,6 +11,7 @@
     <a href="https://mp.weixin.qq.com/s/sCNu4bnJOIx055S_Y1od9A">数据分析必会的 10 个 python 库</a>
 </category>
 <category ref="ref_github">
+    <a href="https://github.com/statsmodels/statsmodels">Statsmodels</a>
 </category>
 <category ref="ref_issues">
 </category>

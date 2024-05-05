@@ -1,4 +1,4 @@
-# Dotted 教程
+# DottedDict 教程
 
 <show-structure depth="3"/>
 
@@ -6,10 +6,11 @@ Python的dotted库提供了一种便捷的方式来处理嵌套字典和列表�
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/wyHTd-tYNkd5MrGRPEUadQ">强大的 Python 库: Dotted</a>
+    <a href="https://mp.weixin.qq.com/s/wyHTd-tYNkd5MrGRPEUadQ">强大的 Python 库: DottedDict</a>
+    <a href="https://mp.weixin.qq.com/s/IyHAs7rFNKt8XmszGJiceQ">实用的 Python 库: DottedDict</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/carlosescri/DottedDict">Dotted</a>
+    <a href="https://github.com/carlosescri/DottedDict">DottedDict</a>
 </category>
 <category ref="ref_issues">
 </category>

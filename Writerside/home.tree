@@ -35,6 +35,8 @@
             <toc-element topic="python-gc.md"/>
             <toc-element topic="python-logging.md"/>
             <toc-element topic="python-packaging.md">
+                <toc-element topic="shiv.md"/>
+                <toc-element topic="hatch.md"/>
                 <toc-element topic="hatchling.md"/>
                 <toc-element topic="nuitka.md"/>
                 <toc-element topic="pyinstaller.md"/>
@@ -47,6 +49,9 @@
             <toc-element topic="cpython.md"/>
         </toc-element>
         <toc-element topic="python-built-pkgs.topic">
+            <toc-element topic="hashlib.md"/>
+            <toc-element topic="subprocess.md"/>
+            <toc-element topic="ctypes.md"/>
             <toc-element topic="functools.md"/>
             <toc-element topic="future.md"/>
             <toc-element topic="itertools.md"/>
@@ -82,11 +87,28 @@
             <toc-element topic="uvloop.md"/>
         </toc-element>
         <toc-element topic="python-pkgs.md">
-            <toc-element topic="lantz.md"/>
-            <toc-element topic="napalm.md"/>
-            <toc-element topic="memory-profiler.md"/>
-            <toc-element topic="jpype.md"/>
-            <toc-element topic="nose.md"/>
+            <toc-element topic="pynng.md"/>
+            <toc-element topic="speedtest.md"/>
+            <toc-element topic="decorator.md"/>
+            <toc-element topic="aiomultiprocess.md"/>
+            <toc-element topic="gdal.md"/>
+            <toc-element topic="merchant.md"/>
+            <toc-element topic="pydigger.md"/>
+            <toc-element topic="schematics.md"/>
+            <toc-element topic="pyfrida.md"/>
+            <toc-element topic="ajenti.md"/>
+            <toc-element topic="mingus.md"/>
+            <toc-element topic="pywifi.md"/>
+            <toc-element topic="pyasn.md"/>
+            <toc-element topic="s4cmd.md"/>
+            <toc-element topic="pingo.md"/>
+            <toc-element topic="mkdocs.md"/>
+            <toc-element topic="calibre.md"/>
+            <toc-element topic="sqlparse.md"/>
+            <toc-element topic="cachetools.md"/>
+            <toc-element topic="mkl-fft.md"/>
+            <toc-element topic="pylibmc.md"/>
+            <toc-element topic="baostock.md"/>
             <toc-element topic="addressrec.md"/>
             <toc-element topic="aesara.md"/>
             <toc-element topic="aiofiles.md"/>
@@ -113,6 +135,7 @@
             <toc-element topic="bidict.md"/>
             <toc-element topic="biopython.md"/>
             <toc-element topic="biosppy.md"/>
+            <toc-element topic="bitarray.md"/>
             <toc-element topic="black.md"/>
             <toc-element topic="blackhole.md"/>
             <toc-element topic="blaze.md"/>
@@ -122,17 +145,20 @@
             <toc-element topic="boltons.md"/>
             <toc-element topic="boto3.md"/>
             <toc-element topic="box.md"/>
+            <toc-element topic="btrees.md"/>
             <toc-element topic="bypy.md"/>
             <toc-element topic="csvkit.md"/>
             <toc-element topic="calamine.md"/>
             <toc-element topic="casbin.md"/>
             <toc-element topic="cement.md"/>
             <toc-element topic="cerberus.md"/>
+            <toc-element topic="cf-units.md"/>
             <toc-element topic="cherrypy.md"/>
             <toc-element topic="chinesecalendar.md"/>
             <toc-element topic="chronos.md"/>
             <toc-element topic="clevercsv.md"/>
             <toc-element topic="cmocean.md"/>
+            <toc-element topic="cobra.md"/>
             <toc-element topic="coconut.md"/>
             <toc-element topic="cocos2d.md"/>
             <toc-element topic="code2flow.md">
@@ -147,6 +173,7 @@
             <toc-element topic="cryptography.md"/>
             <toc-element topic="cudf.md"/>
             <toc-element topic="cupy.md"/>
+            <toc-element topic="windows-curses.md"/>
             <toc-element topic="cysimdjson.md"/>
             <toc-element topic="cython.md"/>
             <toc-element topic="dnspython.md"/>
@@ -160,7 +187,6 @@
             <toc-element topic="dejavu.md"/>
             <toc-element topic="delorean.md"/>
             <toc-element topic="deprecated.md"/>
-            <toc-element topic="diagrams.md"/>
             <toc-element topic="difflib.md"/>
             <toc-element topic="diffusers.md"/>
             <toc-element topic="dill.md"/>
@@ -171,26 +197,30 @@
             <toc-element topic="dotted.md"/>
             <toc-element topic="dowhy.md"/>
             <toc-element topic="dramatiq.md"/>
-            <toc-element topic="drissionpage.md"/>
             <toc-element topic="dtreeviz.md"/>
             <toc-element topic="edt.md"/>
+            <toc-element topic="enlighten.md"/>
             <toc-element topic="envelopes.md"/>
             <toc-element topic="eventlet.md"/>
             <toc-element topic="eyed3.md"/>
             <toc-element topic="ftfy.md"/>
+            <toc-element topic="fabric.md"/>
             <toc-element topic="filelock.md"/>
             <toc-element topic="finetuner.md"/>
             <toc-element topic="flanker.md"/>
             <toc-element topic="flatbuffers.md"/>
             <toc-element topic="flower.md"/>
+            <toc-element topic="fonttools.md"/>
             <toc-element topic="fsociety.md"/>
             <toc-element topic="fugue.md"/>
             <toc-element topic="functime.md"/>
+            <toc-element topic="funcy.md"/>
             <toc-element topic="gspread.md"/>
             <toc-element topic="gvar.md"/>
             <toc-element topic="geopandas.md"/>
             <toc-element topic="geoip2.md"/>
             <toc-element topic="gevent.md"/>
+            <toc-element topic="glom.md"/>
             <toc-element topic="gravis.md"/>
             <toc-element topic="great-tables.md"/>
             <toc-element topic="greykite.md"/>
@@ -198,6 +228,7 @@
             <toc-element topic="gym.md">
             </toc-element>
             <toc-element topic="handcalcs.md"/>
+            <toc-element topic="homeassistant.md"/>
             <toc-element topic="httpx.md"/>
             <toc-element topic="humanize.md"/>
             <toc-element topic="hummingbird.md"/>
@@ -207,12 +238,15 @@
             <toc-element topic="imageio.md"/>
             <toc-element topic="imbox.md"/>
             <toc-element topic="importlib-resources.md"/>
+            <toc-element topic="indexed-gzip.md"/>
             <toc-element topic="indico.md"/>
             <toc-element topic="inquirerpy.md"/>
             <toc-element topic="interpret.md"/>
             <toc-element topic="invoke.md"/>
+            <toc-element topic="jira.md"/>
             <toc-element topic="jmespath.md"/>
             <toc-element topic="joblib.md"/>
+            <toc-element topic="jpype.md"/>
             <toc-element topic="json-flatten.md"/>
             <toc-element topic="jsonpickle.md"/>
             <toc-element topic="jupyter.topic">
@@ -222,24 +256,30 @@
                 <toc-element topic="jupyter_kernel_usage.md"/>
             </toc-element>
             <toc-element topic="kangas.md"/>
+            <toc-element topic="kopf.md"/>
             <toc-element topic="kornia.md"/>
             <toc-element topic="latex-ocr.md"/>
             <toc-element topic="langgraph.md"/>
+            <toc-element topic="lantz.md"/>
             <toc-element topic="latexify.md"/>
             <toc-element topic="lazypredict.md">
             </toc-element>
             <toc-element topic="libcloud.md"/>
             <toc-element topic="librosa.md"/>
+            <toc-element topic="lief.md"/>
             <toc-element topic="logbook.md"/>
             <toc-element topic="loguru.md"/>
             <toc-element topic="luigi.md"/>
             <toc-element topic="lxml.md"/>
             <toc-element topic="lzf.md"/>
             <toc-element topic="m3u8.md"/>
+            <toc-element topic="mkl-service.md"/>
+            <toc-element topic="mkl-random.md"/>
             <toc-element topic="magenta.md"/>
             <toc-element topic="marshmallow.md"/>
             <toc-element topic="matchering.md"/>
             <toc-element topic="maya.md"/>
+            <toc-element topic="memory-profiler.md"/>
             <toc-element topic="mimesis.md"/>
             <toc-element topic="missingno.md"/>
             <toc-element topic="mistune.md"/>
@@ -251,15 +291,18 @@
             <toc-element topic="munch.md"/>
             <toc-element topic="mutagen.md"/>
             <toc-element topic="mypy.md"/>
+            <toc-element topic="napalm.md"/>
             <toc-element topic="networkx.md"/>
             <toc-element topic="neural_prophet.md"/>
             <toc-element topic="newspaper3j.md"/>
+            <toc-element topic="nose.md"/>
             <toc-element topic="numba.md"/>
             <toc-element topic="numpy.md"/>
             <toc-element topic="numpy-stl.md"/>
             <toc-element topic="omegaconf.md"/>
             <toc-element topic="openfisca-france.md"/>
             <toc-element topic="openpyxl.md"/>
+            <toc-element topic="opteryx.md"/>
             <toc-element topic="optimus.md"/>
             <toc-element topic="paddleocr.md"/>
             <toc-element topic="pandassql.md"/>
@@ -272,6 +315,7 @@
             <toc-element topic="pattern.md"/>
             <toc-element topic="pdoc.md"/>
             <toc-element topic="pendulum.md"/>
+            <toc-element topic="pickledb.md"/>
             <toc-element topic="pingouin.md"/>
             <toc-element topic="pipreqs.md"/>
             <toc-element topic="platformio.md"/>
@@ -282,10 +326,13 @@
             <toc-element topic="pretty-errors.md"/>
             <toc-element topic="prettytable.md"/>
             <toc-element topic="progress.md"/>
+            <toc-element topic="property-validator.md"/>
             <toc-element topic="prophet.md"/>
             <toc-element topic="prospector.md"/>
             <toc-element topic="psutil.md"/>
+            <toc-element topic="py-spy.md"/>
             <toc-element topic="pyairtable.md"/>
+            <toc-element topic="pyarmor.md"/>
             <toc-element topic="pybuilder.md"/>
             <toc-element topic="pycallgraph.md"/>
             <toc-element topic="pycryptodome.md"/>
@@ -294,6 +341,7 @@
             <toc-element topic="pyforms.md"/>
             <toc-element topic="pygwalker.md"/>
             <toc-element topic="pygame.md"/>
+            <toc-element topic="pynacl.md"/>
             <toc-element topic="pypdf.md"/>
             <toc-element topic="pypattyrn.md"/>
             <toc-element topic="pyshorteners.md"/>
@@ -302,11 +350,11 @@
             <toc-element topic="pywhat.md"/>
             <toc-element topic="pybaobabdt.md"/>
             <toc-element topic="pybind11.md"/>
+            <toc-element topic="pycco.md"/>
             <toc-element topic="pydantic.md"/>
             <toc-element topic="pydbgen.md"/>
             <toc-element topic="pydub.md"/>
             <toc-element topic="pyelftools.md"/>
-            <toc-element topic="pygal.md"/>
             <toc-element topic="pygments.md"/>
             <toc-element topic="pyhdf.md"/>
             <toc-element topic="pyinfra.md"/>
@@ -322,6 +370,7 @@
             <toc-element topic="pysheeet.md"/>
             <toc-element topic="pysnooper.md"/>
             <toc-element topic="pytest.md"/>
+            <toc-element topic="python-barcode.md"/>
             <toc-element topic="python-benedict.md"/>
             <toc-element topic="python-dotenv.md"/>
             <toc-element topic="python-magic.md"/>
@@ -339,11 +388,13 @@
             <toc-element topic="rauth.md"/>
             <toc-element topic="ray.md"/>
             <toc-element topic="rdkit.md"/>
+            <toc-element topic="records.md"/>
             <toc-element topic="reloading.md"/>
             <toc-element topic="retrying.md"/>
             <toc-element topic="returns.md"/>
             <toc-element topic="rich.md"/>
             <toc-element topic="rope.md"/>
+            <toc-element topic="rospy.md"/>
             <toc-element topic="rpyc.md"/>
             <toc-element topic="rsa.md"/>
             <toc-element topic="ruamel-yaml.md"/>
@@ -373,6 +424,7 @@
             <toc-element topic="stockstats.md"/>
             <toc-element topic="streamparse.md"/>
             <toc-element topic="structlog.md"/>
+            <toc-element topic="supervisor.md"/>
             <toc-element topic="swifter.md"/>
             <toc-element topic="symengine.md"/>
             <toc-element topic="sympy.md"/>
@@ -389,6 +441,7 @@
             <toc-element topic="tinydb.md"/>
             <toc-element topic="tinytag.md"/>
             <toc-element topic="tomli.md"/>
+            <toc-element topic="tomorrow.md"/>
             <toc-element topic="tortoiseorm.topic">
                 <toc-element topic="tortoiseorm_filter.md"/>
             </toc-element>
@@ -404,6 +457,7 @@
             <toc-element topic="twython.md"/>
             <toc-element topic="typer.md"/>
             <toc-element topic="uv.md"/>
+            <toc-element topic="udunits.md"/>
             <toc-element topic="unoconv.md"/>
             <toc-element topic="vaex.md"/>
             <toc-element topic="vcrpy.md"/>
@@ -438,6 +492,12 @@
             <toc-element topic="python-wps-client.md"/>
         </toc-element>
         <toc-element topic="python-web.topic">
+            <toc-element topic="html5lib.md"/>
+            <toc-element topic="topai.md"/>
+            <toc-element topic="markupsafe.md"/>
+            <toc-element topic="pyxley.md"/>
+            <toc-element topic="posthog.md"/>
+            <toc-element topic="autobahnpython.md"/>
             <toc-element topic="aiohttp.md"/>
             <toc-element topic="web-py.md"/>
             <toc-element topic="websocket-client.md"/>
@@ -460,6 +520,9 @@
             <toc-element topic="chameleon.md"/>
             <toc-element topic="dash-web.md"/>
             <toc-element topic="django.md">
+                <toc-element topic="daphne.md"/>
+                <toc-element topic="django-react-boilerplate.md"/>
+                <toc-element topic="geodjango.md"/>
                 <toc-element topic="django-haystack.md"/>
                 <toc-element topic="django-unicorn.md"/>
                 <toc-element topic="django_grappelli.md"/>
@@ -478,6 +541,7 @@
             </toc-element>
             <toc-element topic="falcon.md"/>
             <toc-element topic="fastapi.md">
+                <toc-element topic="fastapi-react.md"/>
                 <toc-element topic="fastAPI_backend_template.md"/>
             </toc-element>
             <toc-element topic="fastui.md"/>
@@ -551,6 +615,8 @@
             <toc-element topic="zodb.md"/>
         </toc-element>
         <toc-element topic="python-crawler.topic">
+            <toc-element topic="drissionpage.md"/>
+            <toc-element topic="lassie.md"/>
             <toc-element topic="requests-html.md"/>
             <toc-element topic="appinum.md">
             </toc-element>
@@ -568,6 +634,16 @@
             <toc-element topic="python-selenium.md"/>
         </toc-element>
         <toc-element topic="python-visualization.topic">
+            <toc-element topic="mplcyberpunk.md"/>
+            <toc-element topic="holoviz.md"/>
+            <toc-element topic="arcade.md"/>
+            <toc-element topic="pywaffle.md"/>
+            <toc-element topic="joypy.md"/>
+            <toc-element topic="pygal.md"/>
+            <toc-element topic="diagrams.md"/>
+            <toc-element topic="vtk.md"/>
+            <toc-element topic="yt.md"/>
+            <toc-element topic="cartopy.md"/>
             <toc-element topic="pyflow.md"/>
             <toc-element topic="mayavi.md"/>
             <toc-element topic="basemap.md"/>
@@ -619,6 +695,16 @@
             <toc-element topic="vizro.md"/>
         </toc-element>
         <toc-element topic="automation.topic">
+            <toc-element topic="uiautomator.md"/>
+            <toc-element topic="robotframework.md"/>
+            <toc-element topic="Pdf2Docx.md"/>
+            <toc-element topic="relatorio.md"/>
+            <toc-element topic="reportlab.md"/>
+            <toc-element topic="python-o365.md"/>
+            <toc-element topic="pikepdf.md"/>
+            <toc-element topic="gunnery.md"/>
+            <toc-element topic="pdfplumber.md"/>
+            <toc-element topic="wechaty.md"/>
             <toc-element topic="rpa.md"/>
             <toc-element topic="mailer.md"/>
             <toc-element topic="freezegun.md"/>
@@ -640,6 +726,8 @@
             <toc-element topic="xlwt.md"/>
         </toc-element>
         <toc-element topic="python-gui.topic">
+            <toc-element topic="pyimgui.md"/>
+            <toc-element topic="pyglet.md"/>
             <toc-element topic="pygtk.md"/>
             <toc-element topic="pyx.md"/>
             <toc-element topic="dearpygui.md"/>
@@ -762,6 +850,8 @@
             </toc-element>
         </toc-element>
         <toc-element topic="nlp.topic">
+            <toc-element topic="pepper.md"/>
+            <toc-element topic="levenshtein.md"/>
             <toc-element topic="glonts.md"/>
             <toc-element topic="gne.md"/>
             <toc-element topic="sumy.md"/>
@@ -774,6 +864,8 @@
             <toc-element topic="snownlp.md"/>
         </toc-element>
         <toc-element topic="dl.topic">
+            <toc-element topic="jina.md"/>
+            <toc-element topic="pydeeplx.md"/>
             <toc-element topic="rlax.md"/>
             <toc-element topic="theano.md"/>
             <toc-element topic="skorch.md"/>
@@ -800,6 +892,13 @@
             <toc-element topic="self-attention.md"/>
         </toc-element>
         <toc-element topic="ml.topic">
+            <toc-element topic="metrics.md"/>
+            <toc-element topic="skforecast.md"/>
+            <toc-element topic="chronos-forecasting.md"/>
+            <toc-element topic="karateclub.md"/>
+            <toc-element topic="qutip.md"/>
+            <toc-element topic="sdv.md"/>
+            <toc-element topic="mining.md"/>
             <toc-element topic="dmu.md"/>
             <toc-element topic="openllm.md"/>
             <toc-element topic="pyss3.md"/>
@@ -884,6 +983,10 @@
             <toc-element topic="bagging_boosting_overview.md"/>
         </toc-element>
         <toc-element topic="asr.topic">
+            <toc-element topic="timeside.md"/>
+            <toc-element topic="audioflux.md"/>
+            <toc-element topic="porcupine.md"/>
+            <toc-element topic="audioread.md"/>
             <toc-element topic="pyaudio.md"/>
         </toc-element>
         <toc-element topic="tts.topic">

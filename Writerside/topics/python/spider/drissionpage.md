@@ -7,8 +7,12 @@ DrissionPage。这是一个集成了Selenium和Requests的库，类似 selenuium
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/rM9fAtSYAo6X0hpNeL1V2w">神奇的 Python 库: DrissionPage</a>
+    <a href="https://mp.weixin.qq.com/s/vavY-yNcXNRZoG8FkgIqog">实用的 Python 库: DrissionPage</a>
+    <a href="https://gitee.com/g1879/DrissionPage">Selenium 文档</a>
+    <a href="https://gitee.com/g1879/DrissionPage">Requests 文档</a>
 </category>
 <category ref="ref_github">
+    <a href="https://gitee.com/g1879/DrissionPage">DrissionPage</a>
 </category>
 <category ref="ref_issues">
 </category>

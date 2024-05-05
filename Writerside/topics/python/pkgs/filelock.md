@@ -10,7 +10,7 @@ filelock 是一个纯 Python 写成的库，它提供了一种简易实用的方
     <a href="https://mp.weixin.qq.com/s/4uIUwte8PShIfq6lwk1biQ">强大的 Python 库: Filelock</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/tox-dev/filelock"></a>
+    <a href="https://github.com/tox-dev/filelock">Filelock</a>
 </category>
 <category ref="ref_issues">
 </category>

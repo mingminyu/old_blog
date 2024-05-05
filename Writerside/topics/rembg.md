@@ -7,7 +7,8 @@ Rembg 是一个 Python 库，用于从图像中去除背景。它使用了深度
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/JVo_AMAMoTDFcAi00M2Lcg">使用的 Python 库: Rembg</a>
+    <a href="https://mp.weixin.qq.com/s/JVo_AMAMoTDFcAi00M2Lcg">强大的 Python 库: Rembg</a>
+    <a href="https://mp.weixin.qq.com/s/2fxsh-91BfSZoKPm-hZ0WQ">实用的 Python 库: Rembg</a>
 </category>
 <category ref="ref_github">
 </category>

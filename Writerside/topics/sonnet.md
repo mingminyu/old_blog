@@ -7,8 +7,10 @@ Sonnet 是一个由 DeepMind 开发的神经网络库，它是 TensorFlow 的一
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/T6-9kqZwoOLzByFjfGyyYw">强大的 Python 库: Sonnet</a>
+    <a href="https://mp.weixin.qq.com/s/IeoUjL36jo_XHrsIthILJQ">实用的 Python 库: Sonnet</a>
 </category>
 <category ref="ref_github">
+    <a href="https://github.com/google-deepmind/sonnet">Sonnet</a>
 </category>
 <category ref="ref_issues">
 </category>
