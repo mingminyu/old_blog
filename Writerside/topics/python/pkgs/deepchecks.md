@@ -7,13 +7,14 @@ Deepchecks 是一个专门用于机器学习模型验证和监控的 Python 库�
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/2VkTx-AuDF1do2-jKdqt9w">deepchecks，一个神奇的 python 库</a>
-    <a href="https://github.com/deepchecks/deepchecks">Deepchecks 简介</a>
+    <a href="https://mp.weixin.qq.com/s/2VkTx-AuDF1do2-jKdqt9w">神奇的 python 库: DeepChecks</a>
+    <a href="https://mp.weixin.qq.com/s/pSbhikTRs8FKJxQKlkHmFA">强大的 python 库: DeepChecks</a>
+    <a href="https://github.com/deepchecks/deepchecks">DeepChecks 简介</a>
 </category>
 <category ref="ref_github">
 </category>
 <category ref="ref_issues">
-    <a href="https://github.com/deepchecks/deepchecks">Deepchecks Github</a>
+    <a href="https://github.com/deepchecks/deepchecks">DeepChecks</a>
 </category>
 <category ref="ref_hf"></category>
 <category ref="ref_ms"></category>

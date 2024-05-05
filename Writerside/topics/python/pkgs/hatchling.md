@@ -16,6 +16,7 @@ PDM
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/jPvTxTWtmuB81wRBMBrfQQ">使用Hatchling轻松实现Python项目打包</a>
+    <a href="https://mp.weixin.qq.com/s/uG3ibVqSBXFsui5yce1IMQ">Python 项目打包: Hatchling</a>
 </category>
 <category ref="ref_github">
 </category>

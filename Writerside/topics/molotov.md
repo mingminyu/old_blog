@@ -7,6 +7,7 @@ Molotov是一个Python库，用于编写和运行压力测试。它可以帮助�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/jk5CKUh3AkFEz1Sa1BBKXg">强大的 Python 库: Molotov</a>
+    <a href="https://mp.weixin.qq.com/s/jk5CKUh3AkFEz1Sa1BBKXg">实用的 Python 库: Molotov</a>
     <a href="https://molotov.readthedocs.io">Molotov 文档</a>
 </category>
 <category ref="ref_github">

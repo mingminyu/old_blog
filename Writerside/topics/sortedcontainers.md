@@ -7,6 +7,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/EYW9wIy0oHgpKpIIfKTkZg">强大的 Python 库: SortedContainers</a>
+    <a href="https://mp.weixin.qq.com/s/mYQMSdVhA6SHBBred04OQg">实用的 Python 库: SortedContainers</a>
 </category>
 <category ref="ref_github">
 </category>

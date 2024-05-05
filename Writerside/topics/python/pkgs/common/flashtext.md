@@ -59,7 +59,8 @@ print(result)
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/owv5FlZpeFx8lAxyl3KSdA">flashtext 一个超酷的 Python 库</a>
+    <a href="https://mp.weixin.qq.com/s/FjpXQQ9L4pL-yZFIhxf6hg">强大的 Python 库: FlashText</a>
+    <a href="https://mp.weixin.qq.com/s/owv5FlZpeFx8lAxyl3KSdA">超酷的 Python 库: FlashText</a>
     <a href="https://flashtext.readthedocs.io/en/latest">FlashText 文档</a>
 </category>
 <category ref="ref_github">

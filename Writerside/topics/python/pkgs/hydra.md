@@ -8,6 +8,7 @@ Hydra，全称是"Hierarchical Configuration"，是一个用于构建复杂应�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/6zc5XrET-biyjRXJRTlgTw">强大的 Python 库: Hydra</a>
+    <a href="https://mp.weixin.qq.com/s/tcF1vuWPAhYYsHSadXzBfw">实用的 Python 库: Hydra</a>
 </category>
 <category ref="ref_github">
 </category>
