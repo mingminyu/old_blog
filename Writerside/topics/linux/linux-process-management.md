@@ -13,7 +13,7 @@ Linux 中可以通过 `lsfo` 命令查看占用端口的服务:
 lsfo -i :8080
 
 # 查看监听端口的服务
-lsfo -nP |grep LISTEN |grep 8080  
+lsfo -nP |grep LISTEN |grep 8080
 
 # 查看监听的端口服务
 lsof -nP -iTCP -sTCP:LISTEN

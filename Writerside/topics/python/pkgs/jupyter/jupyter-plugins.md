@@ -330,6 +330,13 @@ jupyter nbextension enable codefolding/main
 ## StickyLand
 
 
+## NbConvert
+
+nbconvert 是一个非常实用的库，用于将 Jupyter 笔记本转换为其他多种格式，从而使得分享、展示或进一步处理笔记本内容变得更加方便。
+
+
+
+
 
 
 <seealso>
@@ -341,6 +348,7 @@ jupyter nbextension enable codefolding/main
     <a href="https://mp.weixin.qq.com/s/WjXO9hIDc9bGvoYdmHDEYg">一个有趣且实用的 Jupyter 插件: PyGWalker</a>
     <a href="https://mp.weixin.qq.com/s/w4_DqR6LzSC9NtSyGMQ3xg">10 个机器学习包</a>
     <a href="https://mp.weixin.qq.com/s/XIx1AgyESpjjZpUacUwxOg">让你的 Pandas 动起来</a>
+    <a href="https://mp.weixin.qq.com/s/y67ms-72eS8X3_QegoJs3Q">强大的 Python 库: NbConvert</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/cmudig/AutoProfiler">AutoProfiler</a>
@@ -349,6 +357,7 @@ jupyter nbextension enable codefolding/main
     <a href="https://github.com/quantopian/qgrid">QGrid</a>
     <a href="https://github.com/mwouts/itables">ITables</a>
     <a href="https://github.com/mwouts/jupytext">Jupytext</a>
+    <a href="https://github.com/jupyter/nbconvert">NbConvert</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>
