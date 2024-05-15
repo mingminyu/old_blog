@@ -23,6 +23,7 @@
 | [Typora](https://static.macbl.com/app/utilities/typora)                         | Markdown 软件 |
 | [IStat Menus](https://www.macbl.com/app/system/istat-menus)                     | 系统监控        |
 | [Alfread](https://www.macbl.com/app/system/alfred)                              | 快速搜索        | 
+| [Parallels Desktop](https://rutracker.net/forum/viewtopic.php?t=6433734)        | 虚拟机         | 
 
 
 ## 3. 常见问题
@@ -34,4 +35,13 @@
 > 解决办法: 需要现在辅助功能里面将 Bartender 相关权限删除掉，然后重新打开 Bartender 进行权限的赋予
 > 
 {style="note"}
+
+
+注意下，小手机的使用间隔，最好是 5 分钟左右
+
+添加时给客户备注好相关信息
+
+
+
+
 
