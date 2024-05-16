@@ -1,6 +1,6 @@
-# Mac 软件
+# 软件下载
 
-<show-structure depth="2"/>
+<show-structure depth="3"/>
 
 ## 1. 破解网站
 
@@ -16,14 +16,16 @@
 
 ## 2. 软件下载
 
-| 软件                                                                              | 描述          |
-|---------------------------------------------------------------------------------|-------------|
-| [Bartender5](https://www.macbl.com/app/system/bartender)                        | 隐藏顶部栏图标     |
-| [Microsoft Office](https://www.macbl.com/app/business/microsoft-office-for-mac) | 日常办公        |
-| [Typora](https://static.macbl.com/app/utilities/typora)                         | Markdown 软件 |
-| [IStat Menus](https://www.macbl.com/app/system/istat-menus)                     | 系统监控        |
-| [Alfread](https://www.macbl.com/app/system/alfred)                              | 快速搜索        | 
-| [Parallels Desktop](https://rutracker.net/forum/viewtopic.php?t=6433734)        | 虚拟机         | 
+| 软件                                                                                     | 描述          |
+|----------------------------------------------------------------------------------------|-------------|
+| [Bartender5](https://www.macbl.com/app/system/bartender)                               | 隐藏顶部栏图标     |
+| [Microsoft Office](https://www.macbl.com/app/business/microsoft-office-for-mac)        | 日常办公        |
+| [Typora](https://static.macbl.com/app/utilities/typora)                                | Markdown 软件 |
+| [IStat Menus](https://www.macbl.com/app/system/istat-menus)                            | 系统监控        |
+| [Alfread](https://www.macbl.com/app/system/alfred)                                     | 快速搜索        | 
+| [Parallels Desktop](https://rutracker.net/forum/viewtopic.php?t=6433734)               | 虚拟机         | 
+| [ClashX](https://github.com/clashdownload/ClashX/releases/download/1.118.0/ClashX.dmg) | VPN         | 
+| [ClashX Pro](https://dl.clashxpro.org/releases/latest/ClashXPro.dmg)                   | VPN         | 
 
 
 ## 3. 常见问题

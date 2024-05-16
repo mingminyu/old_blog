@@ -812,12 +812,6 @@
         <toc-element topic="scala-advance.topic"/>
         <toc-element topic="scala-web.topic"/>
     </toc-element>
-    <toc-element topic="linux.topic">
-        <toc-element topic="linux_file_operations.md"/>
-        <toc-element topic="linux-compress-decompress-ops.md"/>
-        <toc-element topic="shell.topic"/>
-        <toc-element topic="linux-process-management.md"/>
-    </toc-element>
     <toc-element topic="ai.topic">
         <toc-element topic="label-studio.md">
             <toc-element topic="labelstudio-templates.md"/>
@@ -1053,6 +1047,15 @@
             <toc-element topic="yolopandas.md"/>
         </toc-element>
     </toc-element>
+    <toc-element topic="linux.topic">
+        <toc-element topic="linux_file_operations.md"/>
+        <toc-element topic="linux-compress-decompress-ops.md"/>
+        <toc-element topic="shell.topic"/>
+        <toc-element topic="linux-process-management.md"/>
+    </toc-element>
+    <toc-element topic="macos.md">
+        <toc-element topic="mac-softwares.md"/>
+    </toc-element>
     <toc-element topic="frontend.topic">
         <toc-element topic="d3js.topic"/>
         <toc-element topic="echartsjs.topic">
@@ -1097,7 +1100,6 @@
         </toc-element>
     </toc-element>
     <toc-element topic="softwares.topic">
-        <toc-element topic="mac-softwares.md"/>
         <toc-element topic="softwares-vpn.md"/>
         <toc-element topic="copilot-free-activation.md"/>
     </toc-element>
