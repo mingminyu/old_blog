@@ -1,4 +1,4 @@
-# Rasa Studio 教程
+# Rasa Studio
 
 <show-structure depth="3"/>
 

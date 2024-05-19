@@ -174,8 +174,8 @@ strings -f run.log  | grep error
 
 <seealso>
 <category ref="ref_docs">
-    <a href="https://mp.weixin.qq.com/s/ePCTzboNC5Jmn6UgniViQg">rsync:轻松实现文件的增量备份</a>
-    <a href="https://mp.weixin.qq.com/s/nPKLuRyQ1lUCL1NRebPmBw">使用awk去除文件中的重复行</a>
+    <a href="https://mp.weixin.qq.com/s/ePCTzboNC5Jmn6UgniViQg">rsync: 轻松实现文件的增量备份</a>
+    <a href="https://mp.weixin.qq.com/s/nPKLuRyQ1lUCL1NRebPmBw">使用 awk 去除文件中的重复行</a>
 </category>
 <category ref="ref_github"></category>
 <category ref="ref_issues"></category>
