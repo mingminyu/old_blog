@@ -24,7 +24,11 @@ python webui.py
 
 ## 4. LibreChat
 
-[LibreChat](https://docs.librechat.ai/index.html) 是一款非常不错的开源工具，其界面几乎完全仿照 ChatGPT 界面，此外它还集成了多个其他大模型，例如 Google Gemini。
+[LibreChat](https://docs.librechat.ai/index.html) 是一款非常不错的开源工具，其界面几乎完全仿照 ChatGPT 界面，此外它还集成了多个其他大模型，例如 Google Gemini。美中不足的是，该工具不支持本地大模型的加入，期待后续添加。
+
+> 按照官方教程安装时，可能会遇到 Sharp 库无法正常安装，需要根据终端中给出的[下载地址](https://github.com/lovell/sharp-libvips/releases/download/v8.14.5/libvips-8.14.5-darwin-arm64v8.tar.br)，用浏览器下载好后，将文件放在 `~/.npm/_libvips` 下，再使用 `npm ci` 命令安装就可以了。
+> 
+{style="note"}
 
 
 ## 5. LM Studio

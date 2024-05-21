@@ -12,6 +12,10 @@
 | [潘多拉盒子](https://www.inpandora.com)    |                           |
 | [AppStorrent](https://appstorrent.ru) |                           |
 | [RuTracker](https://rutracker.net)    | 俄罗斯最大的软件破解软件，也包含 MAC 相关软件 |
+| [Macked App](https://macked.app)      | MAC 破解软件                  |
+| [CMacked App](https://cmacked.com)    | MAC 破解软件                  |
+| [XClient](https://xclient.info)       | MAC 破解软件                  |
+| [XMac](https://xmac.app)              | MAC 破解软件                  |
 
 
 ## 2. 软件下载
@@ -26,6 +30,7 @@
 | [Parallels Desktop](https://rutracker.net/forum/viewtopic.php?t=6433734)               | 虚拟机         | 
 | [ClashX](https://github.com/clashdownload/ClashX/releases/download/1.118.0/ClashX.dmg) | VPN         | 
 | [ClashX Pro](https://dl.clashxpro.org/releases/latest/ClashXPro.dmg)                   | VPN         | 
+| [Axure RP](https://xclient.info/s/axure-rp.html)                                       | 设计软件        | 
 
 
 ## 3. 常见问题

@@ -501,8 +501,6 @@
             <toc-element topic="python-wps-client.md"/>
         </toc-element>
         <toc-element topic="python-web.topic">
-            <toc-element topic="httpie.md"/>
-            <toc-element topic="saleor.md"/>
             <toc-element topic="aiohttp.md"/>
             <toc-element topic="apispec.md"/>
             <toc-element topic="asciimatics.md"/>
@@ -558,6 +556,7 @@
             </toc-element>
             <toc-element topic="html5lib.md"/>
             <toc-element topic="httpcore.md"/>
+            <toc-element topic="httpie.md"/>
             <toc-element topic="hug.md"/>
             <toc-element topic="hypercorn.md"/>
             <toc-element topic="jinja2.md"/>
@@ -582,6 +581,7 @@
             <toc-element topic="reactpy.topic"/>
             <toc-element topic="reflex.md"/>
             <toc-element topic="robobrowser.md"/>
+            <toc-element topic="saleor.md"/>
             <toc-element topic="sanic.md"/>
             <toc-element topic="shiny.md"/>
             <toc-element topic="streamlit.md">
@@ -604,6 +604,7 @@
             <toc-element topic="uwsgi.md"/>
             <toc-element topic="uvicorn.md"/>
         </toc-element>
+        <toc-element topic="robyn.md"/>
         <toc-element topic="python-connect-db.topic">
             <toc-element topic="sqlmodel.md"/>
             <toc-element topic="alembic.md"/>
@@ -862,11 +863,11 @@
             </toc-element>
             <toc-element topic="rawdog.md"/>
             <toc-element topic="vec2text.md"/>
-            <toc-element topic="llm-tools.md"/>
             <toc-element topic="llm_overview.md">
                 <toc-element topic="llm-application-share.md"/>
             </toc-element>
         </toc-element>
+        <toc-element topic="llm-tools.md"/>
         <toc-element topic="nlp.topic">
             <toc-element topic="pepper.md"/>
             <toc-element topic="levenshtein.md"/>
