@@ -16,6 +16,7 @@
 | [CMacked App](https://cmacked.com)    | MAC 破解软件                  |
 | [XClient](https://xclient.info)       | MAC 破解软件                  |
 | [XMac](https://xmac.app)              | MAC 破解软件                  |
+| [MacDo](https://macdo.dn)             | MAC 破解软件                  |
 
 
 ## 2. 软件下载
@@ -31,6 +32,7 @@
 | [ClashX](https://github.com/clashdownload/ClashX/releases/download/1.118.0/ClashX.dmg) | VPN         | 
 | [ClashX Pro](https://dl.clashxpro.org/releases/latest/ClashXPro.dmg)                   | VPN         | 
 | [Axure RP](https://xclient.info/s/axure-rp.html)                                       | 设计软件        | 
+| [Final Cut Pro](https://www.macdo.cn/25200.html)                                       | 设计软件        | 
 
 
 ## 3. 常见问题
