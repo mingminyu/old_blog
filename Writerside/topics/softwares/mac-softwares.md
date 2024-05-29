@@ -16,7 +16,8 @@
 | [CMacked App](https://cmacked.com)    | MAC 破解软件                  |
 | [XClient](https://xclient.info)       | MAC 破解软件                  |
 | [XMac](https://xmac.app)              | MAC 破解软件                  |
-| [MacDo](https://macdo.dn)             | MAC 破解软件                  |
+| [MacDo](https://macdo.cn)             | MAC 破解软件                  |
+| [MacWk](https://macwk.cn)             | MAC 破解软件                  |
 
 
 ## 2. 软件下载
