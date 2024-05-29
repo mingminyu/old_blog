@@ -581,6 +581,7 @@
             <toc-element topic="reactpy.topic"/>
             <toc-element topic="reflex.md"/>
             <toc-element topic="robobrowser.md"/>
+            <toc-element topic="robyn.md"/>
             <toc-element topic="saleor.md"/>
             <toc-element topic="sanic.md"/>
             <toc-element topic="shiny.md"/>
@@ -604,13 +605,10 @@
             <toc-element topic="uwsgi.md"/>
             <toc-element topic="uvicorn.md"/>
         </toc-element>
-        <toc-element topic="robyn.md"/>
         <toc-element topic="python-connect-db.topic">
-            <toc-element topic="sqlmodel.md"/>
-            <toc-element topic="alembic.md"/>
-            <toc-element topic="zerorpc.md"/>
             <toc-element topic="aiokafka.md"/>
             <toc-element topic="aio-pika.md"/>
+            <toc-element topic="alembic.md"/>
             <toc-element topic="clickhouse-dirver.md"/>
             <toc-element topic="dataset.md"/>
             <toc-element topic="faust.md"/>
@@ -628,25 +626,27 @@
             <toc-element topic="python-connect-impala.md"/>
             <toc-element topic="python-connect-redis.md"/>
             <toc-element topic="smart_redis.md"/>
+            <toc-element topic="sqlmodel.md"/>
             <toc-element topic="textai.md"/>
             <toc-element topic="zodb.md"/>
+            <toc-element topic="zerorpc.md"/>
         </toc-element>
         <toc-element topic="python-crawler.topic">
-            <toc-element topic="drissionpage.md"/>
-            <toc-element topic="lassie.md"/>
-            <toc-element topic="requests-html.md"/>
             <toc-element topic="appinum.md">
             </toc-element>
             <toc-element topic="beautifulsoup.md"/>
+            <toc-element topic="drissionpage.md"/>
             <toc-element topic="grab.md"/>
             <toc-element topic="grequests.md"/>
             <toc-element topic="intelliscraper.md"/>
+            <toc-element topic="lassie.md"/>
             <toc-element topic="mechanicalsoup.md"/>
             <toc-element topic="pyspider.md"/>
             <toc-element topic="pyppeteer.md"/>
             <toc-element topic="readability-lxml.md"/>
             <toc-element topic="requestium.md"/>
             <toc-element topic="python-requests.md"/>
+            <toc-element topic="requests-html.md"/>
             <toc-element topic="scrapy.md"/>
             <toc-element topic="python-selenium.md"/>
         </toc-element>
@@ -814,9 +814,12 @@
         <toc-element topic="scala-web.topic"/>
     </toc-element>
     <toc-element topic="ai.topic">
-        <toc-element topic="label-studio.md">
-            <toc-element topic="labelstudio-templates.md"/>
-            <toc-element topic="labelstudio-faq.md"/>
+        <toc-element topic="data-annotation.md">
+            <toc-element topic="doccano.md"/>
+            <toc-element topic="label-studio.md">
+                <toc-element topic="labelstudio-templates.md"/>
+                <toc-element topic="labelstudio-faq.md"/>
+            </toc-element>
         </toc-element>
         <toc-element topic="conversational-ai.topic">
             <toc-element topic="chatkbqa_llm.md"/>
@@ -869,18 +872,17 @@
         </toc-element>
         <toc-element topic="llm-tools.md"/>
         <toc-element topic="nlp.topic">
-            <toc-element topic="pepper.md"/>
-            <toc-element topic="levenshtein.md"/>
+            <toc-element topic="fasttext.md"/>
             <toc-element topic="glonts.md"/>
             <toc-element topic="gne.md"/>
-            <toc-element topic="sumy.md"/>
+            <toc-element topic="levenshtein.md"/>
             <toc-element topic="lida.md"/>
-            <toc-element topic="doccano.md"/>
-            <toc-element topic="stanza.md"/>
-            <toc-element topic="textblob.md"/>
-            <toc-element topic="fasttext.md"/>
-            <toc-element topic="spacynlp.md"/>
+            <toc-element topic="pepper.md"/>
             <toc-element topic="snownlp.md"/>
+            <toc-element topic="spacynlp.md"/>
+            <toc-element topic="stanza.md"/>
+            <toc-element topic="sumy.md"/>
+            <toc-element topic="textblob.md"/>
         </toc-element>
         <toc-element topic="dl.topic">
             <toc-element topic="jina.md"/>
