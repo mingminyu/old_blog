@@ -3,12 +3,12 @@
 <platform id="primary">
     <src>keymap.xml</src>
     <use-keymaps>
-        primary_Windows
+        Windows
     </use-keymaps>
 </platform>
 <platform id="secondary">
     <use-keymaps>
-        secondary_macOS
+        MacOS
     </use-keymaps>
     <src>keymap.xml</src>
 </platform>

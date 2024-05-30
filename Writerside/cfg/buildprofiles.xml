@@ -8,6 +8,11 @@
         <web-root>https://mingminyu.github.io</web-root>
         <product-web-url>https://mingminyu.github.io</product-web-url>
     </variables>
+    <shortcuts>
+        <src>keymap.xml</src>
+        <layout name="Windows" display-name="Windows"/>
+        <layout name="MacOS" display-name="MacOS"/>
+    </shortcuts>
     <build-profile instance="instance_id"/>
     <footer>
         <copyright>2023.11.28</copyright>
@@ -17,4 +22,5 @@
             <noindex-content>true</noindex-content>
         </variables>
     </build-profile>
+
 </buildprofiles>

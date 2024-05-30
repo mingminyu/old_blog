@@ -1,33 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Keymap id="km">
-   <Action id="GotoFile">
-      <Description>Go to File...</Description>
-      <Shortcut layout="primary_Windows">Ctrl+Shift+N</Shortcut>
-      <Shortcut layout="secondary_macOS">⇧ ⌘ O</Shortcut>
+   <Action id="$PyCharmCodeFormat">
+      <Description>格式化代码</Description>
+      <Shortcut layout="Windows">Ctrl+Alt+L</Shortcut>
+      <Shortcut layout="MacOS">⌘ ⌥ L</Shortcut>
    </Action>
-   <Action id="ShowIntentionActions">
-      <Description>Show Context Actions</Description>
-      <Shortcut layout="primary_Windows">Alt+Enter</Shortcut>
-      <Shortcut layout="secondary_macOS">⌥ ⏎</Shortcut>
+   <Action id="$PyCharmImportOptimization">
+      <Description>优化导入库</Description>
+      <Shortcut layout="Windows">Ctrl+Alt+O</Shortcut>
+      <Shortcut layout="MacOS">⌘ ⌥ O</Shortcut>
    </Action>
-   <Action id="Generate">
-      <Description>Generate...</Description>
-      <Shortcut layout="primary_Windows">Alt+Insert</Shortcut>
-      <Shortcut layout="secondary_macOS">⌘ N</Shortcut>
+   <Action id="$PyCharmMergeMultiLines">
+      <Description>多行合并一行</Description>
+      <Shortcut layout="Windows">Shift+Ctrl+J</Shortcut>
+      <Shortcut layout="MacOS">⌃ ⇧ J</Shortcut>
    </Action>
-   <Action id="EditorTab">
-      <Description>Tab</Description>
-      <Shortcut layout="primary_Windows">Tab</Shortcut>
-      <Shortcut layout="secondary_macOS">⇥</Shortcut>
+   <Action id="$PyCharmComment">
+      <Description>注释</Description>
+      <Shortcut layout="Windows">Ctrl+/</Shortcut>
+      <Shortcut layout="MacOS">⌘ /</Shortcut>
    </Action>
-   <Action id="CtrlCmd">
-      <Shortcut layout="primary_Windows">Ctrl</Shortcut>
-      <Shortcut layout="secondary_macOS">⌘</Shortcut>
+   <Action id="$PyCharmReplace">
+      <Description>替换</Description>
+      <Shortcut layout="Windows">Ctrl+R</Shortcut>
+      <Shortcut layout="MacOS">⌘ R</Shortcut>
    </Action>
-   <Action id="RenameElement">
-      <Description>Rename...</Description>
-      <Shortcut layout="primary_Windows">Shift+F6</Shortcut>
-      <Shortcut layout="secondary_macOS">⇧ F6</Shortcut>
+   <Action id="$PyCharmFind">
+      <Description>注查找</Description>
+      <Shortcut layout="Windows">Ctrl+F</Shortcut>
+      <Shortcut layout="MacOS">⌘ F</Shortcut>
+   </Action>
+   <Action id="$PyCharmMoveUpCodeLine">
+      <Description>向上移动代码行</Description>
+      <Shortcut layout="Windows">Shift+Alt+⬆</Shortcut>
+      <Shortcut layout="MacOS">⇧ ⌥ ⬆</Shortcut>
+   </Action>
+   <Action id="$PyCharmMoveDownCodeLine">
+      <Description>向下移动代码行</Description>
+      <Shortcut layout="Windows">Shift+Alt+⬇</Shortcut>
+      <Shortcut layout="MacOS">⇧ ⌥ ⬇</Shortcut>
+   </Action>
+   <Action id="$PyCharmUnFoldCodeBlock">
+      <Description>展开代码块</Description>
+      <Shortcut layout="Windows">Ctrl++</Shortcut>
+      <Shortcut layout="MacOS">⌘ +</Shortcut>
+   </Action>
+   <Action id="$PyCharmFoldCodeBlock">
+      <Description>折叠代码块</Description>
+      <Shortcut layout="Windows">Ctrl+-</Shortcut>
+      <Shortcut layout="MacOS">⌘ -</Shortcut>
+   </Action>
+   <Action id="$PyCharmUpperText">
+      <Description>大小写转换</Description>
+      <Shortcut layout="Windows">Shift+Ctrl+U</Shortcut>
+      <Shortcut layout="MacOS">⇧ ⌘ U</Shortcut>
+   </Action>
+   <Action id="$PyCharmForwardDelete">
+      <Description>向前删除代码</Description>
+      <Shortcut layout="Windows">Option+Backspace</Shortcut>
+      <Shortcut layout="MacOS">⌥ ⌫</Shortcut>
+   </Action>
+   <Action id="$PyCharmBackForwardDelete">
+      <Description>向后删除代码</Description>
+      <Shortcut layout="Windows">Fn+Option+Backspace</Shortcut>
+      <Shortcut layout="MacOS">Fn ⌥ ⌫</Shortcut>
+   </Action>
+   <Action id="$PyCharmDeleteLine">
+      <Description>删除代码行</Description>
+      <Shortcut layout="Windows">Ctrl+Y</Shortcut>
+      <Shortcut layout="MacOS">⌘ Y</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmQuickIndent">
+      <Description>快速缩进</Description>
+      <Shortcut layout="Windows">/</Shortcut>
+      <Shortcut layout="MacOS">⌥ ⌘ I</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmSelectToLineStart">
+      <Description>从当前位置选中至行首</Description>
+      <Shortcut layout="Windows">/</Shortcut>
+      <Shortcut layout="MacOS">⇧ ⌘ ←</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmSelectToLineEnd">
+      <Description>从当前位置选中至行尾</Description>
+      <Shortcut layout="Windows">/</Shortcut>
+      <Shortcut layout="MacOS">⇧ ⌘ →</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmPasteFromHistory">
+      <Description>从历史复制记录中中选择粘贴</Description>
+      <Shortcut layout="Windows">/</Shortcut>
+      <Shortcut layout="MacOS">⇧ ⌘ V</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmSelectToCodeBlockStart">
+      <Description>从当前位置选中到代码块的开始</Description>
+      <Shortcut layout="Windows">/</Shortcut>
+      <Shortcut layout="MacOS">⇧ ⌘ [</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmSelectToCodeBlockEnd">
+      <Description>从当前位置选中到代码块的结束</Description>
+      <Shortcut layout="Windows">/</Shortcut>
+      <Shortcut layout="MacOS">⇧ ⌘ ]</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmInsertCurrCodeLine">
+      <Description>在下方复制当前代码行</Description>
+      <Shortcut layout="Windows">Ctrl+D</Shortcut>
+      <Shortcut layout="MacOS">⌘ D</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmStepSelectCodeBlock">
+      <Description>在下方复制当前代码行</Description>
+      <Shortcut layout="Windows">Ctrl+W</Shortcut>
+      <Shortcut layout="MacOS">⌘ W</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmStepCancelSelectCodeBlock">
+      <Description>逐步取消选中代码块</Description>
+      <Shortcut layout="Windows">Shift+Ctrl+W</Shortcut>
+      <Shortcut layout="MacOS">⇧ ⌘ W</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmMoveUpStickCurrLine">
+      <Description>固定当前行窗口向上滑动</Description>
+      <Shortcut layout="Windows">Ctrl+↑</Shortcut>
+      <Shortcut layout="MacOS">⌘ ↑</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmMoveDownStickCurrLine">
+      <Description>固定当前行窗口向下滑动</Description>
+      <Shortcut layout="Windows">Ctrl+↓</Shortcut>
+      <Shortcut layout="MacOS">⌘ ↓</Shortcut>
+   </Action>
+
+   <Action id="$PyCharmInsertWordNearCursor">
+      <Description>固定当前行窗口向下滑动</Description>
+      <Shortcut layout="Windows">/</Shortcut>
+      <Shortcut layout="MacOS">⌥ /</Shortcut>
    </Action>
 
 </Keymap>
+
+<!--   ⌘ ⏎ ⎋  ⌫ ⇧ ⌃ ⬆⬇ ⇥ ⌥ ⬅︎ ➡︎  -->
+<!--   → ← ↑ ↓ -->
