@@ -143,6 +143,12 @@
       <Shortcut layout="MacOS">⌥ /</Shortcut>
    </Action>
 
+   <Action id="$PyCharmOpenSetting">
+      <Description>打开系统设置</Description>
+      <Shortcut layout="Windows">Ctrl+,</Shortcut>
+      <Shortcut layout="MacOS">⌘ ,</Shortcut>
+   </Action>
+
 </Keymap>
 
 <!--   ⌘ ⏎ ⎋  ⌫ ⇧ ⌃ ⬆⬇ ⇥ ⌥ ⬅︎ ➡︎  -->
