@@ -7,6 +7,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/oroYK2yQ6UBFgUWdjW4SpA">强大的 Python 库: Rlax</a>
+    <a href="https://mp.weixin.qq.com/s/133oFuYF9uaXAptOkfOZfA">有趣的 Python 库: Rlax</a>
 </category>
 <category ref="ref_github">
     <a href="https://mp.weixin.qq.com/s/oroYK2yQ6UBFgUWdjW4SpA">Rlax</a>

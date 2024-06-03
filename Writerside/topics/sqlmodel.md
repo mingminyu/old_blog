@@ -7,8 +7,10 @@ SqlModel是一个现代、快速、简单且类型安全的ORM（对象关系映
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/CpkIADsJgmSWUFvtleNTTg">强大的 Python 库: SqlModel</a>
+    <a href="https://mp.weixin.qq.com/s/Ehv1xDdWV3ZJzMHHw4VbqA">有趣的 Python 库: SqlModel</a>
 </category>
 <category ref="ref_github">
+    <a href="https://github.com/tiangolo/sqlmodel">SQLModel</a>
 </category>
 <category ref="ref_issues">
 </category>

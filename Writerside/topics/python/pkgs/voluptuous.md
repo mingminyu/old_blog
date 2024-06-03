@@ -7,6 +7,7 @@ Voluptuous是一个Python库，用于验证Python数据结构，比如那些通�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/9-WBzbvJ3P1c1D0gDcZKDg">强大的 Python 库: Voluptuous</a>
+    <a href="https://mp.weixin.qq.com/s/Pjlv1swccaAPnlS0r28XbQ">有趣的 Python 库: Voluptuous</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/alecthomas/voluptuous">Voluptuous</a>

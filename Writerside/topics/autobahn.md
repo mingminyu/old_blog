@@ -3,6 +3,7 @@
 <show-structure depth="3"/>
 
 Autobahn 是一个 Python 库，提供了 WebSocket 和 WAMP（Web 应用程序消息传递协议）的实现。
+
 WebSocket 为 Web 应用程序提供了实时双向通信的可能性，而 WAMP 则在 WebSocket 的基础上提供了异步的远程过程调用 (RPC) 和主题发布/订阅功能，为构建复杂的实时应用带来了极大的便利。
 
 <seealso>

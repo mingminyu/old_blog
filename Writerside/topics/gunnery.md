@@ -7,6 +7,7 @@
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/li4KhIyEmUknfvZ0Ez9B9A">强大的 Python 库: Gunnery</a>
+    <a href="https://mp.weixin.qq.com/s/oTHfiXzCR67mJXq6eOm1ng">有趣的 Python 库: Gunnery</a>
 </category>
 <category ref="ref_github">
 </category>

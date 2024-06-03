@@ -70,4 +70,8 @@
         <description>Created after removal of "文章管理 API 接口文档" from AiFun</description>
         <accepts>api-doc-big-event-md.html</accepts>
     </rule>
+    <rule id="55410673">
+        <description>Created after removal of "maturin" from ZERO</description>
+        <accepts>maturin.html</accepts>
+    </rule>
 </rules>
