@@ -9,6 +9,7 @@
 
 万幸的是，我们可以通过 PyCharm 中 JSON Schema Mappings 功能可以达成预期的目的，从而能在使用自定义框架或者一些外部框架时，在配置 YAML 文件可以自动补全参数。接下来，我们看下在 PyCharm 中如何实现。
 
+
 ### 1.1 自定义 Json Scheme 文件
 
 现在我们定义一个 JSON Schema，内容为需要自动补全的参数名称、类型以及值，保存文件内容为 demo.json。
@@ -18,7 +19,7 @@
   "$id": "https://example.com/blueprint.schema.json",
   "$schema": "http://json-schema.org/draft-08/schema#",
   "title": "Blueprint",
-  "description": "Cloudify Blueprint as described https://docs.cloudify.co/5.0.5/developer/blueprints/",
+  "description": "Cloudify Blueprint",
   "type": "object",
   "properties": {
     "tosca_definitions_version": {
@@ -96,6 +97,10 @@
 }
 ```
 
+> 关于更多的参数配置形式，可以参考 [SchemaStore](https://www.schemastore.org/json) 中的模板文件来仿写。
+> 
+{style="note"}
+
 ### 1.2 在 PyCharm 中完成配置
 
 操作步骤:
@@ -104,10 +109,38 @@
 3. 在 **Schema file or URL** 中填入我们保存的 demo.json 文件路径
 4. 点击 **+** 号新增一项，可以选择文件，也可以选择 Add File Path Pattern，作用是限定自动参数补全的文件名 Pattern。
 
-> 当我们有多个项目框架需要导入进行自动补全时时，那么我们最好定义好 File Path Pattern 来限定
+> 当我们有多个项目框架需要导入进行自动补全时时，那么我们最好定义好 File Path Pattern 来限定作用的文件名称，比如
 > 
 {style="warning"}
 
+
+### 1.3 快速创建配置信息
+
+完成配置后，我们就可以创建 test.yml 文件，试试利用自动补全的功能快速完成下面的参数配置。
+
+```yaml
+tosca_definitions_version: cloudify_dsl_1_3 
+imports:  
+  - http://cloudify.co/spec/cloudify/5.0.5/types.yaml 
+inputs:   
+  webserver_port:    
+    description: The HTTP web server port.    
+    default: 8000 
+node_templates:
+   
+  http_web_server:    
+    type: cloudify.nodes.WebServer    
+    properties:      
+      port: { get_input: webserver_port }    
+    interfaces:      
+      cloudify.interfaces.lifecycle:        
+        create:           
+          implementation: install.py          
+          executor: central_deployment_agent        
+        delete:           
+          implementation: uninstall.py          
+          executor: central_deployment_agent
+```
 
 
 

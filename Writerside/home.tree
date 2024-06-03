@@ -2,7 +2,7 @@
 <!DOCTYPE instance-profile
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 <instance-profile id="home"
-                 name="AiFun"
+                 name="ZERO"
                  start-page="homepage.topic">
     <toc-element topic="homepage.topic"/>
     <toc-element topic="python.topic">
@@ -838,6 +838,9 @@
                 <toc-element topic="rasa-studio.md">
                     <toc-element topic="rasa-studio-quickstart.md"/>
                 </toc-element>
+                <toc-element topic="rasa-open-source.md">
+                    <toc-element topic="rasa-config-yaml-auto-completion-pycharm.md"/>
+                </toc-element>
             </toc-element>
             <toc-element topic="telepot.md"/>
         </toc-element>
@@ -1033,6 +1036,7 @@
             <toc-element topic="pytesseract.md"/>
             <toc-element topic="yolox.md"/>
         </toc-element>
+        <toc-element topic="mmdet.md"/>
         <toc-element topic="data-analysis.md">
             <toc-element topic="datasette.md"/>
             <toc-element topic="aws-sdk-pandas.md"/>
