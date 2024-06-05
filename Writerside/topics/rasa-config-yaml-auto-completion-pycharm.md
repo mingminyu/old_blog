@@ -6,28 +6,33 @@
 
 ## 1. 定义 Json Schema
 
+Rasa 项目中 YAML 文件有点多，主要包括 config.yml、domain.yml、endpoints.yml、credentials.yml、rules.yml 以及 stories.yml 文件，针对每个文件我们需要定义一个 JSON Schema，确保打开对应文件时能达到自动补全的效果。
+
 ### 1.1 config.yml
+
+关于 config.yml 文件对应的 JSON Schema 文件可以访问 [config.json](https://github.com/mingminyu/python-config-file-auto-complete/rasa-open-source/config.json)。
+
 
 ### 1.2 domain.yml
 
+关于 domain.yml 文件对应的 JSON Schema 文件可以访问 [domain.json](https://github.com/mingminyu/python-config-file-auto-complete/rasa-open-source/domain.json)。
+
 ### 1.3 endpoints.yml
+
+关于 endpoints.yml 文件对应的 JSON Schema 文件可以访问 [endpoints.json](https://github.com/mingminyu/python-config-file-auto-complete/rasa-open-source/endpoints.json)。
 
 ### 1.4 credentials.yml
 
+关于 credentials.yml 文件对应的 JSON Schema 文件可以访问 [credentials.json](https://github.com/mingminyu/python-config-file-auto-complete/rasa-open-source/credentials.json)。
+
 ### 1.5 nlu.yml
+
+关于 nlu.yml 文件对应的 JSON Schema 文件可以访问 [nlu.json](https://github.com/mingminyu/python-config-file-auto-complete/rasa-open-source/nlu.json)。
 
 ### 1.6 rules.yml
 
+关于 rules.yml 文件对应的 JSON Schema 文件可以访问 [rules.json](https://github.com/mingminyu/python-config-file-auto-complete/rasa-open-source/rules.json)。
+
 ### 1.7 stories.yml
 
-我们先看下 Rasa 中的 story 大概的数据结构，再来定义一个对应的 JSON Schema 文件。
-
-```yaml
-version: "3.1"
-
-stories:
-- story:
-  steps:
-  - intent: intent_1
-  - action: utter_1
-```
+关于 stories.yml 文件对应的 JSON Schema 文件可以访问 [stories.json](https://github.com/mingminyu/python-config-file-auto-complete/rasa-open-source/stories.json)。

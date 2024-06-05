@@ -465,7 +465,6 @@
             <toc-element topic="salt.md"/>
             <toc-element topic="sarge.md"/>
             <toc-element topic="scalene.md"/>
-            <toc-element topic="schedule.md"/>
             <toc-element topic="schema.md"/>
             <toc-element topic="schematics.md"/>
             <toc-element topic="scikit_image.md"/>
@@ -566,14 +565,15 @@
         </toc-element>
         <toc-element topic="python-unused-pkgs.md">
             <toc-element topic="kapre.md"/>
-            <toc-element topic="symusic.md"/>
-            <toc-element topic="mido.md"/>
             <toc-element topic="kegtron-ble.md"/>
+            <toc-element topic="mido.md"/>
+            <toc-element topic="nameparser.md"/>
             <toc-element topic="nutrientredopt.md"/>
-            <toc-element topic="scdeep.md"/>
+            <toc-element topic="pycifrw.md"/>
             <toc-element topic="pydy.md"/>
             <toc-element topic="qutip.md"/>
-            <toc-element topic="pycifrw.md"/>
+            <toc-element topic="scdeep.md"/>
+            <toc-element topic="symusic.md"/>
         </toc-element>
         <toc-element topic="python-web.topic">
             <toc-element topic="aiohttp.md"/>
@@ -829,42 +829,45 @@
             <toc-element topic="geo-calculus.md"/>
         </toc-element>
         <toc-element topic="automation.topic">
-            <toc-element topic="imapclient.md"/>
-            <toc-element topic="itchat.md"/>
-            <toc-element topic="procedural.md"/>
-            <toc-element topic="trivval.md"/>
-            <toc-element topic="pywinauto.md"/>
-            <toc-element topic="spiffworkflow.md"/>
-            <toc-element topic="pynput.md"/>
-            <toc-element topic="uiautomator.md"/>
-            <toc-element topic="robotframework.md"/>
-            <toc-element topic="Pdf2Docx.md"/>
-            <toc-element topic="relatorio.md"/>
-            <toc-element topic="reportlab.md"/>
-            <toc-element topic="python-o365.md"/>
-            <toc-element topic="pikepdf.md"/>
-            <toc-element topic="gunnery.md"/>
-            <toc-element topic="pdfplumber.md"/>
-            <toc-element topic="wechaty.md"/>
-            <toc-element topic="rpa.md"/>
-            <toc-element topic="mailer.md"/>
-            <toc-element topic="freezegun.md"/>
             <toc-element topic="ansible.md"/>
-            <toc-element topic="pyexcel.md"/>
-            <toc-element topic="airflow.md"/>
             <toc-element topic="borb.md"/>
             <toc-element topic="docx.md"/>
+            <toc-element topic="freezegun.md"/>
+            <toc-element topic="gunnery.md"/>
+            <toc-element topic="imapclient.md"/>
+            <toc-element topic="itchat.md"/>
+            <toc-element topic="mailer.md"/>
+            <toc-element topic="pdfplumber.md"/>
+            <toc-element topic="Pdf2Docx.md"/>
+            <toc-element topic="pikepdf.md"/>
+            <toc-element topic="procedural.md"/>
             <toc-element topic="pyautogui.md"/>
             <toc-element topic="pymupdf.md"/>
+            <toc-element topic="pynput.md"/>
+            <toc-element topic="pyexcel.md"/>
+            <toc-element topic="python-o365.md"/>
+            <toc-element topic="pywinauto.md"/>
             <toc-element topic="pyzmail.md"/>
-            <toc-element topic="rocketry.md"/>
+            <toc-element topic="relatorio.md"/>
+            <toc-element topic="reportlab.md"/>
+            <toc-element topic="robotframework.md"/>
+            <toc-element topic="rpa.md"/>
+            <toc-element topic="spiffworkflow.md"/>
+            <toc-element topic="trivval.md"/>
+            <toc-element topic="uiautomator.md"/>
             <toc-element topic="wechatpy.md"/>
+            <toc-element topic="wechaty.md"/>
             <toc-element topic="weixin-python.md"/>
             <toc-element topic="win32com.md"/>
             <toc-element topic="xlrd.md"/>
             <toc-element topic="xlsxwriter.md"/>
             <toc-element topic="xlwings.md"/>
             <toc-element topic="xlwt.md"/>
+        </toc-element>
+        <toc-element topic="python-tasks-schedule.md">
+            <toc-element topic="schedule.md"/>
+            <toc-element topic="rocketry.md"/>
+            <toc-element topic="airflow.md"/>
         </toc-element>
         <toc-element topic="python-gui.topic">
             <toc-element topic="gooey.md"/>
@@ -960,7 +963,16 @@
                     <toc-element topic="rasa-studio-quickstart.md"/>
                 </toc-element>
                 <toc-element topic="rasa-open-source.md">
-                    <toc-element topic="rasa-config-yaml-auto-completion-pycharm.md"/>
+                    <toc-element topic="rasa-concepts.md">
+                        <toc-element topic="rasa-training-data.md">
+                            <toc-element topic="rasa-training-data-format.md"/>
+                        </toc-element>
+                        <toc-element topic="rasa-config.md"/>
+                        <toc-element topic="rasa-domain.md"/>
+                    </toc-element>
+                    <toc-element topic="rasa-additional-docs.md">
+                        <toc-element topic="rasa-config-yaml-auto-completion-pycharm.md"/>
+                    </toc-element>
                 </toc-element>
             </toc-element>
             <toc-element topic="telepot.md"/>
