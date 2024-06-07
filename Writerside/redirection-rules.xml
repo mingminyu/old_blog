@@ -74,4 +74,8 @@
         <description>Created after removal of "maturin" from ZERO</description>
         <accepts>maturin.html</accepts>
     </rule>
+    <rule id="24bd801a">
+        <description>Created after removal of "Shell" from ZERO.AI</description>
+        <accepts>shell.html</accepts>
+    </rule>
 </rules>
