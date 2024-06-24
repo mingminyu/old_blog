@@ -2,7 +2,7 @@
 
 <show-structure depth="2"/>
 
-在机器学习领域，模型的可解释性对于理解模型的决策过程和进行决策支持非常重要。Python Shapash 库是一个强大的工具，旨在帮助数据科学家和机器学习工程师可视化和解释模型的预测结果。本文将深入探讨 Python Shapash 库的功能、用法以及如何在实际项目中充分发挥其优势。
+cuDF是一个基于Apache Arrow列内存格式的Python GPU DataFrame库，用于加载、连接、聚合、过滤和其他数据操作。cuDF还提供了类似于pandas的API。
 
 
 <seealso>
@@ -11,7 +11,7 @@
     <a href="https://docs.rapids.ai/api/cudf/stable">cuDF 文档</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/rapidsai/cudf">CuDF Github</a>
+    <a href="https://github.com/rapidsai/cudf">CuDF</a>
 </category>
 <category ref="ref_issues">
 </category>

@@ -2,8 +2,7 @@
 
 <show-structure depth="2"/>
 
-> 待补充
-{style="warning"}
+DeepLabCut是一个用于姿态估计和行为分析的开源Python库。它旨在帮助研究人员进行动物或人类姿态跟踪，无论是在实验室环境中还是在自然场景中。dlclibrary是DeepLabCut生态系统的支持库，提供了一些通用函数和工具来增强DeepLabCut的功能。
 
 
 <seealso>

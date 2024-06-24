@@ -1,4 +1,4 @@
-# pGeoCode 教程
+# PGeoCode 教程
 
 <show-structure depth="3"/>
 

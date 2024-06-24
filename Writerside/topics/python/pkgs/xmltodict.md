@@ -11,6 +11,6 @@
   <a href="https://mp.weixin.qq.com/s/ExM1ft42aFmFxml5DSX6rA">xmltodict，一个超实用的python库</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/martinblech/xmltodict">XMLtoDict Github</a>
+    <a href="https://github.com/martinblech/xmltodict">XMLtoDict</a>
 </category>
 </seealso>

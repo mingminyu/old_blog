@@ -1,0 +1,10 @@
+# DESCRIBE
+
+
+
+
+【查看表创建人】
+
+```SQL
+DESCRIBE FORMMATED <TABLE_NAME>;
+```

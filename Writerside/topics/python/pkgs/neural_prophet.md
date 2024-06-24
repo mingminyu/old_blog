@@ -11,7 +11,7 @@
     <a href="https://mp.weixin.qq.com/s/npXswXe4F7N2NEzug0xltw">NeuralProphet 简介</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/ourownstory/neural_prophet">NeuralProphet Github</a>
+    <a href="https://github.com/ourownstory/neural_prophet">NeuralProphet</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

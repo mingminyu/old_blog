@@ -3,8 +3,7 @@
 <show-structure depth="2"/>
 
 
-> 待补充
-{style="warning"}
+pipreqs是一个用于生成Python项目的依赖需求文件（requirements.txt）的工具。它可以自动分析项目的源代码，检测项目中所使用的第三方库，并生成一个包含这些库及其版本信息的requirements.txt文件。
 
 
 <seealso>

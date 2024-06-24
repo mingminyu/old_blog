@@ -2,6 +2,7 @@
 
 <show-structure depth="2"/>
 
+statsforecast是一个用于时间序列分析和预测的Python库，它建立在statsmodels和scikit-learn等库的基础上，提供了丰富的统计方法和机器学习模型，以帮助你处理时间序列数据。
 
 <seealso>
 <category ref="ref_docs">

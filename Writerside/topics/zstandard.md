@@ -1,4 +1,4 @@
-# Zstandard 教程
+# ZStandard 教程
 
 <show-structure depth="3"/>
 

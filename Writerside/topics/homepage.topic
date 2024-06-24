@@ -18,7 +18,6 @@
         <primary>
             <title>Python 教程</title>
             <a href="python-base.topic" summary="basic data types, conditional control flow, programming styling, regex, package management">Python 基础</a>
-            <a href="python-advance.topic" summary="usages of function, class, decorator, multi-process, logging, and so on">Python 进阶</a>
             <a href="pycharm.md" summary="advances usages of pycharm">PyCharm 使用教程</a>
         </primary>
 
@@ -26,7 +25,7 @@
         <secondary>
             <title>AI 教程</title>
             <a href="llm.topic" summary="usages of llm">LLM 教程</a>
-            <a href="ml.topic" summary="In this tutorial, you can learn to build machine learning models(like Logistic Regression, XGBoost, LightGBM).">ML 教程</a>
+            <a href="python-ml.md" summary="In this tutorial, you can learn to build machine learning models(like Logistic Regression, XGBoost, LightGBM).">ML 教程</a>
             <a href="asr.topic" summary="In this tutorial, you can learn transcribe text content of audios with asr model.">ASR 教程</a>
             <a href="tts.topic" summary="In this tutorial, you can learn transfer text into audios with tts model.">TTS 教程</a>
             <a href="label-studio.md" summary="In this tutorial, you can learn how to use label studio.">Label Studio 教程</a>

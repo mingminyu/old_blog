@@ -1,0 +1,7 @@
+# SHOW
+
+【查看表分区字段】
+
+```SQL
+SHOW PARTITIONS <TABLE_NAME>;
+```

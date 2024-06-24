@@ -78,4 +78,28 @@
         <description>Created after removal of "Shell" from ZERO.AI</description>
         <accepts>shell.html</accepts>
     </rule>
+    <rule id="6e266d0f">
+        <description>Created after removal of "Python 发布文档" from ZERO.AI</description>
+        <accepts>python-public-docs.html</accepts>
+    </rule>
+    <rule id="2363a7c4">
+        <description>Created after removal of "Python 多线程教程" from ZERO.AI</description>
+        <accepts>python-multiprocessing.html</accepts>
+    </rule>
+    <rule id="62cf528f">
+        <description>Created after removal of "Python 进阶" from ZERO.AI</description>
+        <accepts>python-advance.html</accepts>
+    </rule>
+    <rule id="7684b376">
+        <description>Created after removal of "Python 虚拟环境" from ZERO.AI</description>
+        <accepts>python-env-management.html</accepts>
+    </rule>
+    <rule id="60d046c0">
+        <description>Created after removal of "Python 包管理" from ZERO.AI</description>
+        <accepts>python-pkgs-management.html</accepts>
+    </rule>
+    <rule id="3f1a5140">
+        <description>Created after removal of "文档" from ZERO.AI</description>
+        <accepts>documents.html</accepts>
+    </rule>
 </rules>

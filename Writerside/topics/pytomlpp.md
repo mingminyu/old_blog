@@ -1,4 +1,4 @@
-# Pytomlpp 教程
+# PyTomlpp 教程
 
 <show-structure depth="3"/>
 

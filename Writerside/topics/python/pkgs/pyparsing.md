@@ -9,6 +9,6 @@
   <a href="https://mp.weixin.qq.com/s/t7ZB3ARAqszx8TyMBD4wdw">pyparsing，一个神奇的 Python 库</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/pyparsing/pyparsing">Pyparsing Github</a>
+    <a href="https://github.com/pyparsing/pyparsing">Pyparsing</a>
 </category>
 </seealso>

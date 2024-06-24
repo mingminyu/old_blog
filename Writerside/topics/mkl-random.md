@@ -2,7 +2,7 @@
 
 <show-structure depth="3"/>
 
-在Python的众多库中，mkl_random库以其高性能的随机数生成功能而著称。
+在Python的众多库中，mkl_random 库以其高性能的随机数生成功能而著称。
 
 
 <seealso>

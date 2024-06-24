@@ -1,4 +1,4 @@
-# MKL_fft 教程
+# MKL-FFT 教程
 
 <show-structure depth="3"/>
 

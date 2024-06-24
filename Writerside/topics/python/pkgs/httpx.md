@@ -2,8 +2,7 @@
 
 <show-structure depth="2"/>
 
-> 待补充
-{style="warning"}
+`httpx` 是一个现代化的 Python HTTP 客户端库，提供了简洁而强大的 API 来发送 HTTP 请求。相较于传统的 `requests` 库，`httpx` 具有以下一些优点和特点：
 
 
 <seealso>
@@ -13,7 +12,7 @@
     <a href="https://www.python-httpx.org">HttpX 文档</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/encode/httpx">HttpX Github</a>
+    <a href="https://github.com/encode/httpx">HttpX</a>
 </category>
 <category ref="ref_issues"></category>
 <category ref="ref_hf"></category>

@@ -1,4 +1,4 @@
-# Python-socketio 教程
+# Python-SocketIO 教程
 
 <show-structure depth="2"/>
 

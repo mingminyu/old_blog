@@ -1,4 +1,4 @@
-# Python-ds 教程
+# Python-DS 教程
 
 <show-structure depth="3"/>
 

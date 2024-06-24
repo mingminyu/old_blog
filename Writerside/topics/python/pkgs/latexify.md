@@ -2,7 +2,7 @@
 
 <show-structure depth="2"/>
 
-LangGraph是LangChain近期发布的重要功能，这也标志着LangChain向多代理框架进军。LangGraph构建于LangChain之上，帮助开发者轻松构建强大的代理运行时。
+LaTeXify是一个将Python代码和数据结构转换成LaTeX格式的库。这个库特别适合需要在文档或学术论文中展示代码逻辑或数据表示的研究人员和开发者。通过LaTeXify，复杂的Python函数或数据结构可以被优雅地转化为LaTeX代码，进而生成清晰、专业的文档内容
 
 
 

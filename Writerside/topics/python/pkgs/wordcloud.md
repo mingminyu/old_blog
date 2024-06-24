@@ -11,7 +11,7 @@
     <a href="https://mp.weixin.qq.com/s/MP71TlL8Q7t4TON7qRef8g">WordCloud 简介</a>
 </category>
 <category ref="ref_github">
-    <a href="https://github.com/amueller/word_cloud">WordCloud Github</a>
+    <a href="https://github.com/amueller/word_cloud">WordCloud</a>
 </category>
 <category ref="ref_issues">
 </category>

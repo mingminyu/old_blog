@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Python 内置库" id="python-built-pkgs">
+       title="Python 标准库" id="python-built-pkgs">
     <section-starting-page>
         <title>Section starting page title</title>
         <description>

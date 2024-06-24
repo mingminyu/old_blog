@@ -1,4 +1,4 @@
-# Imageio 教程
+# ImageIO 教程
 
 <show-structure depth="3"/>
 
