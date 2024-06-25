@@ -149,6 +149,36 @@
       <Shortcut layout="MacOS">⌘ ,</Shortcut>
    </Action>
 
+   <Action id="$ExcelDeleteLine">
+      <Description>Excel删除一行</Description>
+      <Shortcut layout="Windows">Ctrl+-</Shortcut>
+      <Shortcut layout="MacOS">⌘ -</Shortcut>
+   </Action>
+
+   <Action id="$ExcelBackfill">
+      <Description>Excel向下填充</Description>
+      <Shortcut layout="Windows">Alt+E</Shortcut>
+      <Shortcut layout="MacOS">⌃ E</Shortcut>
+   </Action>
+
+   <Action id="$ExcelAddColumn">
+      <Description>Excel增加一列</Description>
+      <Shortcut layout="Windows">Ctrl++</Shortcut>
+      <Shortcut layout="MacOS">⌃ +</Shortcut>
+   </Action>
+
+   <Action id="$ExcelAddRow">
+      <Description>Excel增加一行</Description>
+      <Shortcut layout="Windows">Ctrl+Shift++</Shortcut>
+      <Shortcut layout="MacOS">⌃ ⇧ +</Shortcut>
+   </Action>
+
+   <Action id="$ExcelAddSheet">
+      <Description>Excel增加一行</Description>
+      <Shortcut layout="Windows">Shift+F11</Shortcut>
+      <Shortcut layout="MacOS">⇧ F11</Shortcut>
+   </Action>
+
 </Keymap>
 
 <!--   ⌘ ⏎ ⎋  ⌫ ⇧ ⌃ ⬆⬇ ⇥ ⌥ ⬅︎ ➡︎  -->
