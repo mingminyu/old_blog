@@ -8,7 +8,6 @@ Bqplot 是一个用于数据可视化的高效库，帮助开发者创建交互�
 <seealso>
 <category ref="ref_docs">
     <a href="https://mp.weixin.qq.com/s/J1XAFmPKj1kPssyGJAfXQg">BQPlot 简介</a>
-    <a href="">强大的 Python 库: BQPlot</a>
 </category>
 <category ref="ref_github">
     <a href="https://github.com/bqplot/bqplot">BQPlot Github</a>

@@ -20,7 +20,6 @@
         <primary>
             <title>Python 教程</title>
             <a href="python-base.topic" summary="basic data types, conditional control flow, programming styling, regex, package management">Python 基础</a>
-            <a href="python-advance.topic" summary="usages of function, class, decorator, multi-process, logging, and so on">Python 进阶</a>
             <a href="pycharm.md" summary="usages of pycharm">PyCharm 使用教程</a>
         </primary>
 
