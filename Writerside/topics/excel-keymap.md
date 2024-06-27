@@ -9,7 +9,7 @@
 | 增加一列      | <shortcut key="$ExcelAddColumn" />  | 在当前单元格左侧新增一列           |
 | 增加一行      | <shortcut key="$ExcelAddRow" />     | 只能选中一行                 |
 | 增加多行      | <shortcut key="$ExcelAddRow" />     | 需要选中多行多列，且选中空单元格不能包含内容 |
-| 新增一个Sheet | <shortcut  key="$ExcelAddSheet" />  |                        |
+| 新增一个Sheet | <shortcut key="$ExcelAddSheet" />   |                        |
 
 
 

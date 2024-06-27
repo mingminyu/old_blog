@@ -1139,7 +1139,7 @@
             <toc-element topic="mkl-service.md"/>
         </toc-element>
     </toc-element>
-    <toc-element topic="go.topic">
+    <toc-element topic="go.topic" hidden="true">
         <toc-element topic="go-advance.topic"/>
         <toc-element topic="go-base.topic"/>
     </toc-element>
@@ -1340,6 +1340,11 @@
         </toc-element>
         <toc-element topic="react.topic"/>
         <toc-element topic="vue.topic"/>
+    </toc-element>
+    <toc-element topic="risk-management.md">
+        <toc-element topic="riskm-basic-concepts.md">
+            <toc-element topic="riskm-concepts-clt.md"/>
+        </toc-element>
     </toc-element>
     <toc-element topic="bigdata.topic">
         <toc-element topic="spark.topic"/>

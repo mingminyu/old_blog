@@ -1,4 +1,4 @@
-# Github Copilot 免费激活
+# Copilot 免费激活
 
 <show-structure depth="2"/>
 
@@ -9,8 +9,6 @@ Github Copilot 是一款非常好用的辅助编程工具，但是 10 美元/月
 ## 2. 获取免费激活码
 
 ## 3. 激活教程
-
-
 
 
 <seealso>
